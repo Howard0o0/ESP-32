@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C Source File">
+<includepath>${IDF_PATH}/components/esp32/include</includepath>
+<includepath>${IDF_PATH}/components/newlib/include</includepath>
+<includepath>${IDF_PATH}/components/freertos/include</includepath>
+<includepath>${IDF_PATH}/components/nvs_flash/include</includepath>
+<includepath>${IDF_PATH}/components/driver/include</includepath>
+<includepath>${IDF_PATH}/components/log/include</includepath>
+<includepath>${IDF_PATH}/components/spi_flash/include</includepath>
+<includepath>${IDF_PATH}/components/fatfs/test_fatfs_host/sdkconfig</includepath>
+<includepath>${IDF_PATH}/components/esp_common/include</includepath>
+<includepath>${PROJECT_PATH}/main/emd_proctol</includepath>
+<includepath>${PROJECT_PATH}/main/ic_driver</includepath>
+<includepath>C:\msys32\home\howard\esp\i2c_self_test\main\util</includepath>
+
+</language>
+<language name="C++ Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="C Source File">
+
+</language>
+<language name="C++ Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+</cdtprojectproperties>
