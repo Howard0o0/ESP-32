@@ -74,8 +74,10 @@ main.o: C:/msys32/home/howard/esp/i2c_self_test/main/main.c \
  C:/msys32/home/howard/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.c \
+ C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.c \
+ C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.h \
+ c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.h \
+ c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.c \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/i2c.h \
@@ -83,36 +85,12 @@ main.o: C:/msys32/home/howard/esp/i2c_self_test/main/main.c \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/queue.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/queue.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.c \
- C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/uart.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
- C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/string.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max17048.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max17048.c \
  c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.h \
  c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\uart.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30205.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30205.c \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max77752.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max77752.c \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/rgb_led.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/rgb_led.c \
- C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/ledc.h \
- C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.c \
+ c:\msys32\home\howard\esp\i2c_self_test\main\util\algorithm.h \
  C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.h \
+ C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.h \
+ C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.c \
  C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.h
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
@@ -265,9 +243,13 @@ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_s
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.h:
+C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.c:
 
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.c:
+C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.h:
+
+c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.h:
+
+c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.c:
 
 C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h:
 
@@ -283,65 +265,17 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/iic.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/emd_proctol/uart.c:
-
-C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/uart.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/string.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max17048.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max17048.c:
-
 c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\iic.h:
 
 c:\msys32\home\howard\esp\i2c_self_test\main\emd_proctol\uart.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30205.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30205.c:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max77752.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max77752.c:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/rgb_led.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/rgb_led.c:
-
-C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/ledc.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.c:
+c:\msys32\home\howard\esp\i2c_self_test\main\util\algorithm.h:
 
 C:/msys32/home/howard/esp/i2c_self_test/main/ic_driver/max30102.h:
+
+C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.h:
+
+C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.c:
 
 C:/msys32/home/howard/esp/i2c_self_test/main/util/algorithm.h:
 /home/howard/esp/i2c_self_test/main/./main.c:

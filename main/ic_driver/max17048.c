@@ -7,7 +7,7 @@
 
 #include "../emd_proctol/iic.h"
 #include "../emd_proctol/uart.h"
-
+#include "max17048.h"
 
 
 uint16_t Max17048_ReadVersion(void)
