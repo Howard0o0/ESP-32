@@ -12,7 +12,7 @@ library/ssl_lib.o: \
  C:/msys32/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_cert.h \
  C:/msys32/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  C:/msys32/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h \
@@ -66,7 +66,7 @@ C:/msys32/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 

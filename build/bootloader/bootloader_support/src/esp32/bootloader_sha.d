@@ -9,7 +9,7 @@ src/esp32/bootloader_sha.o: \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h \
+ c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
@@ -43,7 +43,7 @@ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h:
+c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h:
 

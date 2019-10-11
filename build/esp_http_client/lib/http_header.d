@@ -27,7 +27,7 @@ lib/http_header.o: \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_http_client/lib/include/http_header.h \
@@ -94,7 +94,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

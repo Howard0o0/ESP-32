@@ -1,7 +1,7 @@
 esp32/cpu_util.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/cpu_util.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -37,7 +37,7 @@ esp32/cpu_util.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 

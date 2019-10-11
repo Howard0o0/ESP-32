@@ -1,7 +1,7 @@
 libsodium/src/libsodium/randombytes/randombytes.o: \
  C:/msys32/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/randombytes/randombytes.c \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -36,7 +36,7 @@ libsodium/src/libsodium/randombytes/randombytes.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

@@ -21,7 +21,7 @@ src/phy_init.o: \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -70,6 +70,7 @@ src/phy_init.o: \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/crosscore_int.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_timer.h \
  C:/msys32/home/howard/esp/esp-idf/components/heap/include/esp_heap_caps.h \
@@ -179,7 +180,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h:
 
@@ -276,6 +277,8 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/crosscore_int.h:
 

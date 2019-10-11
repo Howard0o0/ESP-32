@@ -1,6 +1,6 @@
 spiram_psram.o: \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/spiram_psram.c \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/newlib.h \
@@ -79,7 +79,7 @@ spiram_psram.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/string.h:
 

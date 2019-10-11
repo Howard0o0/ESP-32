@@ -6,6 +6,8 @@ src/nvs_item_hash_list.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -24,7 +26,6 @@ src/nvs_item_hash_list.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
@@ -44,6 +45,10 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_typ
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
@@ -80,8 +85,6 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h:
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

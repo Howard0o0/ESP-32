@@ -3,6 +3,7 @@ src/nvs_pagemanager.o: \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
@@ -17,6 +18,8 @@ C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp:
 C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp:
 
 C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 

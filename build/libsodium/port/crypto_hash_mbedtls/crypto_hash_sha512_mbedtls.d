@@ -22,7 +22,7 @@ port/crypto_hash_mbedtls/crypto_hash_sha512_mbedtls.o: \
  C:/msys32/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/limits.h \
@@ -73,7 +73,7 @@ C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 

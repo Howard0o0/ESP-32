@@ -3,7 +3,7 @@ proto-c/constants.pb-c.o: \
  C:/msys32/home/howard/esp/esp-idf/components/protocomm/proto-c/constants.pb-c.h \
  C:/msys32/home/howard/esp/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -31,7 +31,7 @@ C:/msys32/home/howard/esp/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/pr
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

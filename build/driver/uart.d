@@ -18,7 +18,7 @@ uart.o: C:/msys32/home/howard/esp/esp-idf/components/driver/uart.c \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
@@ -54,6 +54,7 @@ uart.o: C:/msys32/home/howard/esp/esp-idf/components/driver/uart.c \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
@@ -133,7 +134,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
@@ -204,6 +205,8 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 

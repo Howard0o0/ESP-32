@@ -2,11 +2,12 @@ src/nvs_api.o: \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
@@ -41,6 +42,7 @@ src/nvs_api.o: \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
@@ -49,7 +51,6 @@ src/nvs_api.o: \
  C:/msys32/home/howard/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  C:/msys32/home/howard/esp/esp-idf/components/heap/include/multi_heap.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
@@ -63,6 +64,10 @@ C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp:
 
 C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
+C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
@@ -70,8 +75,6 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -141,6 +144,8 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecate
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
+C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h:
@@ -156,8 +161,6 @@ C:/msys32/home/howard/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 C:/msys32/home/howard/esp/esp-idf/components/heap/include/multi_heap.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 

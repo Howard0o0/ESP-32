@@ -19,7 +19,7 @@ src/wps/wps_enrollee.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/wpa_supplicant/include/wpa/includes.h \
  C:/msys32/home/howard/esp/esp-idf/components/wpa_supplicant/include/wpa/common.h \
  C:/msys32/home/howard/esp/esp-idf/components/wpa_supplicant/port/include/os.h \
@@ -96,7 +96,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/wpa_supplicant/include/wpa/includes.h:
 

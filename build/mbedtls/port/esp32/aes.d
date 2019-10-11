@@ -17,7 +17,7 @@ port/esp32/aes.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
@@ -30,6 +30,7 @@ port/esp32/aes.o: \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp32/aes.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/aes.h \
+ C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp32/aes.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -62,6 +63,7 @@ port/esp32/aes.o: \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/crosscore_int.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_timer.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
@@ -114,7 +116,7 @@ C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 
@@ -139,6 +141,8 @@ C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp32/aes.h:
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/aes.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp32/aes.h:
 
@@ -203,6 +207,8 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/crosscore_int.h:
 

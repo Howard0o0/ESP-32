@@ -33,7 +33,7 @@ nghttp2/lib/nghttp2_pq.o: \
  C:/msys32/home/howard/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h \
  C:/msys32/home/howard/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h
 
@@ -103,7 +103,7 @@ C:/msys32/home/howard/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 

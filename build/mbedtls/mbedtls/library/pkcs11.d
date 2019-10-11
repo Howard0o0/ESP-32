@@ -2,7 +2,7 @@ mbedtls/library/pkcs11.o: \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs11.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
@@ -27,7 +27,7 @@ C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkc
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 

@@ -15,26 +15,22 @@ spi_slave.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/lock.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h \
- C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_common.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/spi_ll.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/hal_defs.h \
+ C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/queue.h \
+ C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/spi_periph.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
@@ -42,6 +38,18 @@ spi_slave.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/queue.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/spi_slave_hal.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/lldesc.h \
+ C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_common.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h \
+ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_slave.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -55,11 +63,11 @@ spi_slave.o: \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
@@ -77,11 +85,8 @@ spi_slave.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
- C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
- C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_pm.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/pm.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
@@ -128,27 +133,19 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_common.h:
+C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/spi_ll.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/hal_defs.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -156,17 +153,17 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/queue.h:
+C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/spi_periph.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -181,6 +178,30 @@ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/queue.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/include/hal/spi_slave_hal.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/lldesc.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_common.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/spi_slave.h:
 
@@ -208,8 +229,6 @@ C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/corebits.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
-
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.h:
@@ -217,6 +236,8 @@ C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portable.
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 
@@ -252,15 +273,9 @@ C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp32/dport_access.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h:
-
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_pm.h:
 

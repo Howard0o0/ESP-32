@@ -1,7 +1,7 @@
 spi_flash_rom_patch.o: \
  C:/msys32/home/howard/esp/esp-idf/components/spi_flash/spi_flash_rom_patch.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h \
+ c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h \
@@ -12,7 +12,7 @@ spi_flash_rom_patch.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h:
+c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 

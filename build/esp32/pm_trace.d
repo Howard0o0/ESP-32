@@ -1,6 +1,6 @@
 pm_trace.o: C:/msys32/home/howard/esp/esp-idf/components/esp32/pm_trace.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/gpio.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
@@ -54,7 +54,7 @@ pm_trace.o: C:/msys32/home/howard/esp/esp-idf/components/esp32/pm_trace.c \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/driver/include/driver/gpio.h:
 

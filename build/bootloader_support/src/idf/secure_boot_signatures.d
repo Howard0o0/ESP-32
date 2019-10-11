@@ -1,6 +1,6 @@
 src/idf/secure_boot_signatures.o: \
  C:/msys32/home/howard/esp/esp-idf/components/bootloader_support/src/idf/secure_boot_signatures.c \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -55,7 +55,7 @@ src/idf/secure_boot_signatures.o: \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
 

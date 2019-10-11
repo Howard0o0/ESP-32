@@ -1,7 +1,7 @@
 mbedtls/library/rsa_internal.o: \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/library/rsa_internal.c \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
@@ -37,7 +37,7 @@ mbedtls/library/rsa_internal.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 

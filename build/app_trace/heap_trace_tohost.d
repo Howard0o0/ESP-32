@@ -1,6 +1,6 @@
 heap_trace_tohost.o: \
  C:/msys32/home/howard/esp/esp-idf/components/app_trace/heap_trace_tohost.c \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/heap/include/esp_heap_trace.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -29,7 +29,7 @@ heap_trace_tohost.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/heap/include/esp_heap_trace.h:
 

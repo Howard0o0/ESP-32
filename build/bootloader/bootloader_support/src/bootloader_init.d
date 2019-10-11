@@ -1,7 +1,7 @@
 src/bootloader_init.o: \
  C:/msys32/home/howard/esp/esp-idf/components/bootloader_support/src/bootloader_init.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h \
+ c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -37,10 +37,13 @@ src/bootloader_init.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/rtc_wdt.h \
@@ -59,7 +62,7 @@ src/bootloader_init.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h:
+c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h:
 
@@ -131,13 +134,19 @@ C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
-
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
+
+C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 

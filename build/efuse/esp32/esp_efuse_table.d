@@ -1,6 +1,6 @@
 esp32/esp_efuse_table.o: \
  C:/msys32/home/howard/esp/esp-idf/components/efuse/esp32/esp_efuse_table.c \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/efuse/include/esp_efuse.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -33,7 +33,7 @@ esp32/esp_efuse_table.o: \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/howard/esp/esp-idf/components/efuse/esp32/include/esp_efuse_table.h
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/efuse/include/esp_efuse.h:
 

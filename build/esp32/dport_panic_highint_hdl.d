@@ -14,7 +14,7 @@ dport_panic_highint_hdl.o: \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/esp_private/panic_reason.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -48,7 +48,7 @@ C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-fra
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/esp_private/panic_reason.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 

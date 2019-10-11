@@ -1,6 +1,6 @@
 log.o: C:/msys32/home/howard/esp/esp-idf/components/log/log.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h \
+ c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h \
@@ -12,7 +12,7 @@ log.o: C:/msys32/home/howard/esp/esp-idf/components/log/log.c \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h:
+c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/hal.h:
 

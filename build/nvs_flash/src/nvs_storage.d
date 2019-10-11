@@ -3,11 +3,12 @@ src/nvs_storage.o: \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.hpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp \
  C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
@@ -26,6 +27,10 @@ C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp:
 
 C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
+C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
@@ -33,8 +38,6 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
-
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

@@ -10,7 +10,7 @@ xtensa_init.o: \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
@@ -56,7 +56,7 @@ C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

@@ -31,7 +31,7 @@ unity_runner.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/unity/include/unity_test_runner.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/setjmp.h \
@@ -104,7 +104,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 

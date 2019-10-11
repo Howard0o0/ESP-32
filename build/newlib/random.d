@@ -18,7 +18,7 @@ random.o: C:/msys32/home/howard/esp/esp-idf/components/newlib/random.c \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/param.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/reent.h \
@@ -81,7 +81,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/param.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

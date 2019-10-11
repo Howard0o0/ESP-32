@@ -1,4 +1,4 @@
-src//memory_layout_utils.o: \
+src/memory_layout_utils.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/src/memory_layout_utils.c \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -18,7 +18,7 @@ src//memory_layout_utils.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
@@ -68,7 +68,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/string.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/log/include/esp_log.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
@@ -93,4 +93,4 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
-/home/howard/esp/esp-idf/components/soc/src//memory_layout_utils.c:
+/home/howard/esp/esp-idf/components/soc/src/memory_layout_utils.c:

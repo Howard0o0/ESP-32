@@ -26,7 +26,7 @@ emac_dev.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -123,7 +123,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 

@@ -1,1 +1,1 @@
-1 i2c-example v4.0-dev-512-g6fd535c98-dirty
+4190292-dirty uart_echo v4.0-dev-667-gda13efc17-dirty

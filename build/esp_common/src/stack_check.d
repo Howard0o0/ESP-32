@@ -1,6 +1,6 @@
 src/stack_check.o: \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/src/stack_check.c \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -31,7 +31,7 @@ src/stack_check.o: \
  C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h:
 

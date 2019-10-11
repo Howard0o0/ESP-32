@@ -23,7 +23,7 @@ trax.o: C:/msys32/home/howard/esp/esp-idf/components/xtensa/trax.c \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
@@ -101,7 +101,7 @@ C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

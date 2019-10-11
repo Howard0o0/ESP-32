@@ -1,7 +1,7 @@
 esp32/rtc_clk.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/rtc_clk.c \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h \
+ c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -44,7 +44,7 @@ esp32/rtc_clk.o: \
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-c:\msys32\home\howard\esp\i2c_self_test\build\include\sdkconfig.h:
+c:\msys32\home\howard\esp\uart_echo_client\build\include\sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h:
 

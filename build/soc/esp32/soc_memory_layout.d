@@ -21,7 +21,7 @@ esp32/soc_memory_layout.o: \
  C:/msys32/home/howard/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  C:/msys32/home/howard/esp/esp-idf/components/soc/include/soc/soc_memory_layout.h \
@@ -71,7 +71,7 @@ C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_assert.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/i2c_self_test/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 
