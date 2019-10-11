@@ -11,7 +11,7 @@
 #define ECHO_TEST_RTS  (UART_PIN_NO_CHANGE)
 #define ECHO_TEST_CTS  (UART_PIN_NO_CHANGE)
 #define BUF_SIZE 128
-#define WAIT_MSG_FROM_FPGA_MS 500
+#define WAIT_MSG_FROM_FPGA_MS 150
 #define FPGA_RSP_LEN    1+8+10+4
 #define KEY_LEN  
 #define TRY_RCV_TIMES 10
@@ -60,8 +60,8 @@ int rcvRspFromFPGA(uint8_t *rcvBuf)
         iReadBytes = uart_read_bytes(UART_NUM_1, rcvBuf, BUF_SIZE, WAIT_MSG_FROM_FPGA_MS / portTICK_RATE_MS);
         if(iReadBytes > 0)
             {
-                printf("rcvFromFpag: ");
-                print_hex((char *)rcvBuf,iReadBytes);
+                // printf("rcvFromFpag: ");
+                // print_hex((char *)rcvBuf,iReadBytes);
                 return iReadBytes;
             }
     }
@@ -90,8 +90,8 @@ int getPufResponse(uint8_t *challenge,uint8_t *Response)
 
     /* 2. send cmd */
     sendCmdToFPGA(cmd,11);
-    printf("cmd : ");
-    print_hex((char *)cmd,11);
+    // printf("cmd : ");
+    // print_hex((char *)cmd,11);
     
     /* 3. try to receive rsp */
     uint8_t u8RcvBuf[50];
@@ -162,7 +162,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
     int iStableFlag = 0;
     int iErrorTimes = 0;
     uint8_t pu8Challenge8bytes[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88 };
-    uint8_t pu8Challenge8bytes2[] = { 0x88, 0x77, 0x66, 0x55, 0x44, 0x33, 0x22, 0x11 };
+    uint8_t pu8Challenge8bytes2[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
     uint8_t pu8TmpPufResp4Bytes[10][4];
 
     int i;
@@ -186,11 +186,11 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
     i=0;
     while (pu8TmpPufResp4Bytes[i+5] != NULL)
     {
-        if( strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+1] != 0) &&\
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+2] != 0) &&\
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+3] != 0) &&\ 
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+4] != 0) &&\ 
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+5] != 0)    )
+        if( (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+1]) != 0) && \
+        (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+2]) != 0) && \
+        (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+3]) != 0) && \
+        (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+4]) != 0) && \
+        (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+5]) != 0)    )
         {
             iStableFlag = 1;
             memcpy(pu8Puf80Bit,pu8TmpPufResp4Bytes[i],4);
@@ -206,13 +206,14 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
 
      /* get tail 4 bytes puf */
     iErrorTimes = 0;
+    iPufIndex = 0;
     for(i = 0;i < 10;i++)
     {
         if(iErrorTimes >= 3)
         {
             return -1;
         }
-        iRet = getPufResponse(pu8Challenge8bytes,pu8TmpPufResp4Bytes[iPufIndex++]);
+        iRet = getPufResponse(pu8Challenge8bytes2,pu8TmpPufResp4Bytes[iPufIndex++]);
         if(iRet != 0)
         {
             iErrorTimes++;
@@ -225,11 +226,11 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
     iStableFlag = 0;
     while (pu8TmpPufResp4Bytes[i+5] != NULL)
     {
-        if( strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+1] != 0) &&\
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+2] != 0) &&\
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+3] != 0) &&\ 
-            strstr((char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+4] != 0) &&\ 
-            strstr((char *)pu8TmpPufResp4Bytes[i],(uint8_t *)pu8TmpPufResp4Bytes[i+5] != 0)    )
+        if( (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+1]) != 0) && \
+            (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+2]) != 0) && \
+            (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+3]) != 0) && \
+            (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+4]) != 0) && \
+            (strstr( (char *)pu8TmpPufResp4Bytes[i],(char *)pu8TmpPufResp4Bytes[i+5]) != 0)    )
         {
             iStableFlag = 1;
             memcpy(pu8Puf80Bit+4,pu8TmpPufResp4Bytes[i],4);
@@ -280,7 +281,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
 void fpga_test(void)
 {
     UART1_install();
-    
+
     uint8_t au8Puf80bit[10];
     int iRet;
 
@@ -289,8 +290,14 @@ void fpga_test(void)
         iRet = get80bitPuf(au8Puf80bit);
         if (iRet == 0) //success
         {
+            printf("80bit puf : \r\n");
             print_hex((char *)au8Puf80bit,10);
         }
+        else
+        {
+            printf("get 80bit puf failed \r\n");
+        }
+        
 
         vTaskDelay(1000 / portTICK_RATE_MS);
     }

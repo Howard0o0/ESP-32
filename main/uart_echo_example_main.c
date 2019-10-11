@@ -150,8 +150,8 @@ void app_main()
 {
     // echo_task();
     // szm301Test();
-    // fpga_test();
+    fpga_test();
     // getPufResp();
     // uart0_test();
-    xTaskCreate(fpga_test, "uart_echo_task", 1024, NULL, 10, NULL);
+    // xTaskCreate(fpga_test, "uart_echo_task", 1024, NULL, 10, NULL);
 }
