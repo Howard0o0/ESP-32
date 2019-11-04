@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/IDF_PATH/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/IDF_PATH/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/IDF_PATH/value=C\:/msys32/home/howard/esp/esp-idf
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PATH/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PATH/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PATH/value=C\:\\msys32\\mingw32\\bin;C\:\\msys32\\opt\\xtensa-esp32-elf\\bin;C\:\\msys32\\usr\\bin;C\:\\Users\\howard\\app\\eclipse;C\:/Program Files/Java/jre1.8.0_211/bin/server;C\:/Program Files/Java/jre1.8.0_211/bin;C\:/Program Files/Java/jre1.8.0_211/lib/amd64;C\:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Windows\\System32\\OpenSSH\\;C\:\\Program Files\\Java\\jdk1.8.0_211\\bin;C\:\\Program Files\\Java\\jdk1.8.0_211\\jre\\bin;C\:\\Program Files\\dotnet\\;C\:\\Users\\howard\\app\\mingw64\\bin;C\:\\Users\\howard\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\;C\:\\Users\\howard\\AppData\\Local\\Programs\\Python\\Python36\\;C\:\\Users\\howard\\AppData\\Local\\Microsoft\\WindowsApps;C\:\\Users\\howard\\AppData\\Local\\GitHubDesktop\\bin;C\:\\Users\\howard\\AppData\\Local\\Programs\\Microsoft VS Code\\bin
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PROJECT_PATH/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PROJECT_PATH/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/PROJECT_PATH/value=C\:\\msys32\\home\\howard\\esp\\hello_world
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/V/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/V/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/V/value=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.316731881/appendContributed=true

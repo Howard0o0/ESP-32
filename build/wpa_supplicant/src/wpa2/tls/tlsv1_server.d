@@ -31,7 +31,7 @@ src/wpa2/tls/tlsv1_server.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/endian.h \
@@ -114,7 +114,7 @@ C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
 

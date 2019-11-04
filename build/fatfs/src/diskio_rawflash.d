@@ -27,7 +27,7 @@ src/diskio_rawflash.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
@@ -146,7 +146,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
 

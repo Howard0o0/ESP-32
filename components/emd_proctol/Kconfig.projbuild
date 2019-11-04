@@ -1,0 +1,5 @@
+menu "EMD_PROCTOL"
+config EMD_PROCTOL_ENABLE
+bool "Enable emd_proctol"
+default "y"
+endmenu

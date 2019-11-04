@@ -5,7 +5,7 @@ eth_phy/phy_ip101.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
@@ -48,7 +48,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

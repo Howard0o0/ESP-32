@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := uart_echo
+PROJECT_NAME := blink
 
 include $(IDF_PATH)/make/project.mk
 

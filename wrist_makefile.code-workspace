@@ -1,0 +1,61 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"twxs.cmake",
+			"eamodio.gitlens",
+			"mhutchie.git-graph",
+			"donjayamanne.githistory",
+			"seunlanlege.action-buttons",
+			"vscode-icons-team.vscode-icons",
+			"webfreak.debug"
+		]
+	},
+	"settings": {
+		"actionButtons": {
+			"defaultColor": "#ff0034",
+			"commands": [
+				{
+					"name": "Make Menuconfig",
+					"color": "lime",
+					"command": "make -j4 menuconfig"
+				},
+				{
+					"name": "Make",
+					"color": "orange",
+					"command": "make -j4"
+				},
+				{
+					"name": "Make Flash",
+					"color": "lime",
+					"command": "make -j4 flash"
+				},
+				{
+					"name": "Py Monitor",
+					"color": "orange",
+					"command": "idf.py monitor"
+				},
+				{
+					"name": "Make clean",
+					"color": "white",
+					"command": "make -j4 clean"
+				}
+			]
+		},
+		"terminal.integrated.shell.windows": "/bin/bash",
+		"workbench.iconTheme": "vscode-icons",
+		"files.associations": {
+			"esp_gatts_api.h": "c",
+			"freertos.h": "c",
+			"esp_task_wdt.h": "c",
+			"gpio.h": "c",
+			"freertosconfig.h": "c",
+			"queue.h": "c"
+		}
+	}
+}

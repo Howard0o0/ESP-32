@@ -1,63 +1,45 @@
 src/nvs_storage.o: \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_page.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/intrusive_list.h \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp \
- C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.hpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/howard/esp/wrist_makefile/build/include/sdkconfig.h \
+ /home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
+ /home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_page.hpp \
+ /home/howard/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/intrusive_list.h \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp \
+ /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp
 
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.hpp:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h:
+/home/howard/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
+/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+/home/howard/esp/wrist_makefile/build/include/sdkconfig.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
+/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
+/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
+/home/howard/esp/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_page.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h:
+/home/howard/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h:
+/home/howard/esp/esp-idf/components/nvs_flash/src/intrusive_list.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp:
 
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp:
-
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp:
-
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_page.hpp:
-
-C:/msys32/home/howard/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/intrusive_list.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp:
-
-C:/msys32/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp:
+/home/howard/esp/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp:
 /home/howard/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp:

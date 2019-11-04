@@ -1,108 +1,42 @@
 port/esp_hardware.o: \
- C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/esp_hardware.c \
- C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
- C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/newlib.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/config.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/xtensa/config/core-isa.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/reent.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/lock.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/limits.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
- C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
- C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy_poll.h
+ /home/howard/esp/esp-idf/components/mbedtls/port/esp_hardware.c \
+ /home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
+ /home/howard/esp/wrist_makefile/build/include/sdkconfig.h \
+ /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
+ /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
+ /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/howard/esp/esp-idf/components/esp_common/include/esp_system.h \
+ /home/howard/esp/esp-idf/components/esp_common/include/esp_err.h \
+ /home/howard/esp/esp-idf/components/newlib/platform_include/assert.h \
+ /home/howard/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
+ /home/howard/esp/esp-idf/components/esp_common/include/esp_idf_version.h \
+ /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy_poll.h
 
-C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
+/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+/home/howard/esp/wrist_makefile/build/include/sdkconfig.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
+/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdlib.h:
+/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/ieeefp.h:
+/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h:
+/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/newlib.h:
+/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/config.h:
+/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/features.h:
+/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/xtensa/config/core-isa.h:
+/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/reent.h:
+/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/_ansi.h:
+/home/howard/esp/esp-idf/components/esp_common/include/esp_idf_version.h:
 
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/_default_types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/lock.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/stdlib.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/alloca.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/limits.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/machine/types.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/sched.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdio.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/stdio.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_system.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_err.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/assert.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/newlib/include/assert.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp32/include/esp_attr.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
-C:/msys32/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy_poll.h:
+/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy_poll.h:
 /home/howard/esp/esp-idf/components/mbedtls/port/esp_hardware.c:

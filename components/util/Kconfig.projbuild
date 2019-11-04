@@ -1,0 +1,5 @@
+menu "UTIL"
+config UTIL_ENABLE
+bool "Enable util"
+default "y"
+endmenu

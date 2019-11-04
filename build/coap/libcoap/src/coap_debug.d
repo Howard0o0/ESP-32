@@ -39,7 +39,7 @@ libcoap/src/coap_debug.o: \
  C:/msys32/home/howard/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_task.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
@@ -209,7 +209,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/platform_include/sys/select.
 
 C:/msys32/home/howard/esp/esp-idf/components/esp_common/include/esp_task.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 

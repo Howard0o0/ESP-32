@@ -1,0 +1,5 @@
+menu "IC_DRIVER"
+config IC_DRIVER_ENABLE
+bool "Enable ic_driver"
+default "y"
+endmenu

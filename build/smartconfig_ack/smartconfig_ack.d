@@ -19,7 +19,7 @@ smartconfig_ack.o: \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h \
+ C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h \
  C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  C:/msys32/home/howard/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -158,7 +158,7 @@ C:/msys32/home/howard/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-C:/msys32/home/howard/esp/uart_echo_client/build/include/sdkconfig.h:
+C:/msys32/home/howard/esp/wrist_develope/build/include/sdkconfig.h:
 
 C:/msys32/home/howard/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

@@ -1,0 +1,28 @@
+register
+
+phone :
+{
+	"cmd" : "register" 
+}
+
+wrist :
+{
+	"id":"001"
+	"challenge":"..."
+	"encRsp" : "..."
+}
+
+authenticate:
+
+phone :
+{
+	"cmd":"auth"
+	"challenge":"..."
+}
+
+wrist :
+{
+	"id":"001"
+	"status":"success/error"
+	"response" : "... (20bytes) " 
+}
