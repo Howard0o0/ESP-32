@@ -72,8 +72,7 @@ main.o: /home/howard/esp/wrist_makefile/main/main.c \
  /home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/howard/esp/esp-idf/components/driver/include/driver/i2c.h \
  /home/howard/esp/wrist_makefile/main/freertosTest.h \
- /home/howard/esp/wrist_makefile/components/ic_driver/include/taskDoubleFactorAuthenticate.h \
- /home/howard/esp/wrist_makefile/components/ic_driver/include/authenticate.h
+ /home/howard/esp/wrist_makefile/main/taskDoubleFactorAuthenticate.h
 
 /home/howard/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -221,7 +220,5 @@ main.o: /home/howard/esp/wrist_makefile/main/main.c \
 
 /home/howard/esp/wrist_makefile/main/freertosTest.h:
 
-/home/howard/esp/wrist_makefile/components/ic_driver/include/taskDoubleFactorAuthenticate.h:
-
-/home/howard/esp/wrist_makefile/components/ic_driver/include/authenticate.h:
+/home/howard/esp/wrist_makefile/main/taskDoubleFactorAuthenticate.h:
 /home/howard/esp/wrist_makefile/main/./main.c:

@@ -34,7 +34,7 @@ enum FPGA_ACK_ERR
 
 
 
-void UART1_install(void)
+void fpgaDriverInstall(void)
 {
      /* Configure parameters of an UART driver,
      * communication pins and install the driver */
@@ -376,7 +376,7 @@ int lblock_encrype(uint8_t *pu8PlainText,uint8_t *pu8Key,uint8_t *pu8EncrypedDat
 uint8_t au8ChallengeT[199+1] = {0xf5, 00, 00, 00, 0xe, 0x2c, 0x27, 0xdb, 0x81, 0x30, 0x1e, 0x45, 0xe1, 0x36, 0x8f, 0xdc, 0x61, 0x41, 0xa8, 0x9e, 0x21, 0x46, 0x16, 0xdf, 0x1, 0x4a, 0x9d, 0x9f, 0x61, 0x4f, 0x8a, 0x1f, 0x81, 0x10, 0x94, 0x1c, 0x2, 0x27, 0x6, 0x9c, 0x62, 0x2d, 0x16, 0x1c, 0x2, 0x3d, 0x93, 0xc6, 0x22, 0x3d, 0xa1, 0xdd, 0x42, 0x41, 0x89, 0x1e, 0x2, 0x4d, 0x93, 0xc8, 0x42, 00, 00, 00, 0x60, 00, 0x80, 00, 0x2, 00, 0x32, 00, 00, 00, 0x1, 00, 00, 00, 00, 00, 00, 00, 0x1, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 0xb2, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 0xb0, 0xf5};
 void fpga_test(void)
 {
-    UART1_install();
+    fpgaDriverInstall();
     printf("start lblock test \r\n");
 
     /* test 80bit puf */

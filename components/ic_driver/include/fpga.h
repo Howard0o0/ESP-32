@@ -8,11 +8,14 @@
 
 #include <stdint.h>
 
+#define LEN_PUF_RESPONSE 20
+#define LEN_ENC_PUF_RESPONSE 24
+
 
 /*!
- * @brief : fpga connect mcu via uart1 , need to init uart1 before drive fpga
+ * @brief : fpga connect mcu via uart1(22=TXD 23=RXD 21=nRST) , need to init uart1 before drive fpga
  */
-void UART1_install(void);
+void fpgaDriverInstall(void);
 
 
 /*!

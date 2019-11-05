@@ -22,6 +22,138 @@ uint8_t bleRcvBuf[512+1];
 uint8_t bleSendBuf[512+1];
 /* End of global variables */
 
+cJSON *makeJsonForAuthenticate(uint8_t *pu8Challenge)
+{
+    int iRet;
+    uint16_t u16LenDeviceId;
+    uint8_t *pu8PufResp = (uint8_t *)calloc(21,sizeof(uint8_t));
+    uint8_t *pu8DeviceId = (uint8_t *)calloc(10,sizeof(uint8_t));
+
+    getDeviceId(pu8DeviceId, &u16LenDeviceId);
+
+    /* get puf Response */
+    iRet = finigerprintTo20bytesResponse(pu8Challenge,pu8PufResp);
+    if(iRet != 0)
+    {
+        return NULL;
+    }
+
+    /* make json including puf Response */
+    cJSON *cjsonAuth = cJSON_CreateObject();
+    cJSON_AddStringToObject(cjsonAuth,"id",(char *)pu8DeviceId);
+    cJSON_AddStringToObject(cjsonAuth,"state","ok");
+    cJSON_AddStringToObject(cjsonAuth,"response",(char *)pu8PufResp);
+
+    /* free */
+    free(pu8PufResp);
+    free(pu8DeviceId);
+    pu8PufResp = NULL;
+    pu8DeviceId = NULL;
+
+    /* return json */
+    return cjsonAuth;
+
+}
+
+cJSON *makeJsonAuthenticateErr(void)
+{
+    uint8_t *pu8DeviceId = (uint8_t *)calloc(10,sizeof(uint8_t));
+    uint16_t u16LenDeviceId;
+
+    getDeviceId(pu8DeviceId, &u16LenDeviceId);
+    
+    cJSON *cjsonErr = cJSON_CreateObject();
+    cJSON_AddStringToObject(cjsonErr,"id",(char *)pu8DeviceId);
+    cJSON_AddStringToObject(cjsonErr,"state","authenticate error");
+
+    free(pu8DeviceId);
+
+    return cjsonErr;
+}
+
+cJSON *makeJsonRegisterErr(void)
+{
+    uint8_t *pu8DeviceId = (uint8_t *)calloc(10,sizeof(uint8_t));
+    uint16_t u16LenDeviceId;
+
+    getDeviceId(pu8DeviceId, &u16LenDeviceId);
+    
+    cJSON *cjsonErr = cJSON_CreateObject();
+    cJSON_AddStringToObject(cjsonErr,"id",(char *)pu8DeviceId);
+    cJSON_AddStringToObject(cjsonErr,"state","register error");
+
+    free(pu8DeviceId);
+
+    return cjsonErr;
+}
+
+cJSON *makeJsonForRegister(void)
+{
+    cJSON *cjsonRegister = NULL;
+    uint8_t *pu8DeviceId = (uint8_t *)calloc(10,sizeof(uint8_t));
+    uint8_t *pu8PufResp = (uint8_t *)calloc(20+1,sizeof(uint8_t));
+    uint8_t *pu8EncResp = (uint8_t *)calloc(24+1,sizeof(uint8_t));
+    char *pcHexStrChallenge = (char *)calloc(199*2+1,sizeof(char));
+    char *pcHexStrEncResp = (char *)calloc(24*2+1,sizeof(char));
+    uint16_t u16LenDeviceId;
+    uint8_t au8LblockKey[10+1] = {0x01,0x23,0x45,0x67,0x89,0xab,0xcd,0xef,0xfe,0xdc};
+    int iRet;
+    uint8_t u8LenEncResp;
+
+    getDeviceId(pu8DeviceId, &u16LenDeviceId);
+
+
+    /* 1 get fingerprint (Challenge) */
+    uint8_t *pu8Fingerprint = getFingerprintCharacter();
+    
+    /* 2 if get fingerprint failed, return NULL */
+    if(pu8Fingerprint == NULL)
+    {
+        return NULL;
+    }
+    
+    /* 3 if get fingerprint success, try to produce Response using Challenge */
+    iRet = finigerprintTo20bytesResponse(pu8Fingerprint,pu8PufResp);
+    if(iRet != 0)
+    {
+        return NULL;
+    }
+
+    /* 4 if produce Response success,encrype pufResponse */
+    iRet = lblock_encrype(pu8PufResp,au8LblockKey,pu8EncResp,20,&u8LenEncResp);
+    if(iRet != 0)
+    {
+        return NULL;
+    }
+
+    /* 5. turn pu8Fingerprint to pcHexStrChallenge, pu8EncResp to pcHexStrEncResp */
+    hex2str((uint8_t *)pcHexStrChallenge,pu8Fingerprint,199);
+    hex2str((uint8_t *)pcHexStrEncResp,pu8EncResp,24);
+
+    /* 6. make Register json */
+    cjsonRegister = cJSON_CreateObject();
+    cJSON_AddStringToObject(cjsonRegister,"id",(char *)pu8DeviceId);
+    cJSON_AddStringToObject(cjsonRegister,"state","ok");
+    cJSON_AddStringToObject(cjsonRegister,"challenge",pcHexStrChallenge);
+    cJSON_AddStringToObject(cjsonRegister,"ER",pcHexStrEncResp);
+
+
+    /* 7. free calloc space */
+    free(pu8DeviceId);
+    free(pu8PufResp);
+    free(pu8EncResp);
+    free(pcHexStrChallenge);
+    free(pcHexStrEncResp);
+    pu8DeviceId = NULL;
+    pu8PufResp = NULL;
+    pu8EncResp = NULL;
+    pcHexStrChallenge = NULL;
+    pcHexStrEncResp = NULL;
+
+    /* 8. return register json */
+    return cjsonRegister;
+}
+
 cJSON *makeJson_CR(void)
 {
     hex2str((uint8_t *)acEncRespStr_,au8EncResp_,24);
@@ -31,7 +163,6 @@ cJSON *makeJson_CR(void)
     cJSON *cjMsg = cJSON_CreateObject();
     cJSON_AddStringToObject(cjMsg,"id","0B");
     cJSON_AddStringToObject(cjMsg,"state","ok");
-    // cJSON_AddStringToObject(cjMsg,"status","ok");
     cJSON_AddStringToObject(cjMsg,"challenge",acChallengeStr_);
     cJSON_AddStringToObject(cjMsg,"ER",acEncRespStr_);
 
@@ -123,4 +254,9 @@ void registerAndAuth_test(void)
 
     }
     
+}
+
+void getDeviceId(uint8_t *value, uint16_t *len)
+{
+    get_char_value(value, len,5);
 }

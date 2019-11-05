@@ -1383,6 +1383,10 @@ int get_char_value(uint8_t *value, uint16_t *len,int charnum)
 
             return 0;
         }    
+        case 5:{
+            esp_ble_gatts_get_attr_value(SPP[IDX_CHAR_VAL_ID],len,value);
+            break;
+            }
         default:
             break;
     }

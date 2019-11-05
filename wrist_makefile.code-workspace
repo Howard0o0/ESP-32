@@ -55,7 +55,8 @@
 			"esp_task_wdt.h": "c",
 			"gpio.h": "c",
 			"freertosconfig.h": "c",
-			"queue.h": "c"
+			"queue.h": "c",
+			"szm301.h": "c"
 		}
 	}
 }

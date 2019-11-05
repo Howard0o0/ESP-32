@@ -11,7 +11,7 @@
 #define ECHO_TEST_RTS  (UART_PIN_NO_CHANGE)
 #define ECHO_TEST_CTS  (UART_PIN_NO_CHANGE)
 
-void uart2_install(void)
+void szm301DriverInstall(void)
 {
      /* Configure parameters of an UART driver,
      * communication pins and install the driver */

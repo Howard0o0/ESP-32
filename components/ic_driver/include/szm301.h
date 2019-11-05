@@ -9,15 +9,17 @@
 
 #include <stdint.h>
 
+#define LEN_FINGERPRINT 199
+
 /*
  * author       : howard
  * data         : 2019/09/28
  * instrucion   : fingerprint sample module driver
- *                uart2_install() first , then you can call any function bellow you want
+ *                szm301DriverInstall() first , then you can call any function bellow you want
 */
 
-/* SZM301 connect ESP32 with uart2(IO14 IO12) */
-void uart2_install(void);
+/* SZM301 connect ESP32 with uart2(IO26=TXD IO27=RXD) */
+void szm301DriverInstall(void);
 
 /*
  * func : sample fingerprint character , len 199
