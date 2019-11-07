@@ -30,6 +30,7 @@ QueueHandle_t xQueueJsonToSend;
 
 
 /* ************ private function ************************************/
+
 static void taskRcvBleMsg(void);
 static void taskParseJson(void);
 static void taskRegister(void);
@@ -49,7 +50,7 @@ static void taskRcvBleMsg(void)
     while (1)
     {
         /* waiting for ble msg */
-        if(get_char_value(bleRcvBuf,&bleRcvLen,4) != 0) 
+        if(get_char_value(&bleRcvBuf,&bleRcvLen,4) != 0) 
         {
             vTaskDelay(10 / portTICK_RATE_MS);
             continue;
@@ -140,8 +141,6 @@ static void taskParseJson(void)
 
 static void taskRegister(void)
 {
-
-    
     while (1)
     {
         
@@ -167,6 +166,8 @@ static void taskRegister(void)
 static void taskAuthenticate(void)
 {
     char *pcChallengeFromxQue = NULL;
+    cJSON *cjsonAuth = NULL;
+    int iErr;
 
     while (1)
     {
@@ -185,8 +186,10 @@ static void taskAuthenticate(void)
         uint8_t *pu8ChallengeHex = malloc(199*sizeof(uint8_t) + 1);
         HexStrToByte((const char*) pcChallengeFromxQue, (unsigned char*)pu8ChallengeHex, 199*2);
 
+
+
         /* make R json */
-        cJSON *cjsonAuth = makeJsonForAuthenticate(pu8ChallengeHex);
+        cjsonAuth = makeJsonForAuthenticate(pu8ChallengeHex);
         if(cjsonAuth == NULL)
         {
             cjsonAuth = makeJsonAuthenticateErr();
@@ -243,8 +246,6 @@ static void taskSendBleMsg(void)
 
 void mainTaskAuthenticate(void)
 {
-    fpgaDriverInstall();
-    szm301DriverInstall();
 
 
     xTaskCreate(	(TaskFunction_t)taskRcvBleMsg,		/* Pointer to the function that implements the task. */

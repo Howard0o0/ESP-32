@@ -1,3 +1,8 @@
+/*
+ * @author  :   howard
+ * @date    :   2019-10-20
+*/
+
 #ifndef __AUTHENTICATE_H
 #define __AUTHENTICATE_H
 

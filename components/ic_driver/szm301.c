@@ -6,8 +6,8 @@
 
 #define WAIT_RSP_FROM_FINGERMODULE_MS 500
 #define BUF_SIZE 1024
-#define ECHO_TEST_TXD  (GPIO_NUM_26)
-#define ECHO_TEST_RXD  (GPIO_NUM_27)
+#define ECHO_TEST_TXD  (GPIO_NUM_14)
+#define ECHO_TEST_RXD  (GPIO_NUM_12)
 #define ECHO_TEST_RTS  (UART_PIN_NO_CHANGE)
 #define ECHO_TEST_CTS  (UART_PIN_NO_CHANGE)
 
@@ -120,12 +120,12 @@ int sampleFingerprintAndCmpCharacter(uint8_t *pu8Character)
     }
     if(uartRcvLen == 0) //time out when waiting Resp
     {
-        printf("time out when waiting Resp in setSampleFingerTimeOut() \r\n");
+        printf("time out when waiting Resp in sampleFingerprintAndCmpCharacter() \r\n");
         return -2;
     }
     if(uartRcvLen != 8) // finger module will return msgHead(8bytes)+msgBody(199bytes)
     {
-        printf("rcv len error in setSampleFingerTimeOut() : %d bytes \r\n",uartRcvLen);
+        printf("rcv len error in sampleFingerprintAndCmpCharacter() : %d bytes \r\n",uartRcvLen);
         return -3;
     }
 

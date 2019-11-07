@@ -1344,13 +1344,17 @@ void change_char_value(uint8_t * value,int len,int charnum)
             esp_ble_gatts_set_attr_value(SPP[SPP_IDX_SPP_DATA_RECV_VAL],len,value);
             break;
         }    
+        case 5:{
+            esp_ble_gatts_set_attr_value(SID[IDX_CHAR_VAL_ID],len,value);
+            break;
+        }  
         default:
             break;
         
     }
 }
 
-int get_char_value(uint8_t *value, uint16_t *len,int charnum)
+int get_char_value(uint8_t **value, uint16_t *len,int charnum)
 {
 
     switch(charnum){
@@ -1372,19 +1376,22 @@ int get_char_value(uint8_t *value, uint16_t *len,int charnum)
             uint8_t data[1]={0x0};
             const uint8_t * chValue;
             esp_ble_gatts_get_attr_value(SPP[SPP_IDX_SPP_DATA_RECV_VAL],len,&chValue);
-            memcpy(value,chValue,*len);
-            if(value[0] == 0x0)
+            memcpy(((uint8_t *)*value),chValue,*len);
+
+            
+
+            if((*value)[0] == 0x0)
             {
                 // *len=0;
                 return -1;
             }
-            value[*len] = 0;
-            change_char_value(&data,sizeof(data),4);
+            (*value)[*len] = 0;
+            change_char_value(data,sizeof(data),4);
 
             return 0;
         }    
         case 5:{
-            esp_ble_gatts_get_attr_value(SPP[IDX_CHAR_VAL_ID],len,value);
+            esp_ble_gatts_get_attr_value(SID[IDX_CHAR_VAL_ID],len,value);
             break;
             }
         default:

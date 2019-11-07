@@ -28,8 +28,26 @@ cJSON *makeJsonForAuthenticate(uint8_t *pu8Challenge)
     uint16_t u16LenDeviceId;
     uint8_t *pu8PufResp = (uint8_t *)calloc(21,sizeof(uint8_t));
     uint8_t *pu8DeviceId = (uint8_t *)calloc(10,sizeof(uint8_t));
+    char *pcPufRespHexStr = (char *)calloc(20*2+1,sizeof(char));
 
     getDeviceId(pu8DeviceId, &u16LenDeviceId);
+
+    /* match fingerprint with pu8ChallengeHex */
+    printf("waiting finger to match ... \r\n");
+    if( (iRet = sampleFingerprintAndCmpCharacter(pu8Challenge)) != 0)
+    {
+        if (iRet == -1 )
+        {
+            printf("finger print not matched ! \r\n");
+        }
+        else if (iRet == -2 || iRet == -4)
+        {
+            printf("waiting finger timeout ! \r\n");
+        }
+        
+        return NULL;
+    }
+    /* End of match fingerprint with pu8ChallengeHex */
 
     /* get puf Response */
     iRet = finigerprintTo20bytesResponse(pu8Challenge,pu8PufResp);
@@ -38,17 +56,22 @@ cJSON *makeJsonForAuthenticate(uint8_t *pu8Challenge)
         return NULL;
     }
 
+    /* trun pu8PufResp to pcPufRespHexStr */
+    hex2str((uint8_t *)pcPufRespHexStr,pu8PufResp,20);
+
     /* make json including puf Response */
     cJSON *cjsonAuth = cJSON_CreateObject();
     cJSON_AddStringToObject(cjsonAuth,"id",(char *)pu8DeviceId);
     cJSON_AddStringToObject(cjsonAuth,"state","ok");
-    cJSON_AddStringToObject(cjsonAuth,"response",(char *)pu8PufResp);
+    cJSON_AddStringToObject(cjsonAuth,"response",(char *)pcPufRespHexStr);
 
     /* free */
     free(pu8PufResp);
     free(pu8DeviceId);
+    free(pcPufRespHexStr);
     pu8PufResp = NULL;
     pu8DeviceId = NULL;
+    pcPufRespHexStr = NULL;
 
     /* return json */
     return cjsonAuth;
@@ -104,6 +127,7 @@ cJSON *makeJsonForRegister(void)
 
 
     /* 1 get fingerprint (Challenge) */
+    printf("waiting for finger ... \r\n");
     uint8_t *pu8Fingerprint = getFingerprintCharacter();
     
     /* 2 if get fingerprint failed, return NULL */
@@ -256,7 +280,15 @@ void registerAndAuth_test(void)
     
 }
 
+
 void getDeviceId(uint8_t *value, uint16_t *len)
 {
-    get_char_value(value, len,5);
+    const uint8_t *v;
+    uint16_t l;
+    get_char_value(&v, &l,5);
+
+    value[0] = 0x30;
+    value[1] = 0x42;
+    *len = 2;
+
 }

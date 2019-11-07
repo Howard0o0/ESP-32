@@ -18,7 +18,7 @@
 /**/
 //charnum:1,4
 void change_char_value(uint8_t * value,int len,int charnum);
-int get_char_value(uint8_t *value, uint16_t *len,int charnum);
+int get_char_value(uint8_t **value, uint16_t *len,int charnum);
 void server_notify_client(void);
 void server_notify_client_test(uint8_t * value,int len);
 void blue_init();

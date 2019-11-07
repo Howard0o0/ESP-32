@@ -59,7 +59,7 @@
 #define LED_G GPIO_NUM_14
 #define LED_B GPIO_NUM_12
 
-void blink_task(void *pvParameter)
+void blink_task(void)
 {
     /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
        muxed to GPIO on reset already, but some default to other

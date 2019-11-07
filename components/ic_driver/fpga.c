@@ -156,6 +156,7 @@ int finigerprintTo20bytesResponse(uint8_t *au8Fingerprint,uint8_t *au8PufResp)
         uint8_t u8TryTimes = 10;
         while( (iRet = getPufResponse(au8Challenge40bytes+i*8,au8PufResponse4Bytes) != 0)  && (u8TryTimes > 0) )
         {
+            rstFpga();
             printf("fpga not resp ...\r\n");
             u8TryTimes--;
         }
@@ -192,6 +193,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
         {
             return -1;
         }
+        rstFpga();
         iRet = getPufResponse(pu8Challenge8bytes,pu8TmpPufResp4Bytes[iPufIndex++]);
         if(iRet != 0)
         {
@@ -231,6 +233,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
         {
             return -1;
         }
+        rstFpga();
         iRet = getPufResponse(pu8Challenge8bytes2,pu8TmpPufResp4Bytes[iPufIndex++]);
         if(iRet != 0)
         {
@@ -344,6 +347,7 @@ int lblock_encrype(uint8_t *pu8PlainText,uint8_t *pu8Key,uint8_t *pu8EncrypedDat
     uint8_t au8Encryped8btes[8];
     for(i = 0;i < u8EncrypeTimes-1;i++)
     {
+        rstFpga();
         iRet = lblock_encrype_8bytes(pu8PlainText+i*8,pu8Key,au8Encryped8btes);
         if(iRet != 0)
         {

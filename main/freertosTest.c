@@ -86,6 +86,7 @@ void taskNotifyReceive(void *pvParameters)
         {
     		xSemaphoreTake(xSemaphore,portMAX_DELAY);
         }
+		
 		printf("taskNotifyReceive \r\n");
         printf("acChallenge : %s \r\n",acChallenge);
         UBaseType_t leftStackSize = uxTaskGetStackHighWaterMark( NULL );

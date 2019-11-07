@@ -1,7 +1,7 @@
 /*
  * rgb_led.h
  *
- *  Created on: 2019Äê5ÔÂ15ÈÕ
+ *  Created on: 2019ï¿½ï¿½5ï¿½ï¿½15ï¿½ï¿½
  *      Author: Administrator
  */
 
@@ -27,6 +27,6 @@ typedef struct
 #define COLOR_BLUE         0x0000FF
 #define COLOR_PURPLE       0x8B00FF
 
-
+void blink_task(void);
 
 #endif /* MAIN_IC_DRIVER_RGB_LED_H_ */
