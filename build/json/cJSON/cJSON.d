@@ -1,5 +1,6 @@
-cJSON/cJSON.o: /home/howard/esp/esp-idf/components/json/cJSON/cJSON.c \
- /home/howard/esp/esp-idf/components/json/cJSON/cJSON.h
+cJSON/cJSON.o: \
+ C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.c \
+ C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h
 
-/home/howard/esp/esp-idf/components/json/cJSON/cJSON.h:
-/home/howard/esp/esp-idf/components/json/cJSON/cJSON.c:
+C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h:
+/home/waz/esp/esp-idf/components/json/cJSON/cJSON.c:

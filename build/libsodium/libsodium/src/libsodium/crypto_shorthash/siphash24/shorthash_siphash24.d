@@ -1,9 +1,9 @@
 libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.o: \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c:

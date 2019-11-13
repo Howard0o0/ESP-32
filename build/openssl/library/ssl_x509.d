@@ -1,63 +1,63 @@
 library/ssl_x509.o: \
- /home/howard/esp/esp-idf/components/openssl/library/ssl_x509.c \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_x509.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_types.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_code.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl3.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/tls1.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/x509_vfy.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_stack.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_methods.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
- /home/howard/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /home/howard/esp/wrist_makefile/build/include/sdkconfig.h \
- /home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
- /home/howard/esp/esp-idf/components/esp_common/include/esp_types.h \
- /home/howard/esp/esp-idf/components/log/include/esp_log.h \
- /home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/howard/esp/esp-idf/components/log/include/esp_log_internal.h \
- /home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
- /home/howard/esp/esp-idf/components/openssl/include/openssl/ssl.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_x509.h \
- /home/howard/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/library/ssl_x509.c \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_x509.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_types.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_code.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl3.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/tls1.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/x509_vfy.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_stack.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_methods.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_types.h \
+ C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
+ C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/openssl/ssl.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_x509.h \
+ C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_types.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_types.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_code.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_code.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl3.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl3.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/tls1.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/tls1.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/x509_vfy.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/x509_vfy.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_stack.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_stack.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_methods.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_methods.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/home/howard/esp/wrist_makefile/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 
-/home/howard/esp/esp-idf/components/esp_common/include/esp_types.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_types.h:
 
-/home/howard/esp/esp-idf/components/log/include/esp_log.h:
+C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/howard/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/howard/esp/esp-idf/components/log/include/esp_log_internal.h:
+C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/openssl/ssl.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/openssl/ssl.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
 
-/home/howard/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h:
-/home/howard/esp/esp-idf/components/openssl/library/ssl_x509.c:
+C:/msys32/home/waz/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h:
+/home/waz/esp/esp-idf/components/openssl/library/ssl_x509.c:

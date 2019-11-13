@@ -1,7 +1,7 @@
 /*
  * max77752.h
  *
- *  Created on: 2019ï¿½ï¿½5ï¿½ï¿½14ï¿½ï¿½
+ *  Created on: 2019Äê5ÔÂ14ÈÕ
  *      Author: Administrator
  */
 
@@ -78,7 +78,6 @@
 
 
 void MAX77752_Init(void);
-void MAX77752_printAllVolt(void);
 
 
 

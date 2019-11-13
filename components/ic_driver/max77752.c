@@ -147,7 +147,7 @@ void set()
 	vTaskDelay(500 / portTICK_RATE_MS);
 	MAX77752_SetBUCKVoltage(MAX77752_BUCK1, 1.8);	//reset C0
 	vTaskDelay(500 / portTICK_RATE_MS);
-	MAX77752_SetBUCKVoltage(MAX77752_LOAD_SW, 1.8);	//reset A8
+	MAX77752_SetBUCKVoltage(MAX77752_LOAD_SW, 1.8);		//reset A8
 	vTaskDelay(500 / portTICK_RATE_MS);
 	MAX77752_SetBUCKVoltage(MAX77752_BUCK2, 1.5);	//reset 78
 	
@@ -173,28 +173,56 @@ void Set()
 		if(reg_data!=0x7)
 			flag++;
 
-		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK1CNFG1,&reg_data,1);
-		if(reg_data!=0xBF)
-			flag++;
+		// I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK1CNFG1,&reg_data,1);
+		// if(reg_data!=0xBF)
+		// 	flag++;
 
-		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK2CNFG1,&reg_data,1);
-		if(reg_data!=0x90)
-			flag++;
+		// I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK2CNFG1,&reg_data,1);
+		// if(reg_data!=0x90)
+		// 	flag++;
 
-		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK3CNFG1,&reg_data,1);
-		if(reg_data!=0x4A)
-			flag++;
+		// I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK3CNFG1,&reg_data,1);
+		// // if(reg_data!=0x4A)
+		// if(reg_data!=0x45)
+		// 	flag++;
 
-		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_LDO_CNFG1,&reg_data,1);
-		if(reg_data!=0x7)
-			flag++;
+		// I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_LDO_CNFG1,&reg_data,1);
+		// if(reg_data!=0x7)
+		// 	flag++;
 
-		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_CNFG_LSW1,&reg_data,1);
-		if(reg_data!=0x5)
-			flag++;
+		// I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_CNFG_LSW1,&reg_data,1);
+		// if(reg_data!=0x5)
+		// 	flag++;
 
 		if(flag!=0)
 		{
+			I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_GLBL_INT0,&reg_data,1);
+		printf("MAX77752_GLBL_INT0:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_GLBL_INT1,&reg_data,1);
+		printf("MAX77752_GLBL_INT1:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_BUCK_INT, &reg_data, 1);
+		printf("MAX77752_BUCK_INT:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_LSW_INT, &reg_data, 1);
+		printf("MAX77752_LSW_INT:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK_INTM,&reg_data,1);	
+		printf("MAX77752_BUCK_INTM:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_OPMD1, &reg_data, 1);
+		printf("OPMD1:%#x\r\n",reg_data);
+
+		I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_OPMD2, &reg_data, 1);
+		printf("OPMD2:%#x\r\n",reg_data);
+
+		MAX77752_ReadBUCKVoltage(MAX77752_BUCK1);
+		MAX77752_ReadBUCKVoltage(MAX77752_BUCK2);
+		MAX77752_ReadBUCKVoltage(MAX77752_BUCK3);
+		MAX77752_ReadBUCKVoltage(MAX77752_LDO);
+		MAX77752_ReadBUCKVoltage(MAX77752_LOAD_SW);
+
 			set();
 			flag=0;
 		}
@@ -209,51 +237,26 @@ void Set()
 	printf("set finish!!!\r\n");
 }
 
-void MAX77752_printAllVolt(void)
-{
-	uint8_t reg_data = 0;
-	MAX77752_ReadBUCKVoltage(MAX77752_BUCK1);
-	MAX77752_ReadBUCKVoltage(MAX77752_BUCK2);
-	MAX77752_ReadBUCKVoltage(MAX77752_BUCK3);
-	MAX77752_ReadBUCKVoltage(MAX77752_LDO);
-	MAX77752_ReadBUCKVoltage(MAX77752_LOAD_SW);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_GLBL_INT0,&reg_data,1);
-	printf("MAX77752_GLBL_INT0:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_GLBL_INT1,&reg_data,1);
-	printf("MAX77752_GLBL_INT1:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_BUCK_INT, &reg_data, 1);
-	printf("MAX77752_BUCK_INT:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_LSW_INT, &reg_data, 1);
-	printf("MAX77752_LSW_INT:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_BUCK_INTM,&reg_data,1);	
-	printf("MAX77752_BUCK_INTM:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_OPMD1, &reg_data, 1);
-	printf("OPMD1:%#x\r\n",reg_data);
-
-	I2c_Master_Read_Slave(MAX77752_ADDR, MAX77752_OPMD2, &reg_data, 1);
-	printf("OPMD2:%#x\r\n",reg_data);
-
-}
-
 void MAX77752_Init(void)
 {
 	
 	Set();
 
 	int time=0;
-	// while (1)
-	// {
+	while (1)
+	{
 		MAX77752_ReadBUCKVoltage(MAX77752_BUCK1);
 		MAX77752_ReadBUCKVoltage(MAX77752_BUCK2);
 		MAX77752_ReadBUCKVoltage(MAX77752_BUCK3);
 		MAX77752_ReadBUCKVoltage(MAX77752_LDO);
 		MAX77752_ReadBUCKVoltage(MAX77752_LOAD_SW);
+
+		//GPIO get
+		printf("gpio21:%d\r\n",gpio_get_level(GPIO_NUM_21));
+		printf("gpio22:%d\r\n",gpio_get_level(GPIO_NUM_22));
+		printf("gpio23:%d\r\n",gpio_get_level(GPIO_NUM_23));
+
+
 		uint8_t reg_data = 0;
 
 		I2c_Master_Read_Slave(MAX77752_ADDR,MAX77752_GLBL_INT0,&reg_data,1);
@@ -285,7 +288,7 @@ void MAX77752_Init(void)
 		// 	set();
 		// time++;
 
-	// }
+	}
 	
 	
 }

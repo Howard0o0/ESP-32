@@ -216,12 +216,20 @@ void write_byte1(uint8_t Dbyte)
 }
 
 
+
 void lcd_clear(void)
 {
 	SCS_1;
 	delay_us(5);
 	write_byte(0x20);
 	write_byte(0);
+
+  for(int i=0;i<LINE;i++)
+  {
+    for(int j=0;j<LINE_SIZE;j++)
+    LCD_GRAM[i][j]=0;
+  }
+
 	delay_us(5);
 	SCS_0;
 }
@@ -375,3 +383,97 @@ void lcd_print_string(uint8_t x,uint8_t y,const uint8_t *p,uint8_t size)
     }  
      
 }
+
+void lcd_print_photo(uint8_t x,uint8_t y,int type)
+{
+  uint8_t temp,x1,y1;
+  uint8_t y0=y;  
+  const unsigned char *data;
+
+
+  switch(type){
+    case 0:{
+      data=miniunbt;
+      x1=2;
+      y1=16;
+      break; 
+    }
+    case 1:{       
+      data=minibt;
+      x1=2;
+      y1=16;
+      break; 
+    }
+    case 2:{       
+      data=ministep;
+      x1=3;
+      y1=24;
+      break; 
+    }
+    case 3:{       
+      data=minitemperature;
+      x1=3;
+      y1=24;
+      break; 
+    }
+    case 4:{       
+      data=miniheartrate;
+      x1=3;
+      y1=24;
+      break; 
+    }
+    case 5:{       
+      data=minibloodoxygen;
+      x1=3;
+      y1=24;
+      break; 
+    }
+    default:
+    {
+      return;
+      break;
+    }
+      
+  }
+
+  // printf("ID:%d\r\n",type);
+  // for(int l=0;l<y1;l++) printf("1");
+  // printf("\r\n");
+  // int xx=x;
+  // for(int i=0;i<y1;i++)
+  // {
+  //   for(int j=0;j<x1;j++)
+  //   {
+  //     temp=data[i+j*y1];
+  //     for(int k=0;k<8;k++)
+  //     {
+  //       if(temp&0x01) printf("1");
+  //         else printf(" ");
+  //       temp>>=1;
+  //       y++;
+  //     }
+  //   }
+  //   printf("1\r\n");
+  //   y=y0;
+  //   xx++;
+  // }
+
+  for(int i=0;i<y1;i++)
+  {
+    for(int j=0;j<x1;j++)
+    {
+      temp=data[i+j*y1];
+      for(int k=0;k<8;k++)
+      {
+        if(temp&0x01) lcd_drawpoint(x,y,1);
+          else lcd_drawpoint(x,y,0);
+        temp>>=1;
+        y++;
+      }
+    }
+    y=y0;
+    x++;
+  }
+}
+
+

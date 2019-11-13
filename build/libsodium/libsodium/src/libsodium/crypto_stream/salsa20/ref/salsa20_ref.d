@@ -1,21 +1,21 @@
 libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.o: \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.c \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_salsa20.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_stream_salsa20.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/../stream_salsa20.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_salsa20.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_stream_salsa20.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h \
+ c:\msys32\home\waz\esp\esp-idf\components\libsodium\libsodium\src\libsodium\crypto_stream\salsa20\stream_salsa20.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.h
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_salsa20.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_salsa20.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_stream_salsa20.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_stream_salsa20.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/../stream_salsa20.h:
+c:\msys32\home\waz\esp\esp-idf\components\libsodium\libsodium\src\libsodium\crypto_stream\salsa20\stream_salsa20.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.h:
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.c:

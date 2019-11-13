@@ -1,9 +1,9 @@
 libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.o: \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.c \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.c:

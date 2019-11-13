@@ -1,24 +1,24 @@
 libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.o: \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha256.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha256.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha256.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha256.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha256.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c:

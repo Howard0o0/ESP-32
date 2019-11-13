@@ -1,24 +1,24 @@
 libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.o: \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.c \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_sign_edwards25519sha512batch.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
- /home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_sign_edwards25519sha512batch.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_sign_edwards25519sha512batch.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_sign_edwards25519sha512batch.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
 
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
-/home/howard/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.c:

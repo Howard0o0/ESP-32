@@ -1,105 +1,105 @@
 mbedtls/library/ssl_cli.o: \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/library/ssl_cli.c \
- /home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/howard/esp/wrist_makefile/build/include/sdkconfig.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
- /home/howard/esp/esp-idf/components/newlib/platform_include/time.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_internal.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
- /home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/library/ssl_cli.c \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/time.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_internal.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h
 
-/home/howard/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/howard/esp/wrist_makefile/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
 
-/home/howard/esp/esp-idf/components/newlib/platform_include/time.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/time.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_internal.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_internal.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
 
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
-/home/howard/esp/esp-idf/components/mbedtls/mbedtls/library/ssl_cli.c:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
+/home/waz/esp/esp-idf/components/mbedtls/mbedtls/library/ssl_cli.c:

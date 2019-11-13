@@ -1,5 +1,5 @@
-algorithm.o: /home/howard/esp/wrist_makefile/components/util/algorithm.c \
- /home/howard/esp/wrist_makefile/components/util/include/algorithm.h
+algorithm.o: C:/msys32/home/waz/esp/ESP-32/components/util/algorithm.c \
+ C:/msys32/home/waz/esp/ESP-32/components/util/include/algorithm.h
 
-/home/howard/esp/wrist_makefile/components/util/include/algorithm.h:
-/home/howard/esp/wrist_makefile/components/util/./algorithm.c:
+C:/msys32/home/waz/esp/ESP-32/components/util/include/algorithm.h:
+/home/waz/esp/ESP-32/components/util/./algorithm.c:

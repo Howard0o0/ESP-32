@@ -1,3 +1,3 @@
 modbus/functions/mbfuncdiag.o: \
- /home/howard/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c
-/home/howard/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c:
+ C:/msys32/home/waz/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c
+/home/waz/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c:

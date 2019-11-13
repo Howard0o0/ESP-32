@@ -1,3 +1,3 @@
 expat/expat/lib/xmltok_ns.o: \
- /home/howard/esp/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c
-/home/howard/esp/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c:
+ C:/msys32/home/waz/esp/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c
+/home/waz/esp/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c:
