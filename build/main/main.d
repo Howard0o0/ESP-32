@@ -73,7 +73,18 @@ main.o: C:/msys32/home/waz/esp/ESP-32/main/main.c \
  C:/msys32/home/waz/esp/esp-idf/components/driver/include/driver/i2c.h \
  C:/msys32/home/waz/esp/ESP-32/main/freertosTest.h \
  C:/msys32/home/waz/esp/ESP-32/main/taskDoubleFactorAuthenticate.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/rgb_led.h
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/rgb_led.h \
+ C:/msys32/home/waz/esp/ESP-32/main/task_sensor.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
+ C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/uart.h \
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/ls013b7dh03.h \
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160.h \
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160_defs.h \
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30102.h \
+ C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30205.h
 
 C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -224,4 +235,26 @@ C:/msys32/home/waz/esp/ESP-32/main/freertosTest.h:
 C:/msys32/home/waz/esp/ESP-32/main/taskDoubleFactorAuthenticate.h:
 
 C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/rgb_led.h:
+
+C:/msys32/home/waz/esp/ESP-32/main/task_sensor.h:
+
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
+
+C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/uart.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/ls013b7dh03.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160_defs.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30102.h:
+
+C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30205.h:
 /home/waz/esp/ESP-32/main/./main.c:

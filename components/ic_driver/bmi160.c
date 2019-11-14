@@ -1371,7 +1371,6 @@ struct bmi160_sensor_data gyro;
 struct bmi160_int_settg int_config;
 
 int8_t BMI160_init(void){
-    I2c_Master_Init();
 
 	sensor.id = BMI160_I2C_ADDR;
 	sensor.interface = BMI160_I2C_INTF;

@@ -1459,18 +1459,18 @@ void blue_init()
 void change_char_value(uint8_t * value,int len,int charnum)
 {
     switch(charnum){
-        // case 1:{
-        //     esp_ble_gatts_set_attr_value(heart_rate_handle_table[IDX_CHAR_VAL_A],len,value);
-        //     break;
-        //     }
-        // case 2:{
-        //     esp_ble_gatts_set_attr_value(SB[IDX_CHAR_VAL_B],len,value);
-        //     break;
-        //     }
-        // case 3:{
-        //     esp_ble_gatts_set_attr_value(SC[IDX_CHAR_VAL_C],len,value);
-        //     break;
-        //     }
+        case 1:{
+            esp_ble_gatts_set_attr_value(heart_rate_handle_table[IDX_CHAR_VAL_A],len,value);
+            break;
+            }
+        case 2:{
+            esp_ble_gatts_set_attr_value(SB[IDX_CHAR_VAL_B],len,value);
+            break;
+            }
+        case 3:{
+            esp_ble_gatts_set_attr_value(SC[IDX_CHAR_VAL_C],len,value);
+            break;
+            }
         case 4:{
             esp_ble_gatts_set_attr_value(SD[IDX_CHAR_VAL_D],len,value);
             break;

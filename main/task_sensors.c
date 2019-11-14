@@ -11,8 +11,8 @@ void sensor_data_update()
     {
     step=BMI160_read_step_count();
     // bo2andhr=read_spo2_and_ir();
-    // temp=MAX30205_ReadTemperature();
-    // vTaskDelay(5000 / portTICK_RATE_MS);
+    temp=MAX30205_ReadTemperature();
+    vTaskDelay(5000 / portTICK_RATE_MS);
     }
     
 }
@@ -36,6 +36,7 @@ void ble_data_update()
         change_char_value(tempdata,sizeof(tempdata),4);
         vTaskDelay(5000 / portTICK_RATE_MS);
         
+        printf("ble data updated\r\n");
         //test
         // step+=1;
         // temp+=1.1;
@@ -69,7 +70,7 @@ QueueHandle_t mainQueue,sensorQueue;
 void lcd_data_update()
 {
     mainQueue=xQueueCreate(1,sizeof(lcdmain));
-    sensorQueue=xQueueCreate(1,sizeof(lcdmain));
+    sensorQueue=xQueueCreate(1,sizeof(lcdsensor));
     mainSemaphore = xSemaphoreCreateBinary();
     sensorSemaphore = xSemaphoreCreateBinary();
     
@@ -86,11 +87,14 @@ void lcd_data_update()
         B.bo2=bo2andhr->spo2;
         B.tem=temp;
 
-        xQueueSend(mainQueue,&A,10);
-        xQueueSend(sensorQueue,&B,10);
+
+        xQueueSend(mainQueue,(void *)&A,10);
+        xQueueSend(sensorQueue,(void *)&B,10);
         xSemaphoreGive( mainSemaphore );
         xSemaphoreGive( sensorSemaphore );
         vTaskDelay(5000 / portTICK_RATE_MS);
+
+        printf("lcd data updated\r\n");
     }
     
 }
@@ -108,7 +112,7 @@ void lcd_show_main()
         if(xSemaphoreTake( mainSemaphore, 10 ) == pdTRUE)
         {
             char str[100]={0};
-            xQueueReceive( mainQueue, &xMessage, portMAX_DELAY );
+            xQueueReceive( mainQueue, (void *)&xMessage, portMAX_DELAY );
             if(xMessage.bleconnect)
                 lcd_print_photo(0,0,1);
             else
@@ -149,7 +153,7 @@ void lcd_show_sensor()
         if(xSemaphoreTake( sensorSemaphore, 10 ) == pdTRUE)
         {
             char str[100]={0};
-            xQueueReceive( sensorQueue, &xMessage, portMAX_DELAY );
+            xQueueReceive( sensorQueue,(void *)&xMessage, portMAX_DELAY );
 
             if(xMessage.bleconnect)
                 lcd_print_photo(0,0,1);
@@ -163,7 +167,7 @@ void lcd_show_sensor()
 
             lcd_print_photo(0,53,3);
             memset(str,0,sizeof(str)); 
-            sprintf(str, "%f`C", xMessage.tem);
+            sprintf(str, "%.2f`C", xMessage.tem);
             lcd_print_string(33,57,&str,16);
 
             lcd_print_photo(0,78,4);
