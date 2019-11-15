@@ -10,7 +10,10 @@ void sensor_data_update()
     while(1)
     {
     step=BMI160_read_step_count();
-    // bo2andhr=read_spo2_and_ir();
+    if(finger_touch())
+        bo2andhr=read_spo2_and_ir();
+    else 
+        bo2andhr=&bo2andhrinit;
     temp=MAX30205_ReadTemperature();
     vTaskDelay(5000 / portTICK_RATE_MS);
     }
@@ -172,12 +175,18 @@ void lcd_show_sensor()
 
             lcd_print_photo(0,78,4);
             memset(str,0,sizeof(str)); 
-            sprintf(str, "%d", xMessage.hr);
+            if(xMessage.hr==0)
+                sprintf(str, "--");
+            else
+                sprintf(str, "%d", xMessage.hr);
             lcd_print_string(33,82,&str,16);
 
             lcd_print_photo(0,103,5);
             memset(str,0,sizeof(str)); 
-            sprintf(str, "%d%%", xMessage.bo2);
+            if(xMessage.bo2==0)
+                sprintf(str, "--");
+            else
+                sprintf(str, "%d", xMessage.bo2);
             lcd_print_string(33,107,&str,16);
 
 

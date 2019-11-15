@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "max30102.h": "c"
+        "max30102.h": "c",
+        "freertos.h": "c"
     }
 }

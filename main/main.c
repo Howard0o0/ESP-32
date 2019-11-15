@@ -24,11 +24,8 @@
 #include "freertosTest.h"
 #include "taskDoubleFactorAuthenticate.h"
 #include "rgb_led.h"
-<<<<<<< HEAD
 #include "task_sensor.h"
-=======
 #include "max30102.h"
->>>>>>> f759b7b1ee57fdcd09a7fe17c10e352ac863eb78
 
 void allDriverInstall(void);
 
@@ -36,7 +33,7 @@ void allDriverInstall(void);
 void app_main()
 {
 	/* ==========MAX30102 TEST ==================*/
-	MAX30102_test();
+	// MAX30102_test();
 
 	/* ==========End of MAX30102 TEST ==================*/
 
