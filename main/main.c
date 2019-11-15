@@ -24,11 +24,17 @@
 #include "freertosTest.h"
 #include "taskDoubleFactorAuthenticate.h"
 #include "rgb_led.h"
+#include "max30102.h"
 
 void allDriverInstall(void);
 
 void app_main()
 {
+	/* ==========MAX30102 TEST ==================*/
+	MAX30102_test();
+
+	/* ==========End of MAX30102 TEST ==================*/
+
 	/* test fingerprint */
 	// szm301DriverInstall();
 	// while (1)
@@ -125,14 +131,14 @@ void app_main()
 	/*============= End of read ble id ===============*/
 
 	/* =======================Unit Test =====================*/
-	allDriverInstall();
+	// allDriverInstall();
 
-	xTaskCreate(	(TaskFunction_t)mainTaskAuthenticate,		/* Pointer to the function that implements the task. */
-					"defaultTask",	/* Text name for the task.  This is to facilitate debugging only. */
-					1024*16,		/* Stack depth in words. */
-					NULL,		/* We are not using the task parameter. */
-					configMAX_PRIORITIES - 4,			/* This task will run at priority 1. */
-					NULL );	
+	// xTaskCreate(	(TaskFunction_t)mainTaskAuthenticate,		/* Pointer to the function that implements the task. */
+	// 				"defaultTask",	/* Text name for the task.  This is to facilitate debugging only. */
+	// 				1024*16,		/* Stack depth in words. */
+	// 				NULL,		/* We are not using the task parameter. */
+	// 				configMAX_PRIORITIES - 4,			/* This task will run at priority 1. */
+	// 				NULL );	
 	/*=====================End of Unit Test =====================*/
 
 

@@ -1,7 +1,7 @@
 /*
  * max30102.c
  *
- *  Created on: 2019��5��10��
+ *  Created on: 2019??5??10??
  *      Author: Administrator
  */
 
@@ -64,7 +64,7 @@ void waiting_finger(){
 
 spo2Andhr* read_spo2_and_ir(){
 
-//	fresh_first_100_samples();   //����ǰ100������  ,  �����˷�������׼
+//	fresh_first_100_samples();   //?????100??????  ,  ??????????????
 	int result = get_led_data_into_buff();
 	if(result == FALSE){
 		printf("get_led_data_into_buff failed!\r\n");
@@ -165,7 +165,7 @@ static void max30102_read_redLed_and_irLed(uint32_t *pun_red_led, uint32_t *pun_
 	*pun_red_led = 0;
 	*pun_ir_led = 0;
 
-	while(max30102_INT_Capture() == FALSE);   //�ȴ�MAX30102�ж���������
+	while(max30102_INT_Capture() == FALSE);   //???MAX30102?��?????????
 	max3010_clear_status_reg();
 	max30102_read_reg_FIFO(&red_led_1,&red_led_2,&red_led_3,&ir_led_1,&ir_led_2,&ir_led_3);
 	calc_red_ir_led(red_led_1,red_led_2,red_led_3,ir_led_1,ir_led_2,ir_led_3,pun_red_led,pun_ir_led);
@@ -212,7 +212,7 @@ static int get_led_data_into_buff(){
 		while(legalty == FALSE){
 			max30102_read_redLed_and_irLed(&red_led,&ir_led);
 //			printf("red:%i ,ir:%i \r\n",red_led,ir_led);
-			if( (red_led)<100000 || (ir_led)<100000){//������������ݷǷ�(��ָ��û����ȥ)�����¶�
+			if( (red_led)<100000 || (ir_led)<100000){//???????????????(???????????)???????
 				illegal_cnt++;
 			}
 			else
@@ -235,7 +235,7 @@ static void clear_FIFO(){
 		max30102_read_reg_FIFO(&u8_temp_1,&u8_temp_2,&u8_temp_3,&u8_temp_4,&u8_temp_5,&u8_temp_6);
 }
 
-static int finger_touch(){
+int finger_touch(){
 	clear_FIFO();
 	uint8_t u8_temp_1,u8_temp_2,u8_temp_3,u8_temp_4,u8_temp_5,u8_temp_6;
 	uint32_t red_led,ir_led;

@@ -1,5 +1,5 @@
 /*
- * author : ëÞ
+ * author : ï¿½ï¿½
  * NOTE : Remember To IIC_MASTER_INIT first!
  *
  * use instruction: (1)I2c_Master_Init() -> (2)max30102_init() -> (3)waiting_finger() -> (4)read_spo2_and_ir()
@@ -56,22 +56,28 @@ int8_t  ch_hr_valid;    //indicator to show if the heart rate calculation is val
 void max30102_init();
 
 /*
- * func£º Ò»Ö±×èÈûÖ±µ½ÓÐÊÖÖ¸·ÅÉÏ²ÉÑùÆ÷
+ * funcï¿½ï¿½ Ò»Ö±ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 void waiting_finger();
 
 /*
- * func: ¶ÁÈ¡[ÑªÑõ]ÒÔ¼°[ÐÄÂÊ]
- * return: [success]->spo2AndhrÀàÐÍµÄ½á¹¹Ìå£¬°üº¬ÑªÑõºÍÐÄÂÊÁ½¸ö³ÉÔ±£¬¿ÉÒÔÌø×ª²é¿´½á¹¹Ìå¶¨Òå
- *         [fail]->NULL (²É¼¯¹ý³ÌÖÐÊÖÖ¸Àë¿ª)
- * NOTE: Ã¿´Î¶ÁÈ¡ÐèÒª5s
+ * func: ï¿½ï¿½È¡[Ñªï¿½ï¿½]ï¿½Ô¼ï¿½[ï¿½ï¿½ï¿½ï¿½]
+ * return: [success]->spo2Andhrï¿½ï¿½ï¿½ÍµÄ½á¹¹ï¿½å£¬ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½é¿´ï¿½á¹¹ï¿½å¶¨ï¿½ï¿½
+ *         [fail]->NULL (ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ë¿ª)
+ * NOTE: Ã¿ï¿½Î¶ï¿½È¡ï¿½ï¿½Òª5s
  */
 spo2Andhr* read_spo2_and_ir();
 
 /*
- * func : ¿Éµ¥¶Àµ÷ÓÃ£¬´Ë½Ó¿Ú»á°üº¬ÒÔÉÏÈý¸ö½á¹¹½øÐÐ²âÊÔ£¬Í¨¹ý´®¿Ú´òÓ¡ÐÅÏ¢
+ * func : ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½Ë½Ó¿Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½Ð²ï¿½ï¿½Ô£ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ó¡ï¿½ï¿½Ï¢
  */
 void MAX30102_test();
+
+/*
+ * @return :	TRUE (1)
+ * 				FALSE (0)
+*/
+int finger_touch();
 /* ---------------------------------------------------------------- */
 
 
@@ -84,7 +90,7 @@ static void max30102_read_redLed_and_irLed(uint32_t *pun_red_led, uint32_t *pun_
 static int max30102_INT_Capture();
 static void calc_red_ir_led(uint8_t red_1,uint8_t red_2,uint8_t red_3,uint8_t ir_1,uint8_t ir_2,uint8_t ir_3,uint32_t *red_led,uint32_t *ir_led);
 static void max3010_clear_status_reg();
-static int finger_touch();
+
 static void fresh_first_100_samples();
 /* ------------------------------ */
 
