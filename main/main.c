@@ -141,6 +141,7 @@ void app_main()
 
 	// xTaskCreate(lcd_show_main,"lcd_main_test",2048,NULL,1,NULL);
 	xTaskCreate(lcd_show_sensor,"lcd_sensor_test",2048,NULL,2,NULL);
+	
 
 
 	// xTaskCreate(	(TaskFunction_t)mainTaskAuthenticate,		/* Pointer to the function that implements the task. */
