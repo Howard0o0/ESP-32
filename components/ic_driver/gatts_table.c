@@ -451,11 +451,11 @@ static uint8_t find_char_and_desr_index(uint16_t handle)
 
 
 
-uint8_t dataA[10]={0};
-uint8_t dataB[10]={0};
-uint8_t dataC[10]={0};
-uint8_t dataD[2]={0};
-uint8_t dataE[2]={0};
+// uint8_t dataA[10]={0};
+// uint8_t dataB[10]={0};
+// uint8_t dataC[10]={0};
+// uint8_t dataD[2]={0};
+// uint8_t dataE[2]={0};
 
 
 

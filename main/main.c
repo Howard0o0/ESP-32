@@ -184,10 +184,22 @@ void app_main()
 	/* End of test fpga Puf */
 
 	/* test fpga led blink */
-
-	// gpio_set_direction(GPIO_NUM_21,GPIO_MODE_INPUT);
+	// I2c_Master_Init();
+	// MAX77752_Init();
+	// gpio_set_direction(GPIO_NUM_21,GPIO_MODE_OUTPUT);
 	// gpio_set_direction(GPIO_NUM_22,GPIO_MODE_INPUT);
 	// gpio_set_direction(GPIO_NUM_23,GPIO_MODE_INPUT);
+	// rstFpga();
+
+	//GPIO get
+	// printf("gpio21:%d\r\n",gpio_get_level(GPIO_NUM_21));
+	// while(1)
+	// {
+	// 	printf("gpio22:%d\r\n",gpio_get_level(GPIO_NUM_22));
+	// 	printf("gpio23:%d\r\n",gpio_get_level(GPIO_NUM_23));
+	// 	vTaskDelay(1000 / portTICK_RATE_MS);
+	// }
+	
 
 	/* End of test fpga led blink */
 	

@@ -256,10 +256,6 @@ void MAX77752_Init(void)
 		// MAX77752_ReadBUCKVoltage(MAX77752_LDO);
 		// MAX77752_ReadBUCKVoltage(MAX77752_LOAD_SW);
 
-		//GPIO get
-		// printf("gpio21:%d\r\n",gpio_get_level(GPIO_NUM_21));
-		// printf("gpio22:%d\r\n",gpio_get_level(GPIO_NUM_22));
-		// printf("gpio23:%d\r\n",gpio_get_level(GPIO_NUM_23));
 
 
 		// uint8_t reg_data = 0;

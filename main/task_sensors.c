@@ -9,13 +9,13 @@ void sensor_data_update()
 {
     while(1)
     {
-    step=BMI160_read_step_count();
-    if(finger_touch())
-        bo2andhr=read_spo2_and_ir();
-    else 
-        bo2andhr=&bo2andhrinit;
-    temp=MAX30205_ReadTemperature();
-    vTaskDelay(5000 / portTICK_RATE_MS);
+        step=BMI160_read_step_count();
+        if(finger_touch())
+            bo2andhr=read_spo2_and_ir();
+        else 
+            bo2andhr=&bo2andhrinit;
+        temp=MAX30205_ReadTemperature();
+        vTaskDelay(5000 / portTICK_RATE_MS);
     }
     
 }
@@ -40,7 +40,7 @@ void ble_data_update()
         vTaskDelay(5000 / portTICK_RATE_MS);
         
         printf("ble data updated\r\n");
-        //test
+        /*test*/
         // step+=1;
         // temp+=1.1;
         // bo2andhr->spo2+=2;
@@ -53,16 +53,16 @@ void ble_data_update()
 typedef struct lcdA
 {
     bool bleconnect;
-    // uint8_t power;
-    // uint8_t hour;
-    // uint8_t min;
+    uint8_t power;
+    uint8_t hour;
+    uint8_t min;
     uint16_t stepnum;
 }lcdmain;
 
 typedef struct lcdB
 {
     bool bleconnect;
-    // uint8_t power;
+    uint8_t power;
     uint32_t hr;
     uint32_t bo2;
     float tem;
@@ -121,9 +121,10 @@ void lcd_show_main()
             else
              lcd_print_photo(0,0,0);
 
-            // memset(str,0,sizeof(str));
+            memset(str,0,sizeof(str));
             // sprintf(str, "%d%%", xMessage.power);
-            // lcd_print_string(104,0,&str,16);
+            sprintf(str, "96%%");
+            lcd_print_string(104,0,&str,16);
             
 
             lcd_print_photo(0,103,2);
@@ -131,9 +132,10 @@ void lcd_show_main()
             sprintf(str, "%d", xMessage.stepnum);
             lcd_print_string(33,107,&str,16);
 
-            // memset(str,0,sizeof(str));
-            // sprintf(str, "%d:%d", xMessage.hour, xMessage.hour);
-            // lcd_print_string(34,51,&str,24);
+            memset(str,0,sizeof(str));
+            // sprintf(str, "%d:%d", xMessage.hour, xMessage.min);
+            sprintf(str, "11:32");
+            lcd_print_string(34,51,&str,24);
 
             lcd_refresh();
             vTaskDelay(5000 / portTICK_RATE_MS);
@@ -163,9 +165,10 @@ void lcd_show_sensor()
             else
              lcd_print_photo(0,0,0);
 
-            // memset(str,0,sizeof(str));
+            memset(str,0,sizeof(str));
             // sprintf(str, "%d%%", xMessage.power);
-            // lcd_print_string(104,0,&str,16);
+            sprintf(str, "96%%");
+            lcd_print_string(104,0,&str,16);
             
 
             lcd_print_photo(0,53,3);
