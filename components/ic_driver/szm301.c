@@ -25,6 +25,9 @@ void szm301DriverInstall(void)
     uart_set_pin(UART_NUM_2, ECHO_TEST_TXD, ECHO_TEST_RXD, ECHO_TEST_RTS, ECHO_TEST_CTS);
     uart_driver_install(UART_NUM_2, BUF_SIZE * 2, 0, 0, NULL, 0);
 
+        gpio_pad_select_gpio(GPIO_NUM_26);
+        gpio_set_direction(GPIO_NUM_26,GPIO_MODE_OUTPUT);
+        gpio_set_level(GPIO_NUM_26,1);
 }
 
 uint8_t au8UartRcvBuf[BUF_SIZE];
@@ -40,6 +43,7 @@ uint8_t *getFingerprintCharacter(void)
     int uartRcvLen;
     while(i<10)
     {
+        memset(au8UartRcvBuf, 0, BUF_SIZE);
         uartRcvLen = uart_read_bytes(UART_NUM_2, au8UartRcvBuf, BUF_SIZE, WAIT_RSP_FROM_FINGERMODULE_MS / portTICK_RATE_MS);
         if(uartRcvLen > 0)
             break;
@@ -113,6 +117,7 @@ int sampleFingerprintAndCmpCharacter(uint8_t *pu8Character)
     int uartRcvLen;
     while(i<10)
     {
+        memset(au8UartRcvBuf, 0, BUF_SIZE);
         uartRcvLen = uart_read_bytes(UART_NUM_2, au8UartRcvBuf, BUF_SIZE, WAIT_RSP_FROM_FINGERMODULE_MS / portTICK_RATE_MS);
         if(uartRcvLen > 0)
             break;
@@ -155,6 +160,7 @@ int setMatchGrade(uint8_t grade)
     int uartRcvLen;
     while(i<10)
     {
+        memset(au8UartRcvBuf, 0, BUF_SIZE);
         uartRcvLen = uart_read_bytes(UART_NUM_2, au8UartRcvBuf, BUF_SIZE, WAIT_RSP_FROM_FINGERMODULE_MS / portTICK_RATE_MS);
         if(uartRcvLen > 0)
             break;
@@ -193,6 +199,7 @@ int getMatchGrade(void)
     int uartRcvLen;
     while(i<10)
     {
+        memset(au8UartRcvBuf, 0, BUF_SIZE);
         uartRcvLen = uart_read_bytes(UART_NUM_2, au8UartRcvBuf, BUF_SIZE, WAIT_RSP_FROM_FINGERMODULE_MS / portTICK_RATE_MS);
         if(uartRcvLen > 0)
             break;

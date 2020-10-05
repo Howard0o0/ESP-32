@@ -111,7 +111,7 @@ int getPufResponse(uint8_t *challenge,uint8_t *Response)
     // print_hex((char *)cmd,11);
     
     /* 3. try to receive rsp */
-    uint8_t u8RcvBuf[50];
+    uint8_t u8RcvBuf[50] = {0};
     uint8_t u8RcvLen;
     u8RcvLen = rcvRspFromFPGA(u8RcvBuf);
     /* 3.1 exam len */

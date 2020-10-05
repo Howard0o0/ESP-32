@@ -1521,7 +1521,7 @@ int get_char_value(uint8_t **value, uint16_t *len,int charnum)
                 return -1;
             }
             (*value)[*len] = 0;
-            change_char_value(data,sizeof(data),4);
+            change_char_value(data,sizeof(data),5);
 
             return 0;
         }    
