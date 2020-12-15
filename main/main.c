@@ -43,7 +43,7 @@ void app_main()
 	// {
 	// 	gpio_pad_select_gpio(GPIO_NUM_26);
 	// 	gpio_set_direction(GPIO_NUM_26,GPIO_MODE_OUTPUT);
-    	//         gpio_set_level(GPIO_NUM_26,1);
+    // 	gpio_set_level(GPIO_NUM_26,1);
 	// 	uint8_t *pu8Challenge = getFingerprintCharacter();
 	// 	if(pu8Challenge != NULL)
 	// 	{
@@ -134,14 +134,13 @@ void app_main()
 
 	/* =======================Unit Test =====================*/
 	allDriverInstall();
-        
-	// xTaskCreate(sensor_data_update,"sensor_test",2048,NULL,5,NULL);
+	// // xTaskCreate(sensor_data_update,"sensor_test",2048,NULL,5,NULL);
 
-	// xTaskCreate(ble_data_update,"ble_test",2048,NULL,3,NULL);
-	// xTaskCreate(lcd_data_update,"lcd_test",2048,NULL,3,NULL);
+	// // xTaskCreate(ble_data_update,"ble_test",2048,NULL,3,NULL);
+	// // xTaskCreate(lcd_data_update,"lcd_test",2048,NULL,3,NULL);
 
-	// xTaskCreate(lcd_show_main,"lcd_main_test",2048,NULL,1,NULL);
-	// xTaskCreate(lcd_show_sensor,"lcd_sensor_test",2048,NULL,2,NULL);
+	// // xTaskCreate(lcd_show_main,"lcd_main_test",2048,NULL,1,NULL);
+	// // xTaskCreate(lcd_show_sensor,"lcd_sensor_test",2048,NULL,2,NULL);
 	
 
 
