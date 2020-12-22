@@ -8,6 +8,8 @@
 #include "freertos/task.h"
 #include "util.h"
 #include "max77752.h"
+#include <stdlib.h>
+#include <string.h>
 
 // #define UART1_TXD  (GPIO_NUM_2)
 // #define UART1_RXD  (GPIO_NUM_15)
@@ -177,6 +179,45 @@ int finigerprintTo20bytesResponse(uint8_t *au8Fingerprint, uint8_t *au8PufResp)
         }
 
         return 0;
+}
+
+static bool IsSame(uint8_t* str1, uint8_t* str2, size_t len)
+{
+        for (size_t i = 0; i < len; i++)
+        {
+                if (str1[i] != str2[i])
+                        return false;
+        }
+
+        return true;
+}
+
+/* should be free by caller */
+uint8_t* GetLblockKey(int *len)
+{
+        uint8_t dirty_keys[3][11];
+        int try_times = 3;
+        *len = 0;
+        
+        for (int try = 0; try < try_times; try ++)
+        {
+                if (get80bitPuf(dirty_keys[0]) != 0)
+                        continue;
+                if (get80bitPuf(dirty_keys[1]) != 0)
+                        continue;
+                if (get80bitPuf(dirty_keys[2]) != 0)
+                        continue;
+
+                if (IsSame(dirty_keys[0], dirty_keys[1], 10) && IsSame(dirty_keys[0], dirty_keys[2], 10))
+                {
+                        uint8_t* *key = (uint8_t* *)malloc(11);
+                        memcpy(key, dirty_keys[0],10);
+                        *len = 10;
+                        return key;
+                }
+        }
+
+        return NULL;
 }
 
 int get80bitPuf(uint8_t *pu8Puf80Bit)
@@ -389,16 +430,30 @@ void fpga_test(void)
 
         while (1)
         {
-                iRet = get80bitPuf(au8Puf80bit);
-                if (iRet == 0) //success
-                {
-                        printf("80bit puf : \r\n");
-                        print_hex((char *)au8Puf80bit, 10);
+                int lblock_key_len = 0;
+                uint8_t* lblock_key = GetLblockKey(&lblock_key_len);
+                if(lblock_key){
+                        printf("lblock key : \r\n");
+                        print_hex((char *)lblock_key, 10);
+                        free(lblock_key);
                 }
                 else
                 {
-                        printf("get 80bit puf failed \r\n");
+                        printf("get lblock key failed \r\n");
                 }
+
+                
+
+                // iRet = get80bitPuf(au8Puf80bit);
+                // if (iRet == 0) //success
+                // {
+                //         printf("80bit puf : \r\n");
+                //         print_hex((char *)au8Puf80bit, 10);
+                // }
+                // else
+                // {
+                //         printf("get 80bit puf failed \r\n");
+                // }
 
                 vTaskDelay(1000 / portTICK_RATE_MS);
         }

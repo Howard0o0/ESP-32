@@ -74,7 +74,7 @@ cJSON *makeJsonForAuthenticate(uint8_t *pu8Challenge)
         /* make json including puf Response */
         cJSON *cjsonAuth = cJSON_CreateObject();
         cJSON_AddStringToObject(cjsonAuth, "id", (char *)pu8DeviceId);
-        cJSON_AddStringToObject(cjsonAuth, "state", "ok");
+        cJSON_AddStringToObject(cjsonAuth, "status", "ok");
         cJSON_AddStringToObject(cjsonAuth, "response", (char *)pcPufRespHexStr);
 
         /* free */
@@ -98,7 +98,7 @@ cJSON *makeJsonAuthenticateErr(void)
 
         cJSON *cjsonErr = cJSON_CreateObject();
         cJSON_AddStringToObject(cjsonErr, "id", (char *)pu8DeviceId);
-        cJSON_AddStringToObject(cjsonErr, "state", "authenticate error");
+        cJSON_AddStringToObject(cjsonErr, "status", "authenticate error");
 
         free(pu8DeviceId);
 
@@ -114,7 +114,7 @@ cJSON *makeJsonRegisterErr(void)
 
         cJSON *cjsonErr = cJSON_CreateObject();
         cJSON_AddStringToObject(cjsonErr, "id", (char *)pu8DeviceId);
-        cJSON_AddStringToObject(cjsonErr, "state", "register error");
+        cJSON_AddStringToObject(cjsonErr, "status", "register error");
 
         free(pu8DeviceId);
 
@@ -197,7 +197,7 @@ cJSON *makeJsonForRegister(void)
         /* 6. make Register json */
         cjsonRegister = cJSON_CreateObject();
         cJSON_AddStringToObject(cjsonRegister, "id", (char *)pu8DeviceId);
-        cJSON_AddStringToObject(cjsonRegister, "state", "ok");
+        cJSON_AddStringToObject(cjsonRegister, "status", "ok");
         cJSON_AddStringToObject(cjsonRegister, "challenge", pcHexStrChallenge);
         cJSON_AddStringToObject(cjsonRegister, "ER", pcHexStrEncResp);
 
@@ -225,7 +225,7 @@ cJSON *makeJson_CR(void)
         // Hex2Str((const char *)au8Challenge_,acChallengeStr_,199);
         cJSON *cjMsg = cJSON_CreateObject();
         cJSON_AddStringToObject(cjMsg, "id", "0B");
-        cJSON_AddStringToObject(cjMsg, "state", "ok");
+        cJSON_AddStringToObject(cjMsg, "status", "ok");
         cJSON_AddStringToObject(cjMsg, "challenge", acChallengeStr_);
         cJSON_AddStringToObject(cjMsg, "ER", acEncRespStr_);
 
@@ -240,7 +240,7 @@ void makeJson_test_CR(void)
         // Hex2Str((const char *)au8Challenge_,acChallengeStr_,199);
         cJSON *cjMsg = cJSON_CreateObject();
         cJSON_AddStringToObject(cjMsg, "id", "0a");
-        cJSON_AddStringToObject(cjMsg, "state", "ok");
+        cJSON_AddStringToObject(cjMsg, "status", "ok");
         // cJSON_AddStringToObject(cjMsg,"status","ok");
         cJSON_AddStringToObject(cjMsg, "challenge", acChallengeStr_);
         cJSON_AddStringToObject(cjMsg, "ER", acEncRespStr_);
@@ -257,7 +257,7 @@ cJSON *makeJson_R(void)
         hex2str((uint8_t *)pc8Resp, au8Resp, 20);
         cJSON *cjMsg = cJSON_CreateObject();
         cJSON_AddStringToObject(cjMsg, "id", "0B");
-        cJSON_AddStringToObject(cjMsg, "state", "ok");
+        cJSON_AddStringToObject(cjMsg, "status", "ok");
         cJSON_AddStringToObject(cjMsg, "response", pc8Resp);
 
         return cjMsg;
@@ -268,7 +268,7 @@ void makeJson_test_R(void)
         hex2str((uint8_t *)pc8Resp, au8Resp, 20);
         cJSON *cjMsg = cJSON_CreateObject();
         cJSON_AddStringToObject(cjMsg, "id", "0A");
-        cJSON_AddStringToObject(cjMsg, "state", "ok");
+        cJSON_AddStringToObject(cjMsg, "status", "ok");
         cJSON_AddStringToObject(cjMsg, "response", pc8Resp);
         char *pcjson = cJSON_Print(cjMsg);
         /* send json to phone */
