@@ -15,7 +15,7 @@ void sensor_data_update()
         else 
             bo2andhr=&bo2andhrinit;
         temp=MAX30205_ReadTemperature();
-        vTaskDelay(5000 / portTICK_RATE_MS);
+        vTaskDelay(3000 / portTICK_RATE_MS);
     }
     
 }
@@ -37,7 +37,7 @@ void ble_data_update()
         change_char_value(bo2data,sizeof(bo2data),2);
         change_char_value(hrdata,sizeof(hrdata),3);
         change_char_value(tempdata,sizeof(tempdata),4);
-        vTaskDelay(5000 / portTICK_RATE_MS);
+        vTaskDelay(3000 / portTICK_RATE_MS);
         
         printf("ble data updated\r\n");
         /*test*/
@@ -45,7 +45,9 @@ void ble_data_update()
         // temp+=1.1;
         // bo2andhr->spo2+=2;
         // bo2andhr->hr+=3;
-        // printf("step:%d\r\ntemp:%f\r\nbo2:%d\r\nhr:%d\r\n",step,temp,bo2andhr->spo2,bo2andhr->hr);
+        printf("+++++++++++++++++++++\r\n");
+        printf("step:%d\r\ntemp:%f\r\nbo2:%d\r\nhr:%d\r\n",step,temp,bo2andhr->spo2,bo2andhr->hr);
+        printf("+++++++++++++++++++++\r\n");
     }
     
 }

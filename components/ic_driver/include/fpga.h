@@ -87,9 +87,14 @@ int lblock_encrype(uint8_t *pu8PlainText,uint8_t *pu8Key,uint8_t *pu8EncrypedDat
 /* len : 10Byte */
 bool GetLblockKey(uint8_t *lblock_key);
 
+bool IsSame(uint8_t *data1, uint8_t *data2, int len);
+
 int rcvRspFromFPGA(uint8_t *rcvBuf);
 int sendCmdToFPGA(uint8_t *cmd,uint8_t cmdLen);
+
+
 void fpga_test(void);
+void TestLblockKeyStability();
 
 
 #endif

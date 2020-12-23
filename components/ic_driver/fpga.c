@@ -236,21 +236,21 @@ uint8_t *FindMajorElementIndex(uint8_t **data, int first_dim_len,
         return NULL;
 }
 
-
-
 int get80bitPuf(uint8_t *pu8Puf80Bit)
 {
+#define PUF_SAMPLE_TIMES 20
+
         int iRet;
         int iStableFlag = 0;
         int iErrorTimes = 0;
         uint8_t pu8Challenge8bytes[] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};
         uint8_t pu8Challenge8bytes2[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-        uint8_t pu8TmpPufResp4Bytes[10][4];
+        uint8_t pu8TmpPufResp4Bytes[PUF_SAMPLE_TIMES][4];
 
         int i;
         int iPufIndex = 0;
         /* get head 4 bytes puf */
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < PUF_SAMPLE_TIMES; i++)
         {
                 if (iErrorTimes >= 3)
                 {
@@ -265,7 +265,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 }
         }
 
-        uint8_t *stable_puf_a = FindMajorElementIndex((uint8_t**)pu8TmpPufResp4Bytes, 10, 4);
+        uint8_t *stable_puf_a = FindMajorElementIndex((uint8_t **)pu8TmpPufResp4Bytes, PUF_SAMPLE_TIMES, 4);
         if (!stable_puf_a)
         {
                 printf("can't get stable puf ! \r\n");
@@ -296,7 +296,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
         /* get tail 4 bytes puf */
         iErrorTimes = 0;
         iPufIndex = 0;
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < PUF_SAMPLE_TIMES; i++)
         {
                 if (iErrorTimes >= 3)
                 {
@@ -311,13 +311,13 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 }
         }
 
-        uint8_t *stable_puf_b = FindMajorElementIndex((uint8_t**)pu8TmpPufResp4Bytes, 10, 4);
+        uint8_t *stable_puf_b = FindMajorElementIndex((uint8_t **)pu8TmpPufResp4Bytes, PUF_SAMPLE_TIMES, 4);
         if (!stable_puf_b)
         {
                 printf("can't get stable puf ! \r\n");
                 return -1;
         }
-        memcpy(pu8Puf80Bit, stable_puf_b, 4);
+        memcpy(pu8Puf80Bit+4, stable_puf_b, 4);
 
         // i = 0;
         // iStableFlag = 0;
@@ -539,4 +539,44 @@ void fpga_test(void)
         // }
 
         /* test C-R */
+}
+
+void TestLblockKeyStability()
+{
+        fpgaDriverInstall();
+        /* test 80bit puf */
+        uint8_t standard_key[10];
+        uint8_t curr_key[10];
+        int iRet;
+
+        while (GetLblockKey(standard_key) != true)
+                ;
+        printf("standard key : ");
+        print_hex((char *)standard_key, 10);
+
+        while (1)
+        {
+
+                iRet = GetLblockKey(curr_key);
+                if (iRet != true) //success
+                {
+                        printf("get lblock key failed \r\n");
+                        vTaskDelay(1000 / portTICK_RATE_MS);
+                        continue;
+                }
+
+                printf("lblock key : \r\n");
+                print_hex((char *)curr_key, 10);
+                if (!IsSame(standard_key, curr_key, 10))
+                {
+                        printf("not match !!\r\n\r\n");
+                        printf("standard key : ");
+                        print_hex((char *)standard_key, 10);
+                        printf("curr key : ");
+                        print_hex((char *)curr_key, 10);
+
+                        while (1)
+                                vTaskDelay(1000 / portTICK_RATE_MS);
+                }
+        }
 }
