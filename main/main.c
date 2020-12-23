@@ -130,6 +130,10 @@ void app_main()
 
         /* =======================Unit Test =====================*/
         // allDriverInstall();
+
+        iic_test();
+
+
         // xTaskCreate(sensor_data_update,"sensor_test",2048,NULL,5,NULL);
 
         // xTaskCreate(ble_data_update,"ble_test",2048,NULL,3,NULL);
@@ -175,7 +179,7 @@ void app_main()
         /* End of test fpga Puf */
 
         /*+++++++++++++++test lblock key stability++++++++++++++*/
-        TestLblockKeyStability();
+        // TestLblockKeyStability();
         /*---------------test lblock key stability--------------*/
 
         /* test fpga led blink */
@@ -225,7 +229,7 @@ void allDriverInstall(void)
 
         szm301DriverInstall();
         BMI160_init();
-        max30102_init();
+        // max30102_init();
 
         // MAX77752_Init();
         // lcd_init();

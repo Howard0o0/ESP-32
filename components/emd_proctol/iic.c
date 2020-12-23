@@ -270,7 +270,7 @@ void iic_test()
     ESP_ERROR_CHECK(I2c_Master_Init());
 
     xTaskCreate(i2c_test_task, "i2c_test_task0", 1024 * 2, (void *)0, 10, NULL);
-    xTaskCreate(i2c_test_task, "i2c_test_task1", 1024 * 2, (void *)0, 10, NULL);
+//     xTaskCreate(i2c_test_task, "i2c_test_task1", 1024 * 2, (void *)0, 10, NULL);
 }
 
 /******************* (C) COPYRIGHT 2014 ANO TECH *****END OF FILE************/

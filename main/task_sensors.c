@@ -10,11 +10,12 @@ void sensor_data_update()
     while(1)
     {
         step=BMI160_read_step_count();
-        if(finger_touch())
-            bo2andhr=read_spo2_and_ir();
-        else 
-            bo2andhr=&bo2andhrinit;
-        temp=MAX30205_ReadTemperature();
+        // if(finger_touch())
+        //     bo2andhr=read_spo2_and_ir();
+        // else 
+        //     bo2andhr=&bo2andhrinit;
+        
+        // temp=MAX30205_ReadTemperature();
         vTaskDelay(3000 / portTICK_RATE_MS);
     }
     

@@ -87,10 +87,11 @@ int rcvRspFromFPGA(uint8_t *rcvBuf)
                 iReadBytes = uart_read_bytes(UART_NUM_1, rcvBuf, BUF_SIZE, WAIT_MSG_FROM_FPGA_MS / portTICK_RATE_MS);
                 if (iReadBytes > 0)
                 {
-                        printf("rcvFromFpag: ");
-                        print_hex((char *)rcvBuf, iReadBytes);
+                        // printf("rcvFromFpag: ");
+                        // print_hex((char *)rcvBuf, iReadBytes);
                         return iReadBytes;
                 }
+                printf("waiting fpga response...\r\n");
         }
 
         return 0;
@@ -565,7 +566,7 @@ void TestLblockKeyStability()
                         continue;
                 }
 
-                printf("lblock key : \r\n");
+                printf("lblock key : ");
                 print_hex((char *)curr_key, 10);
                 if (!IsSame(standard_key, curr_key, 10))
                 {
@@ -575,8 +576,8 @@ void TestLblockKeyStability()
                         printf("curr key : ");
                         print_hex((char *)curr_key, 10);
 
-                        while (1)
-                                vTaskDelay(1000 / portTICK_RATE_MS);
+                        // while (1)
+                        //         vTaskDelay(1000 / portTICK_RATE_MS);
                 }
         }
 }
