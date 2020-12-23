@@ -136,6 +136,13 @@ cJSON *makeJsonForRegister(void)
 
         getDeviceId(pu8DeviceId, &u16LenDeviceId);
 
+        if(GetLblockKey(au8LblockKey) == false){
+                printf("[ERROR] get lblock key failed!\r\n");
+                return NULL;
+        }
+        printf("[INFO] lblock key : ");
+        print_hex((char*)au8LblockKey,10);
+
         /* 1 get fingerprint (Challenge) */
         printf("waiting for finger ... \r\n");
         uint8_t *pu8Fingerprint = getFingerprintCharacter();
