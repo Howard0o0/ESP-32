@@ -181,44 +181,62 @@ int finigerprintTo20bytesResponse(uint8_t *au8Fingerprint, uint8_t *au8PufResp)
         return 0;
 }
 
-static bool IsSame(uint8_t* str1, uint8_t* str2, size_t len)
+void PrintHex(uint8_t *data, int len)
 {
-        for (size_t i = 0; i < len; i++)
+        for (int i = 0; i < len; i++)
+                printf("%02X ", data[i]);
+        printf("\r\n");
+}
+
+bool IsSame(uint8_t *data1, uint8_t *data2, int len)
+{
+        if (!data1 || !data2)
+                return false;
+
+        for (int i = 0; i < len; i++)
         {
-                if (str1[i] != str2[i])
+                if (data1[i] != data2[i])
                         return false;
         }
 
         return true;
 }
 
-/* should be free by caller */
-uint8_t* GetLblockKey(int *len)
+uint8_t *FindMajorElementIndex(uint8_t **data, int first_dim_len,
+                               int second_dim_len)
 {
-        uint8_t dirty_keys[3][11];
-        int try_times = 3;
-        *len = 0;
-        
-        for (int try = 0; try < try_times; try ++)
-        {
-                if (get80bitPuf(dirty_keys[0]) != 0)
-                        continue;
-                if (get80bitPuf(dirty_keys[1]) != 0)
-                        continue;
-                if (get80bitPuf(dirty_keys[2]) != 0)
-                        continue;
+        uint8_t *candidata = NULL;
+        int count = 0;
 
-                if (IsSame(dirty_keys[0], dirty_keys[1], 10) && IsSame(dirty_keys[0], dirty_keys[2], 10))
+        for (int i = 0; i < first_dim_len; i++)
+        {
+
+                uint8_t *curr_tgt = (uint8_t *)data + i * second_dim_len;
+                if (IsSame(curr_tgt, candidata, second_dim_len))
+                        ++count;
+
+                else if (--count < 0)
                 {
-                        uint8_t* *key = (uint8_t* *)malloc(11);
-                        memcpy(key, dirty_keys[0],10);
-                        *len = 10;
-                        return key;
+                        candidata = curr_tgt;
+                        count = 1;
                 }
         }
 
+        count = 0;
+        for (int i = 0; i < first_dim_len; i++)
+        {
+                uint8_t *curr_tgt = (uint8_t *)data + i * second_dim_len;
+                if (IsSame(curr_tgt, candidata, second_dim_len))
+                        ++count;
+        }
+
+        if (count > first_dim_len / 2)
+                return candidata;
+
         return NULL;
 }
+
+
 
 int get80bitPuf(uint8_t *pu8Puf80Bit)
 {
@@ -247,26 +265,33 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 }
         }
 
-        i = 0;
-        while (pu8TmpPufResp4Bytes[i + 5] != NULL)
-        {
-                if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
-                {
-                        iStableFlag = 1;
-                        memcpy(pu8Puf80Bit, pu8TmpPufResp4Bytes[i], 4);
-                        break;
-                }
-                i++;
-        }
-        if (!iStableFlag)
+        uint8_t *stable_puf_a = FindMajorElementIndex((uint8_t**)pu8TmpPufResp4Bytes, 10, 4);
+        if (!stable_puf_a)
         {
                 printf("can't get stable puf ! \r\n");
                 return -1;
         }
+        memcpy(pu8Puf80Bit, stable_puf_a, 4);
+        // i = 0;
+        // while (pu8TmpPufResp4Bytes[i + 5] != NULL)
+        // {
+        //         if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
+        //         {
+        //                 iStableFlag = 1;
+        //                 memcpy(pu8Puf80Bit, pu8TmpPufResp4Bytes[i], 4);
+        //                 break;
+        //         }
+        //         i++;
+        // }
+        // if (!iStableFlag)
+        // {
+        //         printf("can't get stable puf ! \r\n");
+        //         return -1;
+        // }
 
         /* get tail 4 bytes puf */
         iErrorTimes = 0;
@@ -286,33 +311,49 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 }
         }
 
-        i = 0;
-        iStableFlag = 0;
-        while (pu8TmpPufResp4Bytes[i + 5] != NULL)
-        {
-                if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
-                    (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
-                {
-                        iStableFlag = 1;
-                        memcpy(pu8Puf80Bit + 4, pu8TmpPufResp4Bytes[i], 4);
-                        break;
-                }
-                i++;
-        }
-        if (!iStableFlag)
+        uint8_t *stable_puf_b = FindMajorElementIndex((uint8_t**)pu8TmpPufResp4Bytes, 10, 4);
+        if (!stable_puf_b)
         {
                 printf("can't get stable puf ! \r\n");
                 return -1;
         }
+        memcpy(pu8Puf80Bit, stable_puf_b, 4);
+
+        // i = 0;
+        // iStableFlag = 0;
+        // while (pu8TmpPufResp4Bytes[i + 5] != NULL)
+        // {
+        //         if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
+        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
+        //         {
+        //                 iStableFlag = 1;
+        //                 memcpy(pu8Puf80Bit + 4, pu8TmpPufResp4Bytes[i], 4);
+        //                 break;
+        //         }
+        //         i++;
+        // }
+        // if (!iStableFlag)
+        // {
+        //         printf("can't get stable puf ! \r\n");
+        //         return -1;
+        // }
 
         /* fill the last 2 bytes of au8Puf80bit */
         pu8Puf80Bit[8] = 0xF0;
         pu8Puf80Bit[9] = 0x51;
 
         return 0;
+}
+
+/* len : 10Byte */
+bool GetLblockKey(uint8_t *lblock_key)
+{
+        if (get80bitPuf(lblock_key) == 0)
+                return true;
+        return false;
 }
 
 int lblock_encrype_8bytes(uint8_t *pu8PlainText, uint8_t *pu8Key, uint8_t *pu8EncrypedData)
@@ -430,19 +471,16 @@ void fpga_test(void)
 
         while (1)
         {
-                int lblock_key_len = 0;
-                uint8_t* lblock_key = GetLblockKey(&lblock_key_len);
-                if(lblock_key){
+                iRet = GetLblockKey(au8Puf80bit);
+                if (iRet == true) //success
+                {
                         printf("lblock key : \r\n");
-                        print_hex((char *)lblock_key, 10);
-                        free(lblock_key);
+                        print_hex((char *)au8Puf80bit, 10);
                 }
                 else
                 {
                         printf("get lblock key failed \r\n");
                 }
-
-                
 
                 // iRet = get80bitPuf(au8Puf80bit);
                 // if (iRet == 0) //success

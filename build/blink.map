@@ -20068,6 +20068,8 @@ Discarded input sections
                 0x00000000        0x4 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .literal.finigerprintTo20bytesResponse
                 0x00000000       0x1c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .literal.PrintHex
+                0x00000000       0x10 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .literal.lblock_encrype_8bytes
                 0x00000000       0x38 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .literal.lblock_encrype
@@ -20081,6 +20083,10 @@ Discarded input sections
                 0x00000000       0x35 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .text.finigerprintTo20bytesResponse
                 0x00000000       0x77 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .rodata.PrintHex.str1.4
+                0x00000000        0xa C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .text.PrintHex
+                0x00000000       0x26 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .rodata.lblock_encrype_8bytes.str1.4
                 0x00000000       0x2c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .text.lblock_encrype_8bytes
@@ -20089,8 +20095,8 @@ Discarded input sections
                 0x00000000       0xd6 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .data.au8ChallengeT
                 0x00000000       0xc8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .xt.lit        0x00000000       0x60 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .xt.prop       0x00000000      0x6d8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .xt.lit        0x00000000       0x70 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .xt.prop       0x00000000      0x6f0 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .literal.validate_accel_self_test
                 0x00000000        0x4 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(bmi160.o)
  .literal.unpack_accel_frame
@@ -45812,7 +45818,7 @@ END GROUP
                 0x3ffc0c80                _bss_end = ABSOLUTE (.)
                 0x00000001                ASSERT (((_bss_end - ORIGIN (dram0_0_seg)) <= LENGTH (dram0_0_seg)), DRAM segment data does not fit.)
 
-.flash.rodata   0x3f400020     0x80a4
+.flash.rodata   0x3f400020     0x80c0
                 0x3f400020                _rodata_start = ABSOLUTE (.)
  *(.rodata_desc .rodata_desc.*)
  .rodata_desc   0x3f400020      0x100 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
@@ -46672,103 +46678,106 @@ END GROUP
  .rodata.rcvRspFromFPGA.str1.4
                 0x3f407058        0xe C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  *fill*         0x3f407066        0x2 
- .rodata        0x3f407068        0x8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .rodata.get80bitPuf.str1.4
+                0x3f407068       0x19 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ *fill*         0x3f407081        0x3 
+ .rodata        0x3f407084        0x8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .rodata.fpga_test.str1.4
-                0x3f407070       0x3c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                0x3f40708c       0x3c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .rodata.GPIO_PIN_MUX_REG
-                0x3f4070ac       0xa0 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
-                0x3f4070ac                GPIO_PIN_MUX_REG
+                0x3f4070c8       0xa0 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+                0x3f4070c8                GPIO_PIN_MUX_REG
  .rodata.rtc_gpio_desc
-                0x3f40714c      0x820 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
-                0x3f40714c                rtc_gpio_desc
+                0x3f407168      0x820 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+                0x3f407168                rtc_gpio_desc
  .rodata.spi_flash_clk_cfg_reg
-                0x3f40796c       0x30 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+                0x3f407988       0x30 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
  .rodata.print_hex.str1.4
-                0x3f40799c        0x8 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+                0x3f4079b8        0x8 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
                                   0xa (size before relaxing)
- .rodata        0x3f4079a4       0x34 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .rodata        0x3f4079d8       0x3c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .rodata        0x3f4079c0       0x34 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .rodata        0x3f4079f4       0x3c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
  *libesp_event.a:default_event_loop.*(.rodata.esp_system_event_debug.str1.4 .rodata.esp_event_loop_create_default.str1.4 .rodata.esp_event_send_to_default_loop)
  *libesp_event.a:esp_event.*(.rodata.handler_instances_add.str1.4 .rodata.base_node_add_handler.str1.4 .rodata.loop_node_add_handler.str1.4 .rodata.esp_event_loop_create.str1.4 .rodata.esp_event_loop_run.str1.4 .rodata.esp_event_loop_run_task.str1.4 .rodata.esp_event_handler_register_with.str1.4 .rodata.esp_event_handler_unregister_with.str1.4 .rodata.__func__$7040 .rodata.__func__$7027 .rodata.__func__$7007 .rodata.__func__$6991 .rodata.__func__$6968 .rodata.__func__$6931 .rodata.__func__$6922)
  *(.irom1.text)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x3f407a14                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x3f407a30                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table .gcc_except_table.*)
  .gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
-                0x3f407a14       0x1d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
- *fill*         0x3f407a31        0x3 
+                0x3f407a30       0x1d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
+ *fill*         0x3f407a4d        0x3 
  .gcc_except_table.__gxx_personality_v0
-                0x3f407a34       0x1c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+                0x3f407a50       0x1c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
  .gcc_except_table.__cxa_call_unexpected
-                0x3f407a50       0x18 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+                0x3f407a6c       0x18 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
  .gcc_except_table.__cxa_get_globals_fast
-                0x3f407a68        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+                0x3f407a84        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
  .gcc_except_table._GLOBAL__sub_D___cxa_get_globals_fast
-                0x3f407a6c        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+                0x3f407a88        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
-                0x3f407a70                . = ((. + 0x3) & 0xfffffffc)
-                0x3f407a70                __eh_frame = ABSOLUTE (.)
+                0x3f407a8c                . = ((. + 0x3) & 0xfffffffc)
+                0x3f407a8c                __eh_frame = ABSOLUTE (.)
  *(.eh_frame)
- .eh_frame      0x3f407a70       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_divdi3.o)
- .eh_frame      0x3f407a98       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_moddi3.o)
- .eh_frame      0x3f407ac0       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_udivdi3.o)
- .eh_frame      0x3f407ae8       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_umoddi3.o)
- .eh_frame      0x3f407b10       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_op.o)
- .eh_frame      0x3f407b38       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_opv.o)
- .eh_frame      0x3f407b60       0x58 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(si_class_type_info.o)
- .eh_frame      0x3f407bb8       0x40 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(class_type_info.o)
- .eh_frame      0x3f407bf8       0x70 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
- .eh_frame      0x3f407c68      0x118 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
- .eh_frame      0x3f407d80       0x8c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
- .eh_frame      0x3f407e0c      0x110 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .eh_frame      0x3f407f1c      0x148 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
-                0x3f408068                . = ((. + 0x7) & 0xfffffffc)
- *fill*         0x3f408064        0x4 
-                0x3f408068                __init_array_start = ABSOLUTE (.)
+ .eh_frame      0x3f407a8c       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_divdi3.o)
+ .eh_frame      0x3f407ab4       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_moddi3.o)
+ .eh_frame      0x3f407adc       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_udivdi3.o)
+ .eh_frame      0x3f407b04       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_umoddi3.o)
+ .eh_frame      0x3f407b2c       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_op.o)
+ .eh_frame      0x3f407b54       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_opv.o)
+ .eh_frame      0x3f407b7c       0x58 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(si_class_type_info.o)
+ .eh_frame      0x3f407bd4       0x40 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(class_type_info.o)
+ .eh_frame      0x3f407c14       0x70 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
+ .eh_frame      0x3f407c84      0x118 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+ .eh_frame      0x3f407d9c       0x8c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+ .eh_frame      0x3f407e28      0x110 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .eh_frame      0x3f407f38      0x148 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+                0x3f408084                . = ((. + 0x7) & 0xfffffffc)
+ *fill*         0x3f408080        0x4 
+                0x3f408084                __init_array_start = ABSOLUTE (.)
  *(EXCLUDE_FILE(*crtbegin.* *crtend.*) .ctors .ctors.*)
- .ctors         0x3f408068        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp_common\libesp_common.a(ipc.o)
- .ctors         0x3f40806c        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(wifi_init.o)
- .ctors         0x3f408070        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
- .ctors         0x3f408074        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(reset_reason.o)
-                0x3f408078                __init_array_end = ABSOLUTE (.)
+ .ctors         0x3f408084        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp_common\libesp_common.a(ipc.o)
+ .ctors         0x3f408088        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(wifi_init.o)
+ .ctors         0x3f40808c        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+ .ctors         0x3f408090        0x4 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(reset_reason.o)
+                0x3f408094                __init_array_end = ABSOLUTE (.)
  *crtbegin.*(.dtors)
  *(EXCLUDE_FILE(*crtend.*) .dtors)
- .dtors         0x3f408078        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+ .dtors         0x3f408094        0x4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x3f40807c                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x3f408098                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x3f40807c                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x3f408098                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x3f40807c                soc_reserved_memory_region_start = ABSOLUTE (.)
+                0x3f408098                soc_reserved_memory_region_start = ABSOLUTE (.)
  *(.reserved_memory_address)
  .reserved_memory_address
-                0x3f40807c       0x28 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(soc_memory_layout.o)
+                0x3f408098       0x28 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(soc_memory_layout.o)
  .reserved_memory_address
-                0x3f4080a4       0x20 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
-                0x3f4080c4                soc_reserved_memory_region_end = ABSOLUTE (.)
-                0x3f4080c4                _rodata_end = ABSOLUTE (.)
-                0x3f4080c4                _lit4_start = ABSOLUTE (.)
+                0x3f4080c0       0x20 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+                0x3f4080e0                soc_reserved_memory_region_end = ABSOLUTE (.)
+                0x3f4080e0                _rodata_end = ABSOLUTE (.)
+                0x3f4080e0                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x3f4080c4                _lit4_end = ABSOLUTE (.)
-                0x3f4080c4                . = ALIGN (0x4)
-                0x3f4080c4                _thread_local_start = ABSOLUTE (.)
+                0x3f4080e0                _lit4_end = ABSOLUTE (.)
+                0x3f4080e0                . = ALIGN (0x4)
+                0x3f4080e0                _thread_local_start = ABSOLUTE (.)
  *(.tdata)
  *(.tdata.*)
  *(.tbss)
  *(.tbss.*)
-                0x3f4080c4                _thread_local_end = ABSOLUTE (.)
-                0x3f4080c4                . = ALIGN (0x4)
+                0x3f4080e0                _thread_local_end = ABSOLUTE (.)
+                0x3f4080e0                . = ALIGN (0x4)
 
-.flash.text     0x400d0018    0x172ff
+.flash.text     0x400d0018    0x17247
                 0x400d0018                _stext = .
                 0x400d0018                _text_start = ABSOLUTE (.)
  *(EXCLUDE_FILE(*libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_init.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_time.* *libsoc.a:lldesc.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_RTT_esp32.* *libgcov.a *libesp_ringbuf.a) .literal EXCLUDE_FILE(*libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_init.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_time.* *libsoc.a:lldesc.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_RTT_esp32.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .literal.* EXCLUDE_FILE(*libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_init.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_time.* *libsoc.a:lldesc.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_RTT_esp32.* *libgcov.a *libesp_ringbuf.a) .text EXCLUDE_FILE(*libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_init.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_time.* *libsoc.a:lldesc.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_RTT_esp32.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .text.* EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram.*)
@@ -47556,15 +47565,18 @@ END GROUP
  .literal.getPufResponse
                 0x400d0af0        0x0 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
                                  0x10 (size before relaxing)
+ .literal.FindMajorElementIndex
+                0x400d0af0        0x0 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                                  0x8 (size before relaxing)
  .literal.get80bitPuf
                 0x400d0af0        0x8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                 0x3c (size before relaxing)
+                                 0x28 (size before relaxing)
  .literal.GetLblockKey
                 0x400d0af8        0x0 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                 0x1c (size before relaxing)
+                                  0x4 (size before relaxing)
  .literal.fpga_test
                 0x400d0af8        0xc C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                 0x2c (size before relaxing)
+                                 0x28 (size before relaxing)
  .literal       0x400d0b04        0x0 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
                                   0x8 (size before relaxing)
  .literal.spi_flash_hal_init
@@ -48728,332 +48740,339 @@ END GROUP
                 0x400e5880       0xac C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
                                  0xb0 (size before relaxing)
                 0x400e5880                getPufResponse
+ .text.FindMajorElementIndex
+                0x400e592c       0x66 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                0x400e592c                FindMajorElementIndex
+ *fill*         0x400e5992        0x2 
  .text.get80bitPuf
-                0x400e592c      0x1f5 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                0x1fd (size before relaxing)
-                0x400e592c                get80bitPuf
- *fill*         0x400e5b21        0x3 
+                0x400e5994      0x10a C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                                0x11a (size before relaxing)
+                0x400e5994                get80bitPuf
+ *fill*         0x400e5a9e        0x2 
  .text.GetLblockKey
-                0x400e5b24       0x5c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                 0x70 (size before relaxing)
-                0x400e5b24                GetLblockKey
+                0x400e5aa0       0x14 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                                 0x18 (size before relaxing)
+                0x400e5aa0                GetLblockKey
  .text.fpga_test
-                0x400e5b80       0x3f C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                                 0x59 (size before relaxing)
-                0x400e5b80                fpga_test
- *fill*         0x400e5bbf        0x1 
- .text          0x400e5bc0       0x7d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+                0x400e5ab4       0x37 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                                 0x49 (size before relaxing)
+                0x400e5ab4                fpga_test
+ *fill*         0x400e5aeb        0x1 
+ .text          0x400e5aec       0x7d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
                                  0x81 (size before relaxing)
-                0x400e5bc0                _vsnprintf_r
-                0x400e5c18                vsnprintf
- *fill*         0x400e5c3d        0x3 
+                0x400e5aec                _vsnprintf_r
+                0x400e5b44                vsnprintf
+ *fill*         0x400e5b69        0x3 
  .text.spi_flash_hal_init
-                0x400e5c40       0xbd C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+                0x400e5b6c       0xbd C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
                                  0xc1 (size before relaxing)
-                0x400e5c40                spi_flash_hal_init
- *fill*         0x400e5cfd        0x3 
+                0x400e5b6c                spi_flash_hal_init
+ *fill*         0x400e5c29        0x3 
  .text.print_hex
-                0x400e5d00       0x26 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+                0x400e5c2c       0x26 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
                                  0x2a (size before relaxing)
-                0x400e5d00                print_hex
- *fill*         0x400e5d26        0x2 
- .text          0x400e5d28      0x844 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+                0x400e5c2c                print_hex
+ *fill*         0x400e5c52        0x2 
+ .text          0x400e5c54      0x844 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
                                 0x864 (size before relaxing)
-                0x400e6198                _Unwind_GetGR
-                0x400e62b4                _Unwind_GetCFA
-                0x400e62bc                _Unwind_SetGR
-                0x400e62d8                _Unwind_GetIP
-                0x400e62e0                _Unwind_GetIPInfo
-                0x400e62f0                _Unwind_SetIP
-                0x400e62f8                _Unwind_GetLanguageSpecificData
-                0x400e6300                _Unwind_GetRegionStart
-                0x400e6308                _Unwind_FindEnclosingFunction
-                0x400e631c                _Unwind_GetDataRelBase
-                0x400e6324                _Unwind_GetTextRelBase
-                0x400e632c                _Unwind_RaiseException
-                0x400e63dc                _Unwind_ForcedUnwind
-                0x400e643c                _Unwind_Resume
-                0x400e64a4                _Unwind_Resume_or_Rethrow
-                0x400e650c                _Unwind_DeleteException
-                0x400e651c                _Unwind_Backtrace
- .text          0x400e656c      0xbc6 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+                0x400e60c4                _Unwind_GetGR
+                0x400e61e0                _Unwind_GetCFA
+                0x400e61e8                _Unwind_SetGR
+                0x400e6204                _Unwind_GetIP
+                0x400e620c                _Unwind_GetIPInfo
+                0x400e621c                _Unwind_SetIP
+                0x400e6224                _Unwind_GetLanguageSpecificData
+                0x400e622c                _Unwind_GetRegionStart
+                0x400e6234                _Unwind_FindEnclosingFunction
+                0x400e6248                _Unwind_GetDataRelBase
+                0x400e6250                _Unwind_GetTextRelBase
+                0x400e6258                _Unwind_RaiseException
+                0x400e6308                _Unwind_ForcedUnwind
+                0x400e6368                _Unwind_Resume
+                0x400e63d0                _Unwind_Resume_or_Rethrow
+                0x400e6438                _Unwind_DeleteException
+                0x400e6448                _Unwind_Backtrace
+ .text          0x400e6498      0xbc6 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
                                 0xbe2 (size before relaxing)
-                0x400e6ef8                __register_frame_info_bases
-                0x400e6f34                __register_frame_info
-                0x400e6f44                __register_frame
-                0x400e6f5c                __register_frame_info_table_bases
-                0x400e6f90                __register_frame_info_table
-                0x400e6fa0                __register_frame_table
-                0x400e6fb4                __deregister_frame_info_bases
-                0x400e7048                __deregister_frame_info
-                0x400e7054                __deregister_frame
-                0x400e7068                _Unwind_Find_FDE
- *fill*         0x400e7132        0x2 
+                0x400e6e24                __register_frame_info_bases
+                0x400e6e60                __register_frame_info
+                0x400e6e70                __register_frame
+                0x400e6e88                __register_frame_info_table_bases
+                0x400e6ebc                __register_frame_info_table
+                0x400e6ecc                __register_frame_table
+                0x400e6ee0                __deregister_frame_info_bases
+                0x400e6f74                __deregister_frame_info
+                0x400e6f80                __deregister_frame
+                0x400e6f94                _Unwind_Find_FDE
+ *fill*         0x400e705e        0x2 
  .text.__cxa_guard_dummy
-                0x400e7134        0x5 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
-                0x400e7134                __cxa_guard_dummy
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x0 
- *fill*         0x400e7139        0x3 
+                0x400e7060        0x5 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
+                0x400e7060                __cxa_guard_dummy
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x0 
+ *fill*         0x400e7065        0x3 
  .text.esp_task_wdt_isr_user_handler
-                0x400e713c        0x5 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(task_wdt.o)
-                0x400e713c                esp_task_wdt_isr_user_handler
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x0 
- *fill*         0x400e7141        0x3 
+                0x400e7068        0x5 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(task_wdt.o)
+                0x400e7068                esp_task_wdt_isr_user_handler
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x0 
+ *fill*         0x400e706d        0x3 
  .text.heap_caps_match
-                0x400e7144       0x32 C:/msys32/home/waz/esp/ESP-32/build/heap\libheap.a(heap_caps.o)
-                0x400e7144                heap_caps_match
- *fill*         0x400e7176        0x0 
- *fill*         0x400e7176        0x0 
- *fill*         0x400e7176        0x0 
- *fill*         0x400e7176        0x2 
+                0x400e7070       0x32 C:/msys32/home/waz/esp/ESP-32/build/heap\libheap.a(heap_caps.o)
+                0x400e7070                heap_caps_match
+ *fill*         0x400e70a2        0x0 
+ *fill*         0x400e70a2        0x0 
+ *fill*         0x400e70a2        0x0 
+ *fill*         0x400e70a2        0x2 
  .text.newlib_include_locks_impl
-                0x400e7178        0x5 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(locks.o)
-                0x400e7178                newlib_include_locks_impl
- *fill*         0x400e717d        0x0 
- *fill*         0x400e717d        0x0 
- *fill*         0x400e717d        0x3 
+                0x400e70a4        0x5 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(locks.o)
+                0x400e70a4                newlib_include_locks_impl
+ *fill*         0x400e70a9        0x0 
+ *fill*         0x400e70a9        0x0 
+ *fill*         0x400e70a9        0x3 
  .text._system_r
-                0x400e7180        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
-                0x400e7180                _system_r
- *fill*         0x400e718b        0x0 
- *fill*         0x400e718b        0x0 
- *fill*         0x400e718b        0x1 
+                0x400e70ac        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
+                0x400e70ac                _system_r
+ *fill*         0x400e70b7        0x0 
+ *fill*         0x400e70b7        0x0 
+ *fill*         0x400e70b7        0x1 
  .text._getpid_r
-                0x400e718c        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
-                0x400e718c                _getpid_r
- *fill*         0x400e7197        0x1 
- .text._kill_r  0x400e7198        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
-                0x400e7198                _kill_r
- *fill*         0x400e71a3        0x1 
+                0x400e70b8        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
+                0x400e70b8                _getpid_r
+ *fill*         0x400e70c3        0x1 
+ .text._kill_r  0x400e70c4        0xb C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
+                0x400e70c4                _kill_r
+ *fill*         0x400e70cf        0x1 
  .text.newlib_include_syscalls_impl
-                0x400e71a4        0x5 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
-                0x400e71a4                newlib_include_syscalls_impl
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x0 
- *fill*         0x400e71a9        0x3 
+                0x400e70d0        0x5 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(syscalls.o)
+                0x400e70d0                newlib_include_syscalls_impl
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x0 
+ *fill*         0x400e70d5        0x3 
  .text.mutexattr_check
-                0x400e71ac       0x11 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread.o)
- *fill*         0x400e71bd        0x0 
- *fill*         0x400e71bd        0x0 
- *fill*         0x400e71bd        0x0 
- *fill*         0x400e71bd        0x3 
+                0x400e70d8       0x11 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread.o)
+ *fill*         0x400e70e9        0x0 
+ *fill*         0x400e70e9        0x0 
+ *fill*         0x400e70e9        0x0 
+ *fill*         0x400e70e9        0x3 
  .text.pthread_include_pthread_impl
-                0x400e71c0        0x5 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread.o)
-                0x400e71c0                pthread_include_pthread_impl
- *fill*         0x400e71c5        0x3 
+                0x400e70ec        0x5 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread.o)
+                0x400e70ec                pthread_include_pthread_impl
+ *fill*         0x400e70f1        0x3 
  .text.find_value
-                0x400e71c8       0x14 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread_local_storage.o)
- *fill*         0x400e71dc        0x0 
- *fill*         0x400e71dc        0x0 
- *fill*         0x400e71dc        0x0 
+                0x400e70f4       0x14 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread_local_storage.o)
+ *fill*         0x400e7108        0x0 
+ *fill*         0x400e7108        0x0 
+ *fill*         0x400e7108        0x0 
  .text.pthread_include_pthread_local_storage_impl
-                0x400e71dc        0x5 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread_local_storage.o)
-                0x400e71dc                pthread_include_pthread_local_storage_impl
- *fill*         0x400e71e1        0x0 
- *fill*         0x400e71e1        0x3 
+                0x400e7108        0x5 C:/msys32/home/waz/esp/ESP-32/build/pthread\libpthread.a(pthread_local_storage.o)
+                0x400e7108                pthread_include_pthread_local_storage_impl
+ *fill*         0x400e710d        0x0 
+ *fill*         0x400e710d        0x3 
  .text.s_compare_reserved_regions
-                0x400e71e4        0xc C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(memory_layout_utils.o)
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
- *fill*         0x400e71f0        0x0 
+                0x400e7110        0xc C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(memory_layout_utils.o)
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
+ *fill*         0x400e711c        0x0 
  .text.esp_flash_chip_driver_initialized
-                0x400e71f0       0x10 C:/msys32/home/waz/esp/ESP-32/build/spi_flash\libspi_flash.a(esp_flash_api.o)
-                0x400e71f0                esp_flash_chip_driver_initialized
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
- *fill*         0x400e7200        0x0 
+                0x400e711c       0x10 C:/msys32/home/waz/esp/ESP-32/build/spi_flash\libspi_flash.a(esp_flash_api.o)
+                0x400e711c                esp_flash_chip_driver_initialized
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
+ *fill*         0x400e712c        0x0 
  .text._ZL12read_uleb128PKhPm
-                0x400e7200       0x25 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
- *fill*         0x400e7225        0x3 
+                0x400e712c       0x25 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+ *fill*         0x400e7151        0x3 
  .text._ZL12read_sleb128PKhPl
-                0x400e7228       0x3c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+                0x400e7154       0x3c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
  .text._ZL16get_adjusted_ptrPKSt9type_infoS1_PPv
-                0x400e7264       0x34 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
- *fill*         0x400e7298        0x0 
+                0x400e7190       0x34 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
+ *fill*         0x400e71c4        0x0 
  .text.uart_find_pattern_from_last
-                0x400e7298       0x24 C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(uart.o)
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
- *fill*         0x400e72bc        0x0 
+                0x400e71c4       0x24 C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(uart.o)
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
+ *fill*         0x400e71e8        0x0 
  .text.is_wifi_clk_peripheral
-                0x400e72bc       0x26 C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(periph_ctrl.o)
- *fill*         0x400e72e2        0x0 
- *fill*         0x400e72e2        0x0 
- *fill*         0x400e72e2        0x0 
- *fill*         0x400e72e2        0x0 
- *fill*         0x400e72e2        0x2 
+                0x400e71e8       0x26 C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(periph_ctrl.o)
+ *fill*         0x400e720e        0x0 
+ *fill*         0x400e720e        0x0 
+ *fill*         0x400e720e        0x0 
+ *fill*         0x400e720e        0x0 
+ *fill*         0x400e720e        0x2 
  .text.esp_pm_impl_waiti
-                0x400e72e4        0x8 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(pm_esp32.o)
-                0x400e72e4                esp_pm_impl_waiti
- *fill*         0x400e72ec        0x0 
- *fill*         0x400e72ec        0x0 
- *fill*         0x400e72ec        0x0 
- *fill*         0x400e72ec        0x0 
- *fill*         0x400e72ec        0x0 
- .text.IsSame   0x400e72ec       0x24 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- *fill*         0x400e7310        0x0 
- *fill*         0x400e7310        0x0 
- *fill*         0x400e7310        0x0 
+                0x400e7210        0x8 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(pm_esp32.o)
+                0x400e7210                esp_pm_impl_waiti
+ *fill*         0x400e7218        0x0 
+ *fill*         0x400e7218        0x0 
+ *fill*         0x400e7218        0x0 
+ *fill*         0x400e7218        0x0 
+ *fill*         0x400e7218        0x0 
+ *fill*         0x400e7218        0x0 
+ .text.IsSame   0x400e7218       0x3e C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                0x400e7218                IsSame
+ *fill*         0x400e7256        0x0 
+ *fill*         0x400e7256        0x0 
+ *fill*         0x400e7256        0x0 
+ *fill*         0x400e7256        0x2 
  .text.pthread_setcancelstate
-                0x400e7310        0x7 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
-                0x400e7310                pthread_setcancelstate
- *fill*         0x400e7317        0x0 
- *fill*         0x400e7317        0x0 
- *fill*         0x400e7317        0x0 
- *fill*         0x400e7317        0x0 
+                0x400e7258        0x7 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+                0x400e7258                pthread_setcancelstate
+ *fill*         0x400e725f        0x0 
+ *fill*         0x400e725f        0x0 
+ *fill*         0x400e725f        0x0 
+ *fill*         0x400e725f        0x0 
  *libesp_eth.a:esp_eth_mac_dm9051.*(.literal.emac_dm9051_set_mediator .literal.emac_dm9051_del .literal.dm9051_register_read .literal.emac_dm9051_set_duplex .literal.emac_dm9051_set_speed .literal.dm9051_verify_id .literal.dm9051_get_mac_addr .literal.dm9051_register_write .literal.emac_dm9051_task .literal.dm9051_stop .literal.dm9051_start .literal.emac_dm9051_set_link .literal.emac_dm9051_set_promiscuous .literal.dm9051_set_mac_addr .literal.dm9051_setup_default .literal.dm9051_clear_multicast_table .literal.dm9051_memory_peek .literal.dm9051_memory_read .literal.dm9051_memory_write .literal.emac_dm9051_transmit .literal.emac_dm9051_receive .literal.emac_dm9051_read_phy_reg .literal.emac_dm9051_write_phy_reg .literal.emac_dm9051_get_addr .literal.emac_dm9051_set_addr .literal.emac_dm9051_deinit .literal.dm9051_reset .literal.emac_dm9051_init .literal.esp_eth_mac_new_dm9051 .text.emac_dm9051_set_mediator .text.emac_dm9051_del .text.dm9051_register_read .text.emac_dm9051_set_duplex .text.emac_dm9051_set_speed .text.dm9051_verify_id .text.dm9051_get_mac_addr .text.dm9051_register_write .text.emac_dm9051_task .text.dm9051_stop .text.dm9051_start .text.emac_dm9051_set_link .text.emac_dm9051_set_promiscuous .text.dm9051_set_mac_addr .text.dm9051_setup_default .text.dm9051_clear_multicast_table .text.dm9051_memory_peek .text.dm9051_memory_read .text.dm9051_memory_write .text.emac_dm9051_transmit .text.emac_dm9051_receive .text.emac_dm9051_read_phy_reg .text.emac_dm9051_write_phy_reg .text.emac_dm9051_get_addr .text.emac_dm9051_set_addr .text.emac_dm9051_deinit .text.dm9051_reset .text.emac_dm9051_init .text.esp_eth_mac_new_dm9051)
  *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_esp32_set_mediator .literal.emac_esp32_del .literal.emac_esp32_receive .literal.emac_esp32_rx_task .literal.emac_esp32_transmit .literal.emac_esp32_set_promiscuous .literal.emac_esp32_set_link .literal.emac_esp32_set_duplex .literal.emac_esp32_set_speed .literal.emac_esp32_get_addr .literal.emac_esp32_set_addr .literal.emac_esp32_read_phy_reg .literal.emac_esp32_write_phy_reg .literal.emac_esp32_deinit .literal.emac_esp32_init_smi_gpio .literal.emac_esp32_init .literal.esp_eth_mac_new_esp32 .text.emac_esp32_set_mediator .text.emac_esp32_del .text.emac_esp32_receive .text.emac_esp32_rx_task .text.emac_esp32_transmit .text.emac_esp32_set_promiscuous .text.emac_esp32_set_link .text.emac_esp32_set_duplex .text.emac_esp32_set_speed .text.emac_esp32_get_addr .text.emac_esp32_set_addr .text.emac_esp32_read_phy_reg .text.emac_esp32_write_phy_reg .text.emac_esp32_deinit .text.emac_esp32_init_smi_gpio .text.emac_esp32_init .text.esp_eth_mac_new_esp32)
  *libesp_event.a:esp_event.*(.literal.handler_instances_remove_all .literal.base_node_remove_all_handler .literal.loop_node_remove_all_handler .literal.handler_instances_add .literal.base_node_add_handler .literal.loop_node_add_handler .literal.handler_instances_remove .literal.base_node_remove_handler .literal.loop_node_remove_handler .literal.esp_event_loop_create .literal.esp_event_loop_run .literal.esp_event_loop_run_task .literal.esp_event_loop_delete .literal.esp_event_handler_register_with .literal.esp_event_handler_unregister_with .literal.esp_event_post_to .text.handler_execute .text.handler_instances_remove_all .text.base_node_remove_all_handler .text.loop_node_remove_all_handler .text.handler_instances_add .text.base_node_add_handler .text.loop_node_add_handler .text.handler_instances_remove .text.base_node_remove_handler .text.loop_node_remove_handler .text.esp_event_loop_create .text.esp_event_loop_run .text.esp_event_loop_run_task .text.esp_event_loop_delete .text.esp_event_handler_register_with .text.esp_event_handler_unregister_with .text.esp_event_post_to .text.esp_event_dump)
@@ -49064,8 +49083,8 @@ END GROUP
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x400e7317                _text_end = ABSOLUTE (.)
-                0x400e7317                _etext = .
+                0x400e725f                _text_end = ABSOLUTE (.)
+                0x400e725f                _etext = .
                 0x00000000                _flash_cache_start = ABSOLUTE (0x0)
 
 .iram0.text_end
@@ -50859,7 +50878,7 @@ END GROUP
                 0x40058f14                _wctomb_r = 0x40058f14
 OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
 
-.debug_frame    0x00000000     0x8f00
+.debug_frame    0x00000000     0x8f30
  .debug_frame   0x00000000       0x40 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_frame   0x00000040       0x88 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
  .debug_frame   0x000000c8       0xb8 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
@@ -50969,17 +50988,17 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_frame   0x00007ab0      0x100 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_frame   0x00007bb0      0x3e8 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_frame   0x00007f98      0x118 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_frame   0x000080b0      0x148 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_frame   0x000081f8       0x58 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_frame   0x00008250       0x40 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
- .debug_frame   0x00008290       0x28 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_frame   0x000082b8      0x118 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_frame   0x000083d0       0x70 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_frame   0x00008440      0x2c0 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_frame   0x00008700      0x280 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_frame   0x00008980      0x580 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_frame   0x000080b0      0x178 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_frame   0x00008228       0x58 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_frame   0x00008280       0x40 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_frame   0x000082c0       0x28 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_frame   0x000082e8      0x118 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_frame   0x00008400       0x70 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_frame   0x00008470      0x2c0 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_frame   0x00008730      0x280 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_frame   0x000089b0      0x580 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_info     0x00000000   0x14f27e
+.debug_info     0x00000000   0x14f1f6
  .debug_info    0x00000000     0x10d0 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_info    0x000010d0     0x16a2 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
  .debug_info    0x00002772     0x2536 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
@@ -51106,20 +51125,20 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_info    0x00126a8c     0x4732 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_info    0x0012b1be     0x4713 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_info    0x0012f8d1      0xec6 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_info    0x00130797     0x3f5c C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_info    0x001346f3      0xb64 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_info    0x00135257      0xd10 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
- .debug_info    0x00135f67     0x1284 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
- .debug_info    0x001371eb     0x3639 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
- .debug_info    0x0013a824     0x35a9 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_info    0x0013ddcd     0x47fb C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_info    0x001425c8      0xb8f C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_info    0x00143157     0x2700 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_info    0x00145857     0x2f9e c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_info    0x001487f5       0x26 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
- .debug_info    0x0014881b     0x6a63 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_info    0x00130797     0x3ed4 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_info    0x0013466b      0xb64 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_info    0x001351cf      0xd10 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_info    0x00135edf     0x1284 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+ .debug_info    0x00137163     0x3639 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+ .debug_info    0x0013a79c     0x35a9 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_info    0x0013dd45     0x47fb C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_info    0x00142540      0xb8f C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_info    0x001430cf     0x2700 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_info    0x001457cf     0x2f9e c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_info    0x0014876d       0x26 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
+ .debug_info    0x00148793     0x6a63 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_abbrev   0x00000000    0x1c044
+.debug_abbrev   0x00000000    0x1c031
  .debug_abbrev  0x00000000      0x2a6 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_abbrev  0x000002a6      0x45f C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
  .debug_abbrev  0x00000705      0x5ce C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
@@ -51246,20 +51265,20 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_abbrev  0x00018c02      0x4df C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_abbrev  0x000190e1      0x362 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_abbrev  0x00019443      0x2b4 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_abbrev  0x000196f7      0x4ac C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_abbrev  0x00019ba3      0x25f C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_abbrev  0x00019e02      0x287 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
- .debug_abbrev  0x0001a089      0x1cd C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
- .debug_abbrev  0x0001a256      0x228 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
- .debug_abbrev  0x0001a47e      0x364 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_abbrev  0x0001a7e2      0x48c C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_abbrev  0x0001ac6e      0x28f C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_abbrev  0x0001aefd      0x643 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_abbrev  0x0001b540      0x650 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_abbrev  0x0001bb90       0x14 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
- .debug_abbrev  0x0001bba4      0x4a0 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_abbrev  0x000196f7      0x499 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_abbrev  0x00019b90      0x25f C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_abbrev  0x00019def      0x287 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_abbrev  0x0001a076      0x1cd C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+ .debug_abbrev  0x0001a243      0x228 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+ .debug_abbrev  0x0001a46b      0x364 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_abbrev  0x0001a7cf      0x48c C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_abbrev  0x0001ac5b      0x28f C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_abbrev  0x0001aeea      0x643 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_abbrev  0x0001b52d      0x650 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_abbrev  0x0001bb7d       0x14 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
+ .debug_abbrev  0x0001bb91      0x4a0 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_loc      0x00000000    0x415f5
+.debug_loc      0x00000000    0x41630
  .debug_loc     0x00000000      0x12c C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_loc     0x0000012c      0x2e2 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
  .debug_loc     0x0000040e      0x2f5 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(cpu_start.o)
@@ -51364,17 +51383,17 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_loc     0x00039eed      0x37f C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_loc     0x0003a26c     0x1dfd C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_loc     0x0003c069      0x2a3 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_loc     0x0003c30c      0x91d C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_loc     0x0003cc29       0x4a C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_loc     0x0003cc73       0xbe c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
- .debug_loc     0x0003cd31      0x1c7 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_loc     0x0003cef8      0xc31 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_loc     0x0003db29      0x2c7 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_loc     0x0003ddf0     0x13a1 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_loc     0x0003f191     0x1809 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_loc     0x0004099a      0xc5b C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_loc     0x0003c30c      0x958 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_loc     0x0003cc64       0x4a C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_loc     0x0003ccae       0xbe c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_loc     0x0003cd6c      0x1c7 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_loc     0x0003cf33      0xc31 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_loc     0x0003db64      0x2c7 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_loc     0x0003de2b     0x13a1 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_loc     0x0003f1cc     0x1809 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_loc     0x000409d5      0xc5b C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_aranges  0x00000000     0x37b8
+.debug_aranges  0x00000000     0x37c8
  .debug_aranges
                 0x00000000       0x28 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_aranges
@@ -51628,31 +51647,31 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_aranges
                 0x00003338       0x70 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
  .debug_aranges
-                0x000033a8       0x80 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                0x000033a8       0x90 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
  .debug_aranges
-                0x00003428       0x30 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+                0x00003438       0x30 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
  .debug_aranges
-                0x00003458       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+                0x00003468       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
  .debug_aranges
-                0x00003478       0x18 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+                0x00003488       0x18 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
  .debug_aranges
-                0x00003490       0x18 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+                0x000034a0       0x18 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
  .debug_aranges
-                0x000034a8       0x20 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+                0x000034b8       0x20 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
  .debug_aranges
-                0x000034c8       0x70 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+                0x000034d8       0x70 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
  .debug_aranges
-                0x00003538       0x38 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+                0x00003548       0x38 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
  .debug_aranges
-                0x00003570       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+                0x00003580       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
  .debug_aranges
-                0x00003590       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+                0x000035a0       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
  .debug_aranges
-                0x000035b0       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
+                0x000035c0       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
  .debug_aranges
-                0x000035d0      0x1e8 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+                0x000035e0      0x1e8 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_ranges   0x00000000     0x3ec8
+.debug_ranges   0x00000000     0x3f08
  .debug_ranges  0x00000000       0x18 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_ranges  0x00000018       0x30 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
  .debug_ranges  0x00000048       0x40 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
@@ -51750,16 +51769,16 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_ranges  0x000035c0       0x70 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_ranges  0x00003630      0x180 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_ranges  0x000037b0       0x60 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_ranges  0x00003810       0x88 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_ranges  0x00003898       0x20 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_ranges  0x000038b8       0x10 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_ranges  0x000038c8       0x78 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_ranges  0x00003940       0x28 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_ranges  0x00003968      0x100 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_ranges  0x00003a68      0x270 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_ranges  0x00003cd8      0x1f0 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_ranges  0x00003810       0xc8 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_ranges  0x000038d8       0x20 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_ranges  0x000038f8       0x10 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_ranges  0x00003908       0x78 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_ranges  0x00003980       0x28 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_ranges  0x000039a8      0x100 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_ranges  0x00003aa8      0x270 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_ranges  0x00003d18      0x1f0 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_line     0x00000000    0x99d1d
+.debug_line     0x00000000    0x99c8d
  .debug_line    0x00000000      0x4e7 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
  .debug_line    0x000004e7      0x393 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
  .debug_line    0x0000087a      0xbac C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_guards.o)
@@ -51886,20 +51905,20 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
  .debug_line    0x00088ebb     0x1506 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
  .debug_line    0x0008a3c1     0x4095 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
  .debug_line    0x0008e456      0x6a9 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
- .debug_line    0x0008eaff     0x14a2 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
- .debug_line    0x0008ffa1      0x2c7 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
- .debug_line    0x00090268      0x4ab c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
- .debug_line    0x00090713      0x25e C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
- .debug_line    0x00090971      0x273 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
- .debug_line    0x00090be4      0x5e6 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
- .debug_line    0x000911ca     0x1497 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
- .debug_line    0x00092661      0x633 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
- .debug_line    0x00092c94     0x1f9f c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
- .debug_line    0x00094c33     0x2ba4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
- .debug_line    0x000977d7      0x172 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
- .debug_line    0x00097949     0x23d4 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_line    0x0008eaff     0x1412 C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+ .debug_line    0x0008ff11      0x2c7 C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_line    0x000901d8      0x4ab c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_line    0x00090683      0x25e C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+ .debug_line    0x000908e1      0x273 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+ .debug_line    0x00090b54      0x5e6 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_line    0x0009113a     0x1497 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_line    0x000925d1      0x633 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_line    0x00092c04     0x1f9f c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_line    0x00094ba3     0x2ba4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_line    0x00097747      0x172 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
+ .debug_line    0x000978b9     0x23d4 C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
 
-.debug_str      0x00000000    0x1e58e
+.debug_str      0x00000000    0x1e5d4
  .debug_str     0x00000000      0x7da C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_app_desc.o)
                                 0xa20 (size before relaxing)
  .debug_str     0x000007da      0x857 C:/msys32/home/waz/esp/ESP-32/build/cxx\libcxx.a(cxx_exception_stubs.o)
@@ -52080,91 +52099,91 @@ OUTPUT(C:/msys32/home/waz/esp/ESP-32/build/blink.elf elf32-xtensa-le)
                                 0xa83 (size before relaxing)
  .debug_str     0x000142e0      0x32f C:/msys32/home/waz/esp/ESP-32/build/spi_flash\libspi_flash.a(spi_flash_chip_generic.o)
                                 0xdf4 (size before relaxing)
- .debug_str     0x0001460f      0x78c C:/msys32/home/waz/esp/ESP-32/build/vfs\libvfs.a(vfs.o)
+ .debug_str     0x0001460f      0x792 C:/msys32/home/waz/esp/ESP-32/build/vfs\libvfs.a(vfs.o)
                                0x1d4c (size before relaxing)
- .debug_str     0x00014d9b      0x686 C:/msys32/home/waz/esp/ESP-32/build/vfs\libvfs.a(vfs_uart.o)
+ .debug_str     0x00014da1      0x686 C:/msys32/home/waz/esp/ESP-32/build/vfs\libvfs.a(vfs_uart.o)
                                0x2812 (size before relaxing)
- .debug_str     0x00015421       0xa2 C:/msys32/home/waz/esp/ESP-32/build/xtensa\libxtensa.a(debug_helpers.o)
+ .debug_str     0x00015427       0xa2 C:/msys32/home/waz/esp/ESP-32/build/xtensa\libxtensa.a(debug_helpers.o)
                                0x1298 (size before relaxing)
- .debug_str     0x000154c3       0x40 C:/msys32/home/waz/esp/ESP-32/build/xtensa\libxtensa.a(eri.o)
+ .debug_str     0x000154c9       0x40 C:/msys32/home/waz/esp/ESP-32/build/xtensa\libxtensa.a(eri.o)
                                 0x16b (size before relaxing)
- .debug_str     0x00015503       0x58 C:/msys32/home/waz/esp/esp-idf/components/xtensa/esp32/libhal.a(interrupts--intlevel.o)
+ .debug_str     0x00015509       0x58 C:/msys32/home/waz/esp/esp-idf/components/xtensa/esp32/libhal.a(interrupts--intlevel.o)
                                  0x82 (size before relaxing)
- .debug_str     0x0001555b      0x255 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_divdi3.o)
+ .debug_str     0x00015561      0x255 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_divdi3.o)
                                 0x786 (size before relaxing)
- .debug_str     0x000157b0        0x9 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_moddi3.o)
+ .debug_str     0x000157b6        0x9 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_moddi3.o)
                                 0x786 (size before relaxing)
- .debug_str     0x000157b9        0xa c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_udivdi3.o)
+ .debug_str     0x000157bf        0xa c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_udivdi3.o)
                                 0x787 (size before relaxing)
- .debug_str     0x000157c3        0xa c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_umoddi3.o)
+ .debug_str     0x000157c9        0xa c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(_umoddi3.o)
                                 0x787 (size before relaxing)
- .debug_str     0x000157cd      0x232 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_op.o)
+ .debug_str     0x000157d3      0x232 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_op.o)
                                 0xc52 (size before relaxing)
- .debug_str     0x000159ff      0x109 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_opv.o)
+ .debug_str     0x00015a05      0x109 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(new_opv.o)
                                 0x665 (size before relaxing)
- .debug_str     0x00015b08      0x6ea c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(si_class_type_info.o)
+ .debug_str     0x00015b0e      0x6ea c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(si_class_type_info.o)
                                 0x855 (size before relaxing)
- .debug_str     0x000161f2      0x3fc c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(class_type_info.o)
+ .debug_str     0x000161f8      0x3fc c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(class_type_info.o)
                                 0x883 (size before relaxing)
- .debug_str     0x000165ee      0x342 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
+ .debug_str     0x000165f4      0x342 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_terminate.o)
                                 0xe50 (size before relaxing)
- .debug_str     0x00016930      0x103 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_unex_handler.o)
+ .debug_str     0x00016936      0x103 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_unex_handler.o)
                                 0x779 (size before relaxing)
- .debug_str     0x00016a33      0x103 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_term_handler.o)
+ .debug_str     0x00016a39      0x103 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_term_handler.o)
                                 0xcb5 (size before relaxing)
- .debug_str     0x00016b36      0x8c4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
+ .debug_str     0x00016b3c      0x8c4 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_personality.o)
                                0x1637 (size before relaxing)
- .debug_str     0x000173fa      0x2dd c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
+ .debug_str     0x00017400      0x2dd c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libstdc++.a(eh_globals.o)
                                0x1214 (size before relaxing)
- .debug_str     0x000176d7      0x6a9 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_ota_ops.o)
+ .debug_str     0x000176dd      0x6a9 C:/msys32/home/waz/esp/ESP-32/build/app_update\libapp_update.a(esp_ota_ops.o)
                                0x246a (size before relaxing)
- .debug_str     0x00017d80      0x18f C:/msys32/home/waz/esp/ESP-32/build/bootloader_support\libbootloader_support.a(bootloader_flash_config.o)
+ .debug_str     0x00017d86      0x18f C:/msys32/home/waz/esp/ESP-32/build/bootloader_support\libbootloader_support.a(bootloader_flash_config.o)
                                 0xb98 (size before relaxing)
- .debug_str     0x00017f0f      0x2ee C:/msys32/home/waz/esp/ESP-32/build/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_str     0x00017f15      0x2ee C:/msys32/home/waz/esp/ESP-32/build/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
                                0x23c3 (size before relaxing)
- .debug_str     0x000181fd     0x1a3d C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(rtc_module.o)
+ .debug_str     0x00018203     0x1a3d C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(rtc_module.o)
                                0x536a (size before relaxing)
- .debug_str     0x00019c3a      0x4fc C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(timer.o)
+ .debug_str     0x00019c40      0x4fc C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(timer.o)
                                0x1e8f (size before relaxing)
- .debug_str     0x0001a136      0x3da C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(gpio.o)
+ .debug_str     0x0001a13c      0x3da C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(gpio.o)
                                0x35d8 (size before relaxing)
- .debug_str     0x0001a510      0xc1a C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(uart.o)
+ .debug_str     0x0001a516      0xc1a C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(uart.o)
                                0x2ff5 (size before relaxing)
- .debug_str     0x0001b12a       0xab C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(periph_ctrl.o)
+ .debug_str     0x0001b130       0xab C:/msys32/home/waz/esp/ESP-32/build/driver\libdriver.a(periph_ctrl.o)
                                0x14b5 (size before relaxing)
- .debug_str     0x0001b1d5      0x411 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(pm_esp32.o)
+ .debug_str     0x0001b1db      0x411 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(pm_esp32.o)
                                0x3237 (size before relaxing)
- .debug_str     0x0001b5e6       0xb4 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(reset_reason.o)
+ .debug_str     0x0001b5ec       0xb4 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(reset_reason.o)
                                0x211d (size before relaxing)
- .debug_str     0x0001b69a      0x1c6 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
+ .debug_str     0x0001b6a0      0x1c6 C:/msys32/home/waz/esp/ESP-32/build/esp32\libesp32.a(esp_timer_esp32.o)
                                0x2d1c (size before relaxing)
- .debug_str     0x0001b860      0x708 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
+ .debug_str     0x0001b866      0x708 C:/msys32/home/waz/esp/ESP-32/build/esp_ringbuf\libesp_ringbuf.a(ringbuf.o)
                                0x1aba (size before relaxing)
- .debug_str     0x0001bf68       0xd0 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
+ .debug_str     0x0001bf6e       0xd0 C:/msys32/home/waz/esp/ESP-32/build/esp_wifi\libesp_wifi.a(lib_printf.o)
                                 0x6dd (size before relaxing)
- .debug_str     0x0001c038      0x39d C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
-                               0x2227 (size before relaxing)
- .debug_str     0x0001c3d5       0x8d C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
+ .debug_str     0x0001c03e      0x3dd C:/msys32/home/waz/esp/ESP-32/build/ic_driver\libic_driver.a(fpga.o)
+                               0x225a (size before relaxing)
+ .debug_str     0x0001c41b       0x8d C:/msys32/home/waz/esp/ESP-32/build/newlib\libnewlib.a(pthread.o)
                                 0x703 (size before relaxing)
- .debug_str     0x0001c462       0x7d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
+ .debug_str     0x0001c4a8       0x7d c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib\libc.a(lib_a-vsnprintf.o)
                                 0x7b2 (size before relaxing)
- .debug_str     0x0001c4df       0x42 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
+ .debug_str     0x0001c525       0x42 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(gpio_periph.o)
                                 0x847 (size before relaxing)
- .debug_str     0x0001c521       0x41 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
+ .debug_str     0x0001c567       0x41 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(rtc_periph.o)
                                0x1da0 (size before relaxing)
- .debug_str     0x0001c562       0xea C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
+ .debug_str     0x0001c5a8       0xea C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal.o)
                                0x228c (size before relaxing)
- .debug_str     0x0001c64c      0x3c0 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
+ .debug_str     0x0001c692      0x3c0 C:/msys32/home/waz/esp/ESP-32/build/soc\libsoc.a(spi_flash_hal_iram.o)
                                0x26c4 (size before relaxing)
- .debug_str     0x0001ca0c       0xa9 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
+ .debug_str     0x0001ca52       0xa9 C:/msys32/home/waz/esp/ESP-32/build/util\libutil.a(util.o)
                                 0x620 (size before relaxing)
- .debug_str     0x0001cab5      0x472 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
+ .debug_str     0x0001cafb      0x472 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-xtensa.o)
                                 0xe24 (size before relaxing)
- .debug_str     0x0001cf27      0x45b c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
+ .debug_str     0x0001cf6d      0x45b c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(unwind-dw2-fde.o)
                                 0xcaf (size before relaxing)
- .debug_str     0x0001d382       0x70 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
+ .debug_str     0x0001d3c8       0x70 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0\libgcc.a(lib2funcs.o)
                                  0xf6 (size before relaxing)
- .debug_str     0x0001d3f2     0x119c C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
+ .debug_str     0x0001d438     0x119c C:/msys32/home/waz/esp/ESP-32/build/bt\libbt.a(bt.o)
                                0x4630 (size before relaxing)
 
 .comment        0x00000000       0xa1

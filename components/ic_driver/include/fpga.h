@@ -7,6 +7,7 @@
 #define __FPGA_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 #define LEN_PUF_RESPONSE 20
 #define LEN_ENC_PUF_RESPONSE 24
@@ -83,8 +84,8 @@ int lblock_encrype_8bytes(uint8_t *pu8PlainText,uint8_t *pu8Key,uint8_t *pu8Encr
 int lblock_encrype(uint8_t *pu8PlainText,uint8_t *pu8Key,uint8_t *pu8EncrypedData, uint8_t pu8LenbeforEncrype, uint8_t *pu8LenAfterEncrype);
 
 
-/* should be free by caller */
-uint8_t* GetLblockKey(int *len);
+/* len : 10Byte */
+bool GetLblockKey(uint8_t *lblock_key);
 
 int rcvRspFromFPGA(uint8_t *rcvBuf);
 int sendCmdToFPGA(uint8_t *cmd,uint8_t cmdLen);
