@@ -1,7 +1,7 @@
-main.o: C:/msys32/home/waz/esp/ESP-32/main/main.c \
+main.o: C:/msys32/home/waz/esp/ESP-32-copy/main/main.c \
  C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/build/include/sdkconfig.h \
  C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  C:/msys32/home/waz/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  C:/msys32/home/waz/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -60,37 +60,37 @@ main.o: C:/msys32/home/waz/esp/ESP-32/main/main.c \
  C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
  C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_task_wdt.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/szm301.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/fpga.h \
- C:/msys32/home/waz/esp/ESP-32/components/util/include/util.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/authenticate.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/szm301.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/fpga.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/util/include/util.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/authenticate.h \
  C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/gatts_table.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max77752.h \
- C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/iic.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/gatts_table.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max77752.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/emd_proctol/include/iic.h \
  C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h \
  C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/waz/esp/esp-idf/components/driver/include/driver/i2c.h \
- C:/msys32/home/waz/esp/ESP-32/main/freertosTest.h \
- C:/msys32/home/waz/esp/ESP-32/main/taskDoubleFactorAuthenticate.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/rgb_led.h \
- C:/msys32/home/waz/esp/ESP-32/main/task_sensor.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/main/freertosTest.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/main/taskDoubleFactorAuthenticate.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/rgb_led.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/main/task_sensor.h \
  C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
  C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
- C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/uart.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/ls013b7dh03.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160_defs.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30102.h \
- C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30205.h
+ C:/msys32/home/waz/esp/ESP-32-copy/components/emd_proctol/include/uart.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/ls013b7dh03.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/bmi160.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/bmi160_defs.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max30102.h \
+ C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max30205.h
 
 C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32-copy/build/include/sdkconfig.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -208,21 +208,21 @@ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_task_wdt.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/szm301.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/szm301.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/fpga.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/fpga.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/util/include/util.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/util/include/util.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/authenticate.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/authenticate.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/gatts_table.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/gatts_table.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max77752.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max77752.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/iic.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/emd_proctol/include/iic.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h:
 
@@ -230,13 +230,13 @@ C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/driver/include/driver/i2c.h:
 
-C:/msys32/home/waz/esp/ESP-32/main/freertosTest.h:
+C:/msys32/home/waz/esp/ESP-32-copy/main/freertosTest.h:
 
-C:/msys32/home/waz/esp/ESP-32/main/taskDoubleFactorAuthenticate.h:
+C:/msys32/home/waz/esp/ESP-32-copy/main/taskDoubleFactorAuthenticate.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/rgb_led.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/rgb_led.h:
 
-C:/msys32/home/waz/esp/ESP-32/main/task_sensor.h:
+C:/msys32/home/waz/esp/ESP-32-copy/main/task_sensor.h:
 
 C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
@@ -246,15 +246,15 @@ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_stru
 
 C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/emd_proctol/include/uart.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/emd_proctol/include/uart.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/ls013b7dh03.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/ls013b7dh03.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/bmi160.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/bmi160_defs.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/bmi160_defs.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30102.h:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max30102.h:
 
-C:/msys32/home/waz/esp/ESP-32/components/ic_driver/include/max30205.h:
-/home/waz/esp/ESP-32/main/./main.c:
+C:/msys32/home/waz/esp/ESP-32-copy/components/ic_driver/include/max30205.h:
+/home/waz/esp/ESP-32-copy/main/./main.c:

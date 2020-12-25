@@ -25,7 +25,7 @@
 #include "taskDoubleFactorAuthenticate.h"
 #include "rgb_led.h"
 #include "task_sensor.h"
-#include "max30102.h"  
+#include "max30102.h"
 
 void allDriverInstall(void);
 
@@ -133,7 +133,6 @@ void app_main()
 
         iic_test();
 
-
         // xTaskCreate(sensor_data_update,"sensor_test",2048,NULL,5,NULL);
 
         // xTaskCreate(ble_data_update,"ble_test",2048,NULL,3,NULL);
@@ -180,6 +179,7 @@ void app_main()
 
         /*+++++++++++++++test lblock key stability++++++++++++++*/
         // TestLblockKeyStability();
+        PrintStableLblockKey();
         /*---------------test lblock key stability--------------*/
 
         /* test fpga led blink */

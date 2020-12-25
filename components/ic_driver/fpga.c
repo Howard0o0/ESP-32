@@ -73,6 +73,7 @@ void rstFpga(void)
 
 int sendCmdToFPGA(uint8_t *cmd, uint8_t cmdLen)
 {
+        rstFpga();
         int iWriteLen = uart_write_bytes(UART_NUM_1, (const char *)cmd, cmdLen);
         // vTaskDelay(150 / portTICK_RATE_MS);     // period btween 2 send has to > 150ms
         return iWriteLen;
@@ -239,7 +240,7 @@ uint8_t *FindMajorElementIndex(uint8_t **data, int first_dim_len,
 
 int get80bitPuf(uint8_t *pu8Puf80Bit)
 {
-#define PUF_SAMPLE_TIMES 20
+#define PUF_SAMPLE_TIMES 50
 
         int iRet;
         int iStableFlag = 0;
@@ -318,7 +319,7 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 printf("can't get stable puf ! \r\n");
                 return -1;
         }
-        memcpy(pu8Puf80Bit+4, stable_puf_b, 4);
+        memcpy(pu8Puf80Bit + 4, stable_puf_b, 4);
 
         // i = 0;
         // iStableFlag = 0;
@@ -355,6 +356,72 @@ bool GetLblockKey(uint8_t *lblock_key)
         if (get80bitPuf(lblock_key) == 0)
                 return true;
         return false;
+}
+
+static uint8_t *getLblockResponseAccordingToId(char *id)
+{
+        static uint8_t lblockResponse[5][10] = {
+            {0x78, 0x2A, 0xC8, 0x15, 0x5D, 0x95, 0x81, 0x8D}, // ID : 0X0D
+            {},
+            {},
+            {},
+            {}};
+
+        if (strstr(id, "0D") != NULL)
+                return lblockResponse[0];
+
+        printf("unrecord id : %s \r\n", id);
+        return NULL;
+}
+
+bool GetStableLblockKey(uint8_t *stable_lblock_key, char *id)
+{
+        uint8_t dirty_key[11];
+        int errCnt = 0;
+        uint8_t *standard_enc_data = getLblockResponseAccordingToId(id);
+        uint8_t dirty_enc_data[8];
+
+        while (errCnt < 10)
+        {
+                printf("trying to get stable lblock key , round %d \r\n", errCnt);
+                if (GetLblockKey(dirty_key) != true)
+                {
+                        errCnt++;
+                        printf("[ERROR] cannot get first-step stable key from fpga \r\n");
+                        continue;
+                }
+                printf("key : ");
+                PrintHex(dirty_key, 10);
+                if (lblock_encrype_8bytes((uint8_t *)"12345678", dirty_key, dirty_enc_data) != 0)
+                {
+                        errCnt++;
+                        printf("[ERROR] get wrong lblock key \r\n");
+                        continue;
+                }
+                printf("enc : ");
+                PrintHex(dirty_enc_data, 8);
+                if (IsSame(dirty_enc_data, standard_enc_data, 8) == true)
+                {
+                        memcpy(stable_lblock_key, dirty_key, 10);
+                        printf("[INFO] got stable lblock key: ");
+                        PrintHex(dirty_key, 10);
+                        return true;
+                }
+                errCnt++;
+        }
+
+        return false;
+}
+
+uint8_t *GetLblockKeyForId(char *id)
+{
+        static uint8_t lblockKey[11] = {0};
+        if (lblockKey[8] == 0xF0 && lblockKey[9] == 0x51)
+                return lblockKey;
+
+        if (GetStableLblockKey(lblockKey, id) == true)
+                return lblockKey;
+        return NULL;
 }
 
 int lblock_encrype_8bytes(uint8_t *pu8PlainText, uint8_t *pu8Key, uint8_t *pu8EncrypedData)
@@ -549,6 +616,7 @@ void TestLblockKeyStability()
         uint8_t standard_key[10];
         uint8_t curr_key[10];
         int iRet;
+        uint8_t standard_key_enc[8];
 
         while (GetLblockKey(standard_key) != true)
                 ;
@@ -568,16 +636,29 @@ void TestLblockKeyStability()
 
                 printf("lblock key : ");
                 print_hex((char *)curr_key, 10);
-                if (!IsSame(standard_key, curr_key, 10))
+                if (lblock_encrype_8bytes((uint8_t *)"12345678", curr_key, standard_key_enc) == 0)
                 {
-                        printf("not match !!\r\n\r\n");
-                        printf("standard key : ");
-                        print_hex((char *)standard_key, 10);
-                        printf("curr key : ");
-                        print_hex((char *)curr_key, 10);
-
-                        // while (1)
-                        //         vTaskDelay(1000 / portTICK_RATE_MS);
+                        printf("after enc : ");
+                        PrintHex(standard_key_enc, 8);
                 }
+        }
+}
+
+void PrintStableLblockKey()
+{
+        fpgaDriverInstall();
+        uint8_t *lblockKey = NULL;
+        while (1)
+        {
+                lblockKey = GetLblockKeyForId("0D");
+                if (!lblockKey)
+                {
+                        printf("555 got lblock key failed \r\n");
+                        vTaskDelay(1000 / portTICK_RATE_MS);
+                        continue;
+                }
+                printf("Got Stable Lblock Key : ");
+                PrintHex(lblockKey, 10);
+                vTaskDelay(1000 / portTICK_RATE_MS);
         }
 }
