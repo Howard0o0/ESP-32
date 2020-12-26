@@ -240,7 +240,7 @@ uint8_t *FindMajorElementIndex(uint8_t **data, int first_dim_len,
 
 int get80bitPuf(uint8_t *pu8Puf80Bit)
 {
-#define PUF_SAMPLE_TIMES 50
+#define PUF_SAMPLE_TIMES 10
 
         int iRet;
         int iStableFlag = 0;
@@ -274,26 +274,6 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
                 return -1;
         }
         memcpy(pu8Puf80Bit, stable_puf_a, 4);
-        // i = 0;
-        // while (pu8TmpPufResp4Bytes[i + 5] != NULL)
-        // {
-        //         if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
-        //         {
-        //                 iStableFlag = 1;
-        //                 memcpy(pu8Puf80Bit, pu8TmpPufResp4Bytes[i], 4);
-        //                 break;
-        //         }
-        //         i++;
-        // }
-        // if (!iStableFlag)
-        // {
-        //         printf("can't get stable puf ! \r\n");
-        //         return -1;
-        // }
 
         /* get tail 4 bytes puf */
         iErrorTimes = 0;
@@ -321,27 +301,6 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
         }
         memcpy(pu8Puf80Bit + 4, stable_puf_b, 4);
 
-        // i = 0;
-        // iStableFlag = 0;
-        // while (pu8TmpPufResp4Bytes[i + 5] != NULL)
-        // {
-        //         if ((strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 1]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 2]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 3]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 4]) != 0) &&
-        //             (strstr((char *)pu8TmpPufResp4Bytes[i], (char *)pu8TmpPufResp4Bytes[i + 5]) != 0))
-        //         {
-        //                 iStableFlag = 1;
-        //                 memcpy(pu8Puf80Bit + 4, pu8TmpPufResp4Bytes[i], 4);
-        //                 break;
-        //         }
-        //         i++;
-        // }
-        // if (!iStableFlag)
-        // {
-        //         printf("can't get stable puf ! \r\n");
-        //         return -1;
-        // }
 
         /* fill the last 2 bytes of au8Puf80bit */
         pu8Puf80Bit[8] = 0xF0;
@@ -361,14 +320,17 @@ bool GetLblockKey(uint8_t *lblock_key)
 static uint8_t *getLblockResponseAccordingToId(char *id)
 {
         static uint8_t lblockResponse[5][10] = {
-            {0x78, 0x2A, 0xC8, 0x15, 0x5D, 0x95, 0x81, 0x8D}, // ID : 0X0D
-            {},
+            {0x78, 0x2A, 0xC8, 0x15, 0x5D, 0x95, 0x81, 0x8D}, // ID : "0D"
+            {0xE8,0xED ,0x93 ,0x53 ,0x2C,0xAE ,0x5A ,0x59},   // ID : "0B"
             {},
             {},
             {}};
 
         if (strstr(id, "0D") != NULL)
                 return lblockResponse[0];
+        if (strstr(id, "0B") != NULL)
+                return lblockResponse[1];
+        
 
         printf("unrecord id : %s \r\n", id);
         return NULL;
@@ -650,7 +612,7 @@ void PrintStableLblockKey()
         uint8_t *lblockKey = NULL;
         while (1)
         {
-                lblockKey = GetLblockKeyForId("0D");
+                lblockKey = GetLblockKeyForId("0B");
                 if (!lblockKey)
                 {
                         printf("555 got lblock key failed \r\n");

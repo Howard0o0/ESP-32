@@ -2,7 +2,6 @@
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/install.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/edit_cache.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/size-components.dir
-/Users/zhuhouwang/esp/wristband/build/CMakeFiles/hello-world.elf.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/_project_elf_src.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/rebuild_cache.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/erase_flash.dir
@@ -17,6 +16,7 @@
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/monitor.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/gen_project_binary.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/bootloader.dir
+/Users/zhuhouwang/esp/wristband/build/CMakeFiles/gatt_server_service_table_demo.elf.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/confserver.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/size.dir
 /Users/zhuhouwang/esp/wristband/build/CMakeFiles/menuconfig.dir
@@ -290,6 +290,7 @@
 /Users/zhuhouwang/esp/wristband/build/esp-idf/bt/CMakeFiles/list_install_components.dir
 /Users/zhuhouwang/esp/wristband/build/esp-idf/bt/CMakeFiles/rebuild_cache.dir
 /Users/zhuhouwang/esp/wristband/build/esp-idf/bt/CMakeFiles/edit_cache.dir
+/Users/zhuhouwang/esp/wristband/build/esp-idf/bt/CMakeFiles/__idf_bt.dir
 /Users/zhuhouwang/esp/wristband/build/esp-idf/cbor/CMakeFiles/install/local.dir
 /Users/zhuhouwang/esp/wristband/build/esp-idf/cbor/CMakeFiles/install/strip.dir
 /Users/zhuhouwang/esp/wristband/build/esp-idf/cbor/CMakeFiles/install.dir

@@ -341,7 +341,7 @@ void TryToGetLblockKey()
 
         getDeviceId(pu8DeviceId, &u16LenDeviceId);
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 10; i++)
         {
                 printf("trying to get id=%s lblock key\r\n",(char*)pu8DeviceId);
                 lblockKey = GetLblockKeyForId((char *)pu8DeviceId);
