@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/Users/zhuhouwang/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/Users/zhuhouwang/esp/wristband/build/bootloader",
+    "config_file":        "/Users/zhuhouwang/esp/wristband/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.1-520-gc3324a82a",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/Users/zhuhouwang/esp/esp-idf/components/efuse/Kconfig;/Users/zhuhouwang/esp/esp-idf/components/esp32/Kconfig;/Users/zhuhouwang/esp/esp-idf/components/esp_common/Kconfig;/Users/zhuhouwang/esp/esp-idf/components/log/Kconfig;/Users/zhuhouwang/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/zhuhouwang/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/zhuhouwang/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/zhuhouwang/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/zhuhouwang/esp/esp-idf/components/bootloader", "/Users/zhuhouwang/esp/esp-idf/components/bootloader_support", "/Users/zhuhouwang/esp/esp-idf/components/efuse", "/Users/zhuhouwang/esp/esp-idf/components/esp32", "/Users/zhuhouwang/esp/esp-idf/components/esp_common", "/Users/zhuhouwang/esp/esp-idf/components/esp_rom", "/Users/zhuhouwang/esp/esp-idf/components/esptool_py", "/Users/zhuhouwang/esp/esp-idf/components/log", "/Users/zhuhouwang/esp/esp-idf/components/bootloader/subproject/main", "/Users/zhuhouwang/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/zhuhouwang/esp/esp-idf/components/partition_table", "/Users/zhuhouwang/esp/esp-idf/components/soc", "/Users/zhuhouwang/esp/esp-idf/components/spi_flash", "/Users/zhuhouwang/esp/esp-idf/components/xtensa", "" ]
+}
