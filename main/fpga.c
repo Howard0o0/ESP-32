@@ -320,9 +320,9 @@ bool GetLblockKey(uint8_t *lblock_key)
 static uint8_t *getLblockResponseAccordingToId(char *id)
 {
         static uint8_t lblockResponse[5][10] = {
-            {0x78, 0x2A, 0xC8, 0x15, 0x5D, 0x95, 0x81, 0x8D}, // ID : "0D"
+            {0x7A ,0x13 ,0x3C ,0xAA ,0x43 ,0x3F ,0xE4 ,0xAB}, // ID : "0D"
             {0xE8,0xED ,0x93 ,0x53 ,0x2C,0xAE ,0x5A ,0x59},   // ID : "0B"
-            {},
+            {0xB7 ,0x67 ,0x36 ,0x15,0x7E  ,0x36 ,0x9A ,0x77 }, // ID : "0F"
             {},
             {}};
 
@@ -330,6 +330,9 @@ static uint8_t *getLblockResponseAccordingToId(char *id)
                 return lblockResponse[0];
         if (strstr(id, "0B") != NULL)
                 return lblockResponse[1];
+        if (strstr(id, "0F") != NULL)
+                return lblockResponse[2];
+        
         
 
         printf("unrecord id : %s \r\n", id);
@@ -612,7 +615,7 @@ void PrintStableLblockKey()
         uint8_t *lblockKey = NULL;
         while (1)
         {
-                lblockKey = GetLblockKeyForId("0B");
+                lblockKey = GetLblockKeyForId("0F");
                 if (!lblockKey)
                 {
                         printf("555 got lblock key failed \r\n");

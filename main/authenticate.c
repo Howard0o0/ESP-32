@@ -328,6 +328,12 @@ void getDeviceId(uint8_t *value, uint16_t *len)
         // uint16_t l;
         // get_char_value(&v, &l, 6);
 
+/*
+        "0B":0x30,0x42
+        "0D":0x30,0x44
+        "0F":0x30,0x46
+*/
+
         value[0] = 0x30;
         value[1] = 0x44;
         *len = 2;
