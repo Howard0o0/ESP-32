@@ -1,5 +1,5 @@
-syscalls.o: /Users/zhuhouwang/esp/esp-idf/components/newlib/syscalls.c \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/errno.h
+syscalls.o: C:/msys32/home/waz/esp/esp-idf/components/newlib/syscalls.c \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/errno.h
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/errno.h:
-/Users/zhuhouwang/esp/esp-idf/components/newlib/./syscalls.c:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/errno.h:
+/home/waz/esp/esp-idf/components/newlib/./syscalls.c:

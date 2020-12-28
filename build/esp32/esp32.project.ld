@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: /Users/zhuhouwang/esp/esp-idf/components/esp32/ld/esp32.project.ld.in */
+/* Generated from: C:/msys32/home/waz/esp/esp-idf/components/esp32/ld/esp32.project.ld.in */
 
 /*  Default entry point:  */
 ENTRY(call_start_cpu0);
@@ -14,8 +14,7 @@ SECTIONS
   {
     . = ALIGN(4);
 
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.literal EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.text EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.text.*)
-    *libsoc.a:uart_hal_iram.*( .rtc.literal  .rtc.text  .rtc.text.*)
+    *( .rtc.literal  .rtc.text  .rtc.text.*)
 
     *rtc_wake_stub*.*(.literal .text .literal.* .text.*)
     _rtc_text_end = ABSOLUTE(.);
@@ -57,8 +56,7 @@ SECTIONS
   {
     _rtc_data_start = ABSOLUTE(.);
 
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.data EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.data.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.rodata EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.rodata.*)
-    *libsoc.a:uart_hal_iram.*( .rtc.data  .rtc.data.*  .rtc.rodata  .rtc.rodata.*)
+    *( .rtc.data  .rtc.data.*  .rtc.rodata  .rtc.rodata.*)
 
     *rtc_wake_stub*.*(.data .rodata .data.* .rodata.* .bss .bss.*)
     _rtc_data_end = ABSOLUTE(.);
@@ -71,8 +69,7 @@ SECTIONS
     *rtc_wake_stub*.*(.bss .bss.*)
     *rtc_wake_stub*.*(COMMON)
 
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .rtc.bss)
-    *libsoc.a:uart_hal_iram.*( .rtc.bss)
+    *( .rtc.bss)
 
     _rtc_bss_end = ABSOLUTE(.);
   } > rtc_data_location
@@ -149,7 +146,6 @@ SECTIONS
     . = 0x3C0;
     KEEP(*(.DoubleExceptionVector.text));
     . = 0x400;
-    _invalid_pc_placeholder = ABSOLUTE(.);
     *(.*Vector.literal)
 
     *(.UserEnter.literal);
@@ -166,61 +162,59 @@ SECTIONS
     /* Code marked as runnning out of IRAM */
     _iram_text_start = ABSOLUTE(.);
 
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .iram1 EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .iram1.*)
-    *libapp_trace.a:SEGGER_RTT_esp32.*( .literal  .literal.*  .text  .text.*)
+    *( .iram1  .iram1.*)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_hal_tx_complete_cb .text.emac_hal_tx_complete_cb)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_hal_rx_complete_cb .text.emac_hal_rx_complete_cb)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_hal_rx_early_cb .text.emac_hal_rx_early_cb)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_esp32_isr_handler .text.emac_esp32_isr_handler)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_hal_tx_unavail_cb .text.emac_hal_tx_unavail_cb)
+    *libesp_eth.a:esp_eth_mac_dm9051.*(.literal.dm9051_isr_handler .text.dm9051_isr_handler)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_hal_rx_unavail_cb .text.emac_hal_rx_unavail_cb)
+    *libesp_ringbuf.a:( .literal  .literal.*  .text  .text.*)
+    *libgcov.a:( .literal  .literal.*  .text  .text.*)
     *libapp_trace.a:SEGGER_SYSVIEW.*( .literal  .literal.*  .text  .text.*)
     *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*( .literal  .literal.*  .text  .text.*)
-    *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*( .literal  .literal.*  .text  .text.*)
     *libapp_trace.a:app_trace.*( .literal  .literal.*  .text  .text.*)
     *libapp_trace.a:app_trace_util.*( .literal  .literal.*  .text  .text.*)
-    *libdriver.a:gpio.*(.literal.gpio_iomux_in .text.gpio_iomux_in)
-    *libdriver.a:gpio.*(.literal.gpio_iomux_out .text.gpio_iomux_out)
-    *libesp32.a:panic.*( .literal  .literal.*  .text  .text.*)
-    *libesp_event.a:default_event_loop.*(.literal.esp_event_isr_post .text.esp_event_isr_post)
-    *libesp_event.a:esp_event.*(.literal.esp_event_isr_post_to .text.esp_event_isr_post_to)
-    *libesp_ringbuf.a:( .literal  .literal.*  .text  .text.*)
-    *libfreertos.a:( .literal  .literal.*  .text  .text.*)
+    *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*( .literal  .literal.*  .text  .text.*)
+    *libapp_trace.a:SEGGER_RTT_esp32.*( .literal  .literal.*  .text  .text.*)
+    *libpp.a:( .wifi0iram  .wifi0iram.*)
     *libgcc.a:_divsf3.*( .literal  .literal.*  .text  .text.*)
     *libgcc.a:lib2funcs.*( .literal  .literal.*  .text  .text.*)
-    *libgcov.a:( .literal  .literal.*  .text  .text.*)
-    *libhal.a:( .literal  .literal.*  .text  .text.*)
-    *libheap.a:multi_heap.*( .literal  .literal.*  .text  .text.*)
-    *libheap.a:multi_heap_poisoning.*( .literal  .literal.*  .text  .text.*)
-    *liblog.a:log.*(.literal.esp_log_write .text.esp_log_write)
-    *liblog.a:log_freertos.*(.literal.esp_log_early_timestamp .text.esp_log_early_timestamp)
-    *liblog.a:log_freertos.*(.literal.esp_log_impl_lock .text.esp_log_impl_lock)
-    *liblog.a:log_freertos.*(.literal.esp_log_impl_lock_timeout .text.esp_log_impl_lock_timeout)
-    *liblog.a:log_freertos.*(.literal.esp_log_impl_unlock .text.esp_log_impl_unlock)
-    *liblog.a:log_freertos.*(.literal.esp_log_timestamp .text.esp_log_timestamp)
-    *libnet80211.a:( .wifi0iram  .wifi0iram.*)
-    *libnet80211.a:( .wifirxiram  .wifirxiram.*)
-    *libnewlib.a:heap.*( .literal  .literal.*  .text  .text.*)
-    *libpp.a:( .wifi0iram  .wifi0iram.*)
-    *libpp.a:( .wifirxiram  .wifirxiram.*)
+    *libesp_event.a:default_event_loop.*(.literal.esp_event_isr_post .text.esp_event_isr_post)
+    *libesp_event.a:esp_event.*(.literal.esp_event_isr_post_to .text.esp_event_isr_post_to)
     *librtc.a:( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:cpu_util.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:i2c_hal_iram.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:ledc_hal_iram.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:lldesc.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_clk.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_clk_init.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_init.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_periph.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_pm.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_sleep.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_time.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:rtc_wdt.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:spi_flash_hal_gpspi.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:spi_flash_hal_iram.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:spi_hal_iram.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:spi_slave_hal_iram.*( .literal  .literal.*  .text  .text.*)
-    *libsoc.a:uart_hal_iram.*( .iram1  .iram1.*)
-    *libspi_flash.a:memspi_host_driver.*( .literal  .literal.*  .text  .text.*)
-    *libspi_flash.a:spi_flash_chip_gd.*( .literal  .literal.*  .text  .text.*)
+    *libheap.a:multi_heap_poisoning.*( .literal  .literal.*  .text  .text.*)
+    *libheap.a:multi_heap.*( .literal  .literal.*  .text  .text.*)
+    *libnet80211.a:( .wifi0iram  .wifi0iram.*)
+    *libesp32.a:panic.*( .literal  .literal.*  .text  .text.*)
     *libspi_flash.a:spi_flash_chip_generic.*( .literal  .literal.*  .text  .text.*)
-    *libspi_flash.a:spi_flash_chip_issi.*( .literal  .literal.*  .text  .text.*)
+    *libspi_flash.a:memspi_host_driver.*( .literal  .literal.*  .text  .text.*)
     *libspi_flash.a:spi_flash_rom_patch.*( .literal  .literal.*  .text  .text.*)
+    *libspi_flash.a:spi_flash_chip_issi.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_rx_complete_cb .text.emac_hal_rx_complete_cb)
+    *libsoc.a:cpu_util.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_clk.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_init.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:spi_flash_hal_iram.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_periph.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_clk_init.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_wdt.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_rx_early_cb .text.emac_hal_rx_early_cb)
+    *libsoc.a:spi_slave_hal_iram.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_sleep.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:spi_hal_iram.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:rtc_pm.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_tx_unavail_cb .text.emac_hal_tx_unavail_cb)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_isr .text.emac_hal_isr)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_rx_unavail_cb .text.emac_hal_rx_unavail_cb)
+    *libsoc.a:rtc_time.*( .literal  .literal.*  .text  .text.*)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_tx_complete_cb .text.emac_hal_tx_complete_cb)
+    *libsoc.a:lldesc.*( .literal  .literal.*  .text  .text.*)
     *libxtensa.a:eri.*( .literal  .literal.*  .text  .text.*)
+    *libnewlib.a:heap.*( .literal  .literal.*  .text  .text.*)
+    *libhal.a:( .literal  .literal.*  .text  .text.*)
+    *libfreertos.a:( .literal  .literal.*  .text  .text.*)
 
     _iram_text_end = ABSOLUTE(.);
   } > iram0_0_seg
@@ -250,40 +244,27 @@ SECTIONS
     *(.gnu.linkonce.s2.*)
     *(.jcr)
 
-
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .data EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .data.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .dram1 EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .dram1.*)
-    *libapp_trace.a:SEGGER_RTT_esp32.*( .rodata  .rodata.*)
+    *( .data  .data.*  .dram1  .dram1.*)
+    *libgcov.a:( .rodata  .rodata.*)
     *libapp_trace.a:SEGGER_SYSVIEW.*( .rodata  .rodata.*)
     *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*( .rodata  .rodata.*)
-    *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*( .rodata  .rodata.*)
     *libapp_trace.a:app_trace.*( .rodata  .rodata.*)
     *libapp_trace.a:app_trace_util.*( .rodata  .rodata.*)
-    *libdriver.a:gpio.*(.rodata.gpio_iomux_in)
-    *libdriver.a:gpio.*(.rodata.gpio_iomux_out)
-    *libesp32.a:panic.*( .rodata  .rodata.*)
+    *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*( .rodata  .rodata.*)
+    *libapp_trace.a:SEGGER_RTT_esp32.*( .rodata  .rodata.*)
+    *libgcc.a:_divsf3.*( .rodata  .rodata.*)
     *libesp_event.a:default_event_loop.*(.rodata.esp_event_isr_post)
     *libesp_event.a:esp_event.*(.rodata.esp_event_isr_post_to)
-    *libgcc.a:_divsf3.*( .rodata  .rodata.*)
-    *libgcov.a:( .rodata  .rodata.*)
-    *libheap.a:multi_heap.*( .rodata  .rodata.*)
     *libheap.a:multi_heap_poisoning.*( .rodata  .rodata.*)
-    *liblog.a:log.*(.rodata.esp_log_write)
-    *liblog.a:log_freertos.*(.rodata.esp_log_early_timestamp)
-    *liblog.a:log_freertos.*(.rodata.esp_log_impl_lock)
-    *liblog.a:log_freertos.*(.rodata.esp_log_impl_lock_timeout)
-    *liblog.a:log_freertos.*(.rodata.esp_log_impl_unlock)
-    *liblog.a:log_freertos.*(.rodata.esp_log_timestamp)
+    *libheap.a:multi_heap.*( .rodata  .rodata.*)
+    *libesp32.a:panic.*( .rodata  .rodata.*)
+    *libspi_flash.a:spi_flash_chip_generic.*( .rodata  .rodata.*)
+    *libspi_flash.a:memspi_host_driver.*( .rodata  .rodata.*)
+    *libspi_flash.a:spi_flash_chip_issi.*( .rodata  .rodata.*)
+    *libsoc.a:rtc_clk.*( .rodata  .rodata.*)
+    *libsoc.a:spi_flash_hal_iram.*( .rodata  .rodata.*)
     *libnewlib.a:heap.*( .rodata  .rodata.*)
     *libphy.a:( .rodata  .rodata.*)
-    *libsoc.a:i2c_hal_iram.*( .rodata  .rodata.*)
-    *libsoc.a:rtc_clk.*( .rodata  .rodata.*)
-    *libsoc.a:spi_flash_hal_gpspi.*( .rodata  .rodata.*)
-    *libsoc.a:spi_flash_hal_iram.*( .rodata  .rodata.*)
-    *libsoc.a:uart_hal_iram.*( .data  .data.*  .dram1  .dram1.*)
-    *libspi_flash.a:memspi_host_driver.*( .rodata  .rodata.*)
-    *libspi_flash.a:spi_flash_chip_gd.*( .rodata  .rodata.*)
-    *libspi_flash.a:spi_flash_chip_generic.*( .rodata  .rodata.*)
-    *libspi_flash.a:spi_flash_chip_issi.*( .rodata  .rodata.*)
 
     _data_end = ABSOLUTE(.);
     . = ALIGN(4);
@@ -322,8 +303,7 @@ SECTIONS
     . = ALIGN (4);
     _nimble_bss_end = ABSOLUTE(.);
 
-    *(EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .bss EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) .bss.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.*) COMMON)
-    *libsoc.a:uart_hal_iram.*( .bss  .bss.*  COMMON)
+    *( .bss  .bss.*  COMMON)
 
     *(.dynsbss)
     *(.sbss)
@@ -351,13 +331,9 @@ SECTIONS
     *(.rodata_desc .rodata_desc.*)               /* Should be the first.  App version info.        DO NOT PUT ANYTHING BEFORE IT! */
     *(.rodata_custom_desc .rodata_custom_desc.*) /* Should be the second. Custom app version info. DO NOT PUT ANYTHING BEFORE IT! */
 
-    *(EXCLUDE_FILE(*libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:_divsf3.* *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:i2c_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:spi_flash_hal_gpspi.* *libnewlib.a:heap.* *libphy.a) .rodata EXCLUDE_FILE(*libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *liblog.a:log_freertos.* *liblog.a:log.* *libgcc.a:_divsf3.* *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:i2c_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:spi_flash_hal_gpspi.* *libdriver.a:gpio.* *libnewlib.a:heap.* *libphy.a) .rodata.*)
-    *libdriver.a:gpio.*(.rodata.gpio_od_enable.str1.4 .rodata.gpio_input_enable.str1.4 .rodata.gpio_input_disable.str1.4 .rodata.gpio_output_disable.str1.4 .rodata.gpio_output_enable.str1.4 .rodata.gpio_pullup_en.str1.4 .rodata.gpio_pullup_dis.str1.4 .rodata.gpio_set_intr_type.str1.4 .rodata.gpio_set_pull_mode.str1.4 .rodata.gpio_set_direction.str1.4 .rodata.gpio_config.str1.4 .rodata.gpio_reset_pin.str1.4 .rodata.gpio_isr_handler_add.str1.4 .rodata.gpio_isr_register.str1.4 .rodata.gpio_install_isr_service.str1.4 .rodata.gpio_wakeup_enable.str1.4 .rodata.gpio_set_drive_capability.str1.4 .rodata.gpio_get_drive_capability.str1.4 .rodata.gpio_hold_en.str1.4 .rodata.gpio_iomux_in.str1.4 .rodata.gpio_iomux_out.str1.4 .rodata.__func__$5974 .rodata.__func__$5964 .rodata.__FUNCTION__$6195 .rodata.__FUNCTION__$6190 .rodata.__func__$5926 .rodata.__FUNCTION__$6185 .rodata.__func__$5917 .rodata.__FUNCTION__$6179 .rodata.__FUNCTION__$6173 .rodata.__FUNCTION__$6168 .rodata.__FUNCTION__$6161 .rodata.__FUNCTION__$6146 .rodata.__FUNCTION__$6142 .rodata.__FUNCTION__$6135 .rodata.__func__$6116 .rodata.__func__$6107 .rodata.__FUNCTION__$6065 .rodata.__FUNCTION__$6069 .rodata.__func__$5880 .rodata.__FUNCTION__$6057 .rodata.__FUNCTION__$6061 .rodata.__func__$5864 .rodata.__FUNCTION__$6049 .rodata.__func__$5872 .rodata.__FUNCTION__$6053 .rodata.__FUNCTION__$6094 .rodata.__FUNCTION__$6082 .rodata.__FUNCTION__$6074 .rodata.__FUNCTION__$6045 .rodata.__FUNCTION__$6037 .rodata.__FUNCTION__$6041 .rodata.__FUNCTION__$6032 .rodata.__func__$5826 .rodata.__FUNCTION__$6027 .rodata.__func__$5820 .rodata.__FUNCTION__$6023 .rodata.__func__$5814 .rodata.__FUNCTION__$6019 .rodata.__func__$5808 .rodata.__FUNCTION__$6015)
-    *libesp_event.a:default_event_loop.*(.rodata.esp_event_loop_create_default.str1.4 .rodata.esp_event_send_to_default_loop)
-    *libesp_event.a:esp_event.*(.rodata.handler_instances_add.str1.4 .rodata.base_node_add_handler.str1.4 .rodata.loop_node_add_handler.str1.4 .rodata.esp_event_loop_create.str1.4 .rodata.esp_event_loop_run.str1.4 .rodata.esp_event_loop_run_task.str1.4 .rodata.esp_event_handler_register_with.str1.4 .rodata.esp_event_handler_unregister_with.str1.4 .rodata.__func__$8625 .rodata.__func__$8612 .rodata.__func__$8592 .rodata.__func__$8576 .rodata.__func__$8553 .rodata.__func__$8512 .rodata.__func__$8503)
-    *liblog.a:log.*(.rodata.esp_log_level_set.str1.4 .rodata.__func__$3534 .rodata.__func__$3505)
-    *liblog.a:log_freertos.*(.rodata.esp_log_system_timestamp.str1.4)
-    *libsoc.a:uart_hal_iram.*( .rodata  .rodata.*)
+    *(EXCLUDE_FILE(*libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:_divsf3.* *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_clk.* *libnewlib.a:heap.* *libphy.a) .rodata EXCLUDE_FILE(*libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:_divsf3.* *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_clk.* *libnewlib.a:heap.* *libphy.a) .rodata.*)
+    *libesp_event.a:default_event_loop.*(.rodata.esp_system_event_debug.str1.4 .rodata.esp_event_loop_create_default.str1.4 .rodata.esp_event_send_to_default_loop)
+    *libesp_event.a:esp_event.*(.rodata.handler_instances_add.str1.4 .rodata.base_node_add_handler.str1.4 .rodata.loop_node_add_handler.str1.4 .rodata.esp_event_loop_create.str1.4 .rodata.esp_event_loop_run.str1.4 .rodata.esp_event_loop_run_task.str1.4 .rodata.esp_event_handler_register_with.str1.4 .rodata.esp_event_handler_unregister_with.str1.4 .rodata.__func__$7040 .rodata.__func__$7027 .rodata.__func__$7007 .rodata.__func__$6991 .rodata.__func__$6968 .rodata.__func__$6931 .rodata.__func__$6922)
 
     *(.irom1.text) /* catch stray ICACHE_RODATA_ATTR */
     *(.gnu.linkonce.r.*)
@@ -376,7 +352,7 @@ SECTIONS
         Make a point of not including anything from crtbegin.o or crtend.o, as IDF doesn't use toolchain crt
       */
     __init_array_start = ABSOLUTE(.);
-    KEEP (*(EXCLUDE_FILE (*crtend.* *crtbegin.*) .ctors SORT(.ctors.*)))
+    KEEP (*(EXCLUDE_FILE (*crtend.* *crtbegin.*) .ctors .ctors.*))
     __init_array_end = ABSOLUTE(.);
     KEEP (*crtbegin.*(.dtors))
     KEEP (*(EXCLUDE_FILE (*crtend.*) .dtors))
@@ -417,13 +393,12 @@ SECTIONS
     _stext = .;
     _text_start = ABSOLUTE(.);
 
-    *(EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_wdt.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .literal EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *liblog.a:log.* *liblog.a:log_freertos.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_wdt.* *libdriver.a:gpio.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .literal.* EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_wdt.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .text EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.* *liblog.a:log.* *liblog.a:log_freertos.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_wdt.* *libdriver.a:gpio.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .text.* EXCLUDE_FILE(*libpp.a *libnet80211.a *libsoc.a:uart_hal_iram.*) .wifi0iram EXCLUDE_FILE(*libpp.a *libnet80211.a *libsoc.a:uart_hal_iram.*) .wifi0iram.* EXCLUDE_FILE(*libpp.a *libnet80211.a *libsoc.a:uart_hal_iram.*) .wifirxiram EXCLUDE_FILE(*libpp.a *libnet80211.a *libsoc.a:uart_hal_iram.*) .wifirxiram.*)
-    *libdriver.a:gpio.*(.literal.gpio_od_enable .literal.gpio_od_disable .literal.gpio_input_enable .literal.gpio_input_disable .literal.gpio_output_disable .literal.gpio_intr_enable_on_core .literal.gpio_output_enable .literal.gpio_isr_register_on_core_static .literal.gpio_pullup_en .literal.gpio_pullup_dis .literal.gpio_pulldown_en .literal.gpio_pulldown_dis .literal.gpio_set_intr_type .literal.gpio_intr_enable .literal.gpio_intr_disable .literal.gpio_set_level .literal.gpio_get_level .literal.gpio_set_pull_mode .literal.gpio_set_direction .literal.gpio_config .literal.gpio_reset_pin .literal.gpio_isr_handler_add .literal.gpio_isr_handler_remove .literal.gpio_uninstall_isr_service .literal.gpio_isr_register .literal.gpio_install_isr_service .literal.gpio_wakeup_enable .literal.gpio_wakeup_disable .literal.gpio_set_drive_capability .literal.gpio_get_drive_capability .literal.gpio_hold_en .literal.gpio_hold_dis .literal.gpio_deep_sleep_hold_en .literal.gpio_deep_sleep_hold_dis .text.gpio_od_enable .text.gpio_od_disable .text.gpio_input_enable .text.gpio_input_disable .text.gpio_output_disable .text.gpio_intr_enable_on_core .text.gpio_output_enable .text.gpio_isr_register_on_core_static .text.gpio_pullup_en .text.gpio_pullup_dis .text.gpio_pulldown_en .text.gpio_pulldown_dis .text.gpio_set_intr_type .text.gpio_intr_enable .text.gpio_intr_disable .text.gpio_set_level .text.gpio_get_level .text.gpio_set_pull_mode .text.gpio_set_direction .text.gpio_config .text.gpio_reset_pin .text.gpio_isr_handler_add .text.gpio_isr_handler_remove .text.gpio_uninstall_isr_service .text.gpio_isr_register .text.gpio_install_isr_service .text.gpio_wakeup_enable .text.gpio_wakeup_disable .text.gpio_set_drive_capability .text.gpio_get_drive_capability .text.gpio_hold_en .text.gpio_hold_dis .text.gpio_deep_sleep_hold_en .text.gpio_deep_sleep_hold_dis)
-    *libesp_event.a:default_event_loop.*(.literal.esp_event_handler_register .literal.esp_event_handler_unregister .literal.esp_event_post .literal.esp_event_loop_create_default .literal.esp_event_loop_delete_default .literal.esp_event_send_to_default_loop .text.esp_event_handler_register .text.esp_event_handler_unregister .text.esp_event_post .text.esp_event_loop_create_default .text.esp_event_loop_delete_default .text.esp_event_send_to_default_loop)
+    *(EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:lldesc.* *libsoc.a:rtc_time.* *libsoc.a:rtc_pm.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_periph.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_init.* *libsoc.a:rtc_clk.* *libsoc.a:cpu_util.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .literal EXCLUDE_FILE(*libesp_eth.a:esp_eth_mac_esp32.* *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_ringbuf.a *libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:emac_hal.* *libsoc.a:lldesc.* *libsoc.a:rtc_time.* *libsoc.a:rtc_pm.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_periph.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_init.* *libsoc.a:rtc_clk.* *libsoc.a:cpu_util.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .literal.* EXCLUDE_FILE(*libesp_ringbuf.a *libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:lldesc.* *libsoc.a:rtc_time.* *libsoc.a:rtc_pm.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_periph.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_init.* *libsoc.a:rtc_clk.* *libsoc.a:cpu_util.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .text EXCLUDE_FILE(*libesp_eth.a:esp_eth_mac_esp32.* *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_ringbuf.a *libgcov.a *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *librtc.a *libheap.a:multi_heap.* *libheap.a:multi_heap_poisoning.* *libesp32.a:panic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libsoc.a:emac_hal.* *libsoc.a:lldesc.* *libsoc.a:rtc_time.* *libsoc.a:rtc_pm.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_periph.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_init.* *libsoc.a:rtc_clk.* *libsoc.a:cpu_util.* *libxtensa.a:eri.* *libnewlib.a:heap.* *libhal.a *libfreertos.a) .text.* EXCLUDE_FILE(*libpp.a *libnet80211.a) .wifi0iram EXCLUDE_FILE(*libpp.a *libnet80211.a) .wifi0iram.*)
+    *libesp_eth.a:esp_eth_mac_dm9051.*(.literal.emac_dm9051_set_mediator .literal.emac_dm9051_del .literal.dm9051_register_read .literal.emac_dm9051_set_duplex .literal.emac_dm9051_set_speed .literal.dm9051_verify_id .literal.dm9051_get_mac_addr .literal.dm9051_register_write .literal.emac_dm9051_task .literal.dm9051_stop .literal.dm9051_start .literal.emac_dm9051_set_link .literal.emac_dm9051_set_promiscuous .literal.dm9051_set_mac_addr .literal.dm9051_setup_default .literal.dm9051_clear_multicast_table .literal.dm9051_memory_peek .literal.dm9051_memory_read .literal.dm9051_memory_write .literal.emac_dm9051_transmit .literal.emac_dm9051_receive .literal.emac_dm9051_read_phy_reg .literal.emac_dm9051_write_phy_reg .literal.emac_dm9051_get_addr .literal.emac_dm9051_set_addr .literal.emac_dm9051_deinit .literal.dm9051_reset .literal.emac_dm9051_init .literal.esp_eth_mac_new_dm9051 .text.emac_dm9051_set_mediator .text.emac_dm9051_del .text.dm9051_register_read .text.emac_dm9051_set_duplex .text.emac_dm9051_set_speed .text.dm9051_verify_id .text.dm9051_get_mac_addr .text.dm9051_register_write .text.emac_dm9051_task .text.dm9051_stop .text.dm9051_start .text.emac_dm9051_set_link .text.emac_dm9051_set_promiscuous .text.dm9051_set_mac_addr .text.dm9051_setup_default .text.dm9051_clear_multicast_table .text.dm9051_memory_peek .text.dm9051_memory_read .text.dm9051_memory_write .text.emac_dm9051_transmit .text.emac_dm9051_receive .text.emac_dm9051_read_phy_reg .text.emac_dm9051_write_phy_reg .text.emac_dm9051_get_addr .text.emac_dm9051_set_addr .text.emac_dm9051_deinit .text.dm9051_reset .text.emac_dm9051_init .text.esp_eth_mac_new_dm9051)
+    *libesp_eth.a:esp_eth_mac_esp32.*(.literal.emac_esp32_set_mediator .literal.emac_esp32_del .literal.emac_esp32_receive .literal.emac_esp32_rx_task .literal.emac_esp32_transmit .literal.emac_esp32_set_promiscuous .literal.emac_esp32_set_link .literal.emac_esp32_set_duplex .literal.emac_esp32_set_speed .literal.emac_esp32_get_addr .literal.emac_esp32_set_addr .literal.emac_esp32_read_phy_reg .literal.emac_esp32_write_phy_reg .literal.emac_esp32_deinit .literal.emac_esp32_init_smi_gpio .literal.emac_esp32_init .literal.esp_eth_mac_new_esp32 .text.emac_esp32_set_mediator .text.emac_esp32_del .text.emac_esp32_receive .text.emac_esp32_rx_task .text.emac_esp32_transmit .text.emac_esp32_set_promiscuous .text.emac_esp32_set_link .text.emac_esp32_set_duplex .text.emac_esp32_set_speed .text.emac_esp32_get_addr .text.emac_esp32_set_addr .text.emac_esp32_read_phy_reg .text.emac_esp32_write_phy_reg .text.emac_esp32_deinit .text.emac_esp32_init_smi_gpio .text.emac_esp32_init .text.esp_eth_mac_new_esp32)
     *libesp_event.a:esp_event.*(.literal.handler_instances_remove_all .literal.base_node_remove_all_handler .literal.loop_node_remove_all_handler .literal.handler_instances_add .literal.base_node_add_handler .literal.loop_node_add_handler .literal.handler_instances_remove .literal.base_node_remove_handler .literal.loop_node_remove_handler .literal.esp_event_loop_create .literal.esp_event_loop_run .literal.esp_event_loop_run_task .literal.esp_event_loop_delete .literal.esp_event_handler_register_with .literal.esp_event_handler_unregister_with .literal.esp_event_post_to .text.handler_execute .text.handler_instances_remove_all .text.base_node_remove_all_handler .text.loop_node_remove_all_handler .text.handler_instances_add .text.base_node_add_handler .text.loop_node_add_handler .text.handler_instances_remove .text.base_node_remove_handler .text.loop_node_remove_handler .text.esp_event_loop_create .text.esp_event_loop_run .text.esp_event_loop_run_task .text.esp_event_loop_delete .text.esp_event_handler_register_with .text.esp_event_handler_unregister_with .text.esp_event_post_to .text.esp_event_dump)
-    *liblog.a:log.*(.literal.heap_bubble_down .literal.esp_log_set_vprintf .literal.esp_log_level_set .literal.esp_log_writev .text.heap_bubble_down .text.esp_log_set_vprintf .text.esp_log_level_set .text.esp_log_writev)
-    *liblog.a:log_freertos.*(.literal.esp_log_system_timestamp .text.esp_log_system_timestamp)
-    *libsoc.a:uart_hal_iram.*( .literal  .literal.*  .text  .text.*  .wifi0iram  .wifi0iram.*  .wifirxiram  .wifirxiram.*)
+    *libesp_event.a:default_event_loop.*(.literal.esp_system_event_debug .literal.esp_event_handler_register .literal.esp_event_handler_unregister .literal.esp_event_post .literal.esp_event_loop_create_default .literal.esp_event_loop_delete_default .literal.esp_event_send_to_default_loop .text.esp_system_event_debug .text.esp_event_handler_register .text.esp_event_handler_unregister .text.esp_event_post .text.esp_event_loop_create_default .text.esp_event_loop_delete_default .text.esp_event_send_to_default_loop)
+    *libsoc.a:emac_hal.*(.literal.emac_hal_init .literal.emac_hal_lowlevel_init .literal.emac_hal_reset_desc_chain .literal.emac_hal_init_mac_default .literal.emac_hal_init_dma_default .literal.emac_hal_set_speed .literal.emac_hal_set_duplex .literal.emac_hal_set_phy_cmd .literal.emac_hal_set_phy_data .literal.emac_hal_set_address .literal.emac_hal_start .literal.emac_hal_stop .literal.emac_hal_transmit_frame .literal.emac_hal_receive_frame .text.emac_hal_init .text.emac_hal_lowlevel_init .text.emac_hal_reset .text.emac_hal_is_reset_done .text.emac_hal_set_csr_clock_range .text.emac_hal_reset_desc_chain .text.emac_hal_init_mac_default .text.emac_hal_init_dma_default .text.emac_hal_set_speed .text.emac_hal_set_duplex .text.emac_hal_set_promiscuous .text.emac_hal_is_mii_busy .text.emac_hal_set_phy_cmd .text.emac_hal_set_phy_data .text.emac_hal_get_phy_data .text.emac_hal_set_address .text.emac_hal_start .text.emac_hal_stop .text.emac_hal_get_tx_desc_owner .text.emac_hal_transmit_frame .text.emac_hal_receive_frame)
 
     *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
     *(.irom0.text) /* catch stray ICACHE_RODATA_ATTR */

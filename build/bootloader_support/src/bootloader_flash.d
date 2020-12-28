@@ -1,51 +1,48 @@
 src/bootloader_flash.o: \
- /Users/zhuhouwang/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c \
- /Users/zhuhouwang/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_err.h \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /Users/zhuhouwang/esp/esp-idf/components/log/include/esp_log.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /Users/zhuhouwang/esp/esp-idf/components/log/include/esp_log_internal.h \
- /Users/zhuhouwang/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
- /Users/zhuhouwang/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /Users/zhuhouwang/esp/esp-idf/components/soc/include/soc/efuse_periph.h \
- /Users/zhuhouwang/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
- /Users/zhuhouwang/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_assert.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
+ C:/msys32/home/waz/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c \
+ C:/msys32/home/waz/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_err.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
+ C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h \
+ C:/msys32/home/waz/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/include/soc/efuse_periph.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_assert.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
 
-/Users/zhuhouwang/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
+C:/msys32/home/waz/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_err.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_err.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h:
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/log/include/esp_log.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
+C:/msys32/home/waz/esp/esp-idf/components/log/include/esp_log_internal.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/log/include/esp_log_internal.h:
+C:/msys32/home/waz/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/xtensa/include/esp_attr.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/include/soc/efuse_periph.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/include/soc/efuse_periph.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_assert.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_assert.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
-/Users/zhuhouwang/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_bit_defs.h:
+/home/waz/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c:

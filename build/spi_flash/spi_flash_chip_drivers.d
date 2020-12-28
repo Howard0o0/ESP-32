@@ -1,39 +1,33 @@
 spi_flash_chip_drivers.o: \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/spi_flash_chip_drivers.c \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_driver.h \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/esp_flash.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_err.h \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h \
- /Users/zhuhouwang/esp/esp-idf/components/soc/include/hal/spi_flash_types.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_types.h \
- /Users/zhuhouwang/esp/esp-idf/components/soc/include/hal/esp_flash_err.h \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_generic.h \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_issi.h \
- /Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_gd.h
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/spi_flash_chip_drivers.c \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_driver.h \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_flash.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_err.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/include/hal/spi_flash_types.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_types.h \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/include/hal/esp_flash_err.h \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_generic.h \
+ C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_issi.h
 
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_driver.h:
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_driver.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/esp_flash.h:
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/esp_flash.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_err.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_err.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/include/hal/spi_flash_types.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/include/hal/spi_flash_types.h:
+C:/msys32/home/waz/esp/esp-idf/components/esp_common/include/esp_types.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_types.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/include/hal/esp_flash_err.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/include/hal/esp_flash_err.h:
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_generic.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_generic.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_issi.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/include/spi_flash_chip_gd.h:
-/Users/zhuhouwang/esp/esp-idf/components/spi_flash/./spi_flash_chip_drivers.c:
+C:/msys32/home/waz/esp/esp-idf/components/spi_flash/include/spi_flash_chip_issi.h:
+/home/waz/esp/esp-idf/components/spi_flash/./spi_flash_chip_drivers.c:

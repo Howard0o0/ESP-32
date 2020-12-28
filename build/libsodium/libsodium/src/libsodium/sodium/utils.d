@@ -1,24 +1,21 @@
 libsodium/src/libsodium/sodium/utils.o: \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/utils.c \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/errno.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/utils.c \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/errno.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/errno.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/errno.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/utils.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/utils.c:

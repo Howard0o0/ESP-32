@@ -1,11 +1,8 @@
-src/lldesc.o: /Users/zhuhouwang/esp/esp-idf/components/soc/src/lldesc.c \
- /Users/zhuhouwang/esp/esp-idf/components/soc/include/soc/lldesc.h \
- /Users/zhuhouwang/esp/wristband/build/bootloader/../include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h
+src/lldesc.o: C:/msys32/home/waz/esp/esp-idf/components/soc/src/lldesc.c \
+ C:/msys32/home/waz/esp/esp-idf/components/soc/include/soc/lldesc.h \
+ C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h
 
-/Users/zhuhouwang/esp/esp-idf/components/soc/include/soc/lldesc.h:
+C:/msys32/home/waz/esp/esp-idf/components/soc/include/soc/lldesc.h:
 
-/Users/zhuhouwang/esp/wristband/build/bootloader/../include/sdkconfig.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
-/Users/zhuhouwang/esp/esp-idf/components/soc/src/lldesc.c:
+C:/msys32/home/waz/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
+/home/waz/esp/esp-idf/components/soc/src/lldesc.c:

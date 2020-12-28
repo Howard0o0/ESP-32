@@ -1,12 +1,12 @@
 libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.o: \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.c \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_hchacha20.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_hchacha20.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_hchacha20.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_core_hchacha20.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h:
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.c:
