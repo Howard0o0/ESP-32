@@ -1,12 +1,24 @@
 **FRR**
 
-1000cycles
+10000cycles
 
-TH=0, FRR=0.862863 
+thresh : 0 , frr : 0.928 
 
-TH=1, FRR=0.240240 
+thresh : 1 , frr : 0.836 
 
-TH=2, FRR=0.057057  
+thresh : 2 , frr : 0.680 
 
-TH=3, FRR=0
+thresh : 3 , frr : 0.403 
+
+thresh : 4 , frr : 0.000 
+
+thresh : 5 , frr : 0.000 
+
+thresh : 6 , frr : 0.000 
+
+thresh : 7 , frr : 0.000 
+
+thresh : 8 , frr : 0.000 
+
+thresh : 9 , frr : 0.000 
 
