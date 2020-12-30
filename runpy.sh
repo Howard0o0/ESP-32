@@ -1,0 +1,1 @@
+python3 matplot/main.py

@@ -174,7 +174,11 @@ void app_main() {
 	/*+++++++++++++++test lblock key stability++++++++++++++*/
 	// TestLblockKeyStability();
 	// PrintStableLblockKey();
-	FRR(10000);
+	// FRR(10000);
+	// FARByDifferentFinger(7, 500);
+	// getPUFResponse();
+	// FARByDifferentPUFBoard(5000);
+	SameFingerDist(100);
 	/*---------------test lblock key stability--------------*/
 
 	/* test fpga led blink */

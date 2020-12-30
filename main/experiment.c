@@ -81,6 +81,9 @@ void FARByDifferentFinger(int finger_cnt, int round) {
 
 	// get standard finger and response
 	while (!pu8Fingerprint || standardRsp[ 0 ] == 0) {
+
+		printf("waiting standard fingerprint  ...\r\n");
+
 		pu8Fingerprint = getFingerprintCharacter();
 		if (!pu8Fingerprint) {
 			printf("get standard FingerprintCharacter failed\r\n");
@@ -98,17 +101,21 @@ void FARByDifferentFinger(int finger_cnt, int round) {
 	}
 
 	for (int i = 0; i < finger_cnt; i++) {
-		printf("waiting fake fingerprint %d ...\r\n", finger_cnt);
-		vTaskDelay(2000 / portTICK_RATE_MS);
+		pu8Fingerprint = NULL;
 
-		pu8Fingerprint = getFingerprintCharacter();
-		if (!pu8Fingerprint) {
-			printf("get standard FingerprintCharacter failed\r\n");
-			continue;
+		while (!pu8Fingerprint) {
+			printf("waiting fake fingerprint %d ...\r\n", i);
+			vTaskDelay(2000 / portTICK_RATE_MS);
+			pu8Fingerprint = getFingerprintCharacter();
+			if (!pu8Fingerprint) {
+				printf("get fake finger %d failed\r\n", i);
+				continue;
+			}
 		}
 
 		// 每个指纹测round轮，测10个指纹
-		for (int i = 0; i < round; i++) {
+		for (int r = 0; r < round; r++) {
+			printf("round %d \r\n", r);
 
 			int result = finigerprintTo20bytesResponse(pu8Fingerprint, pu8PufResp);
 			if (result != 0) {
@@ -124,7 +131,7 @@ void FARByDifferentFinger(int finger_cnt, int round) {
 	}
 
 	for (int thresh = 0; thresh < 160; thresh++) {
-		float frr = ( float )accept_cnt[ thresh ] / round;
+		float frr = ( float )accept_cnt[ thresh ] / round * finger_cnt;
 		printf("thresh : %d , frr : %.3f \r\n", thresh, frr);
 	}
 
@@ -151,17 +158,22 @@ void getPUFResponse() {
 void FARByDifferentPUFBoard(int round) {
 
 	uint8_t* pu8PufResp	       = ( uint8_t* )calloc(20 + 1, sizeof(uint8_t));
-	uint8_t	 standardRsp[]	       = {};
+	uint8_t	 standardRsp[]	       = { 0x54, 0xbd, 0x58, 0xd8, 0x54, 0xbd, 0x58, 0xd8, 0x54, 0xbd,
+				   0x58, 0xd8, 0x54, 0xbd, 0x58, 0xd8, 0x54, 0xbd, 0x58, 0XD8 };
 	uint8_t	 pu8Fingerprint[ 200 ] = { 0 };
 	int	 accept_cnt[ 162 ]     = { 0 };
 
 	for (int i = 0; i < round; i++) {
+		printf("round %d \r\n", i);
 
 		int result = finigerprintTo20bytesResponse(pu8Fingerprint, pu8PufResp);
 		if (result != 0) {
 			printf("standard finigerprintTo20bytesResponse failed\r\n");
 			continue;
 		}
+
+		printf("PUF-resp : ");
+		print_hex(( char* )pu8PufResp, 20);
 
 		int dist = CalcHamingDist(standardRsp, pu8PufResp, 20);
 
@@ -175,4 +187,69 @@ void FARByDifferentPUFBoard(int round) {
 	}
 
 	printf("test done!\r\n");
+}
+
+static uint8_t* waitFinger() {
+
+	uint8_t* pu8Fingerprint = NULL;
+	while (!pu8Fingerprint) {
+
+		pu8Fingerprint = getFingerprintCharacter();
+		if (!pu8Fingerprint) {
+			printf("get standard FingerprintCharacter failed\r\n");
+			continue;
+		}
+	}
+	return pu8Fingerprint;
+}
+
+static void printRate(float* arr, int len, int total) {
+	printf("[ ");
+	for (int i = 0; i < len - 1; i++)
+		printf("%.02f, ", arr[ i ] / total);
+	printf("%.02f } \r\n", arr[ len - 1 ] / total);
+}
+
+void SameFingerDist(int round) {
+
+	uint8_t standardFingerBytes[ 40 ] = { 0 };
+	uint8_t standardResp[ 20 ]	  = { 0 };
+
+	printf("waiting standard finger \r\n");
+	uint8_t* fingerCharacter = waitFinger();
+	extract40BytesChallenge(fingerCharacter, standardFingerBytes);
+	printf("get standard fingerprint 40B : ");
+	print_hex(( char* )standardFingerBytes, 40);
+	while (finigerprintTo20bytesResponse(fingerCharacter, standardResp) != 0)
+		;
+
+	float finger_haming_rate[ 320 ] = { 0 };
+	float resp_haming_rate[ 160 ]	= { 0 };
+
+	uint8_t fingerBytes[ 40 ] = { 0 };
+	uint8_t resp[ 20 ]	  = { 0 };
+
+	for (int i = 0; i < round; i++) {
+		printf("waiting finger %d ... \r\n", i);
+		fingerCharacter = waitFinger();
+		extract40BytesChallenge(fingerCharacter, fingerBytes);
+		printf("get fingerprint 40B : ");
+		print_hex(( char* )fingerBytes, 40);
+		int dist = CalcHamingDist(fingerBytes, standardFingerBytes, 40);
+		finger_haming_rate[ dist ]++;
+
+		while (finigerprintTo20bytesResponse(fingerCharacter, resp) != 0)
+			;
+		dist = CalcHamingDist(resp, standardResp, 20);
+		resp_haming_rate[ dist ]++;
+	}
+
+	printf("sample finger done !\r\n");
+
+	printf("finger haming rate : ");
+	printRate(finger_haming_rate, 320, round);
+	printf("resp haming rate : ");
+	printRate(resp_haming_rate, 160, round);
+
+	printf("test done \r\n");
 }

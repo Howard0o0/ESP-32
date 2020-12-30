@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: STTStar - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/STTStar.res" /d "NDEBUG" /d "_AFXDLL" "D:\中转文件\TFS-M7x系列光学指纹模块Demo-串口\STTStar(5416)_NewFrame\STTStar.rc"" 
+Creating temporary file "C:\MySYS\TEMP\RSPC9DC.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/STTStar_NewFrame.pdb" /machine:I386 /out:"Release/STTStar_NewFrame.exe" 
+".\Release\BmpButton.obj"
+".\Release\CommSetDlg.obj"
+".\Release\CommTestDlg.obj"
+".\Release\CoolB.obj"
+".\Release\MainFrm.obj"
+".\Release\mscomm.obj"
+".\Release\StdAfx.obj"
+".\Release\STTStar.obj"
+".\Release\STTStarDoc.obj"
+".\Release\STTStarView.obj"
+".\Release\UpgradeDlg.obj"
+".\Release\STTStar.res"
+]
+Creating command line "link.exe @C:\MySYS\TEMP\RSPC9DC.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+STTStar_NewFrame.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,121 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by STTStar.rc
+//
+#define IDD_ABOUTBOX                    100
+#define IDD_STTSTAR_FORM                101
+#define IDD_COMMAND_DIALOG              102
+#define IDD_COMM_TEST_DIALOG            102
+#define IDR_MAINFRAME                   128
+#define IDR_STTSTATYPE                  129
+#define IDD_COMM_SET_DIALOG             131
+#define IDD_COMM_PORT_SET               137
+#define IDD_UPGRADE                     138
+#define IDC_PARM1                       1000
+#define IDC_MSCOMM_CMD                  1001
+#define IDC_EDIT_CMD                    1002
+#define IDC_PARM2                       1003
+#define IDC_PARM3                       1004
+#define IDC_BUTTON_CMD                  1005
+#define IDC_EDIT_ACK_INFO               1007
+#define IDC_BUTTON_CLOSE                1008
+#define IDC_PARM12                      1009
+#define IDC_BUTTON_BMP                  1011
+#define IDC_COMBO_SET_BAUD              1011
+#define IDC_BUTTON_SET_BAUD             1012
+#define IDC_MSCOMM1                     1013
+#define IDC_RADIO_GET_USERCNT           1018
+#define IDC_RADIO_GET_USERROLE          1019
+#define IDC_RADIO_DOWN_MATCH_N          1020
+#define IDC_RADIO_USER_REG              1021
+#define IDC_RADIO_DEL_USER              1022
+#define IDC_CHECK_CHAHGE                1022
+#define IDC_RADIO_DEL_ALLUSER           1023
+#define IDC_PROGRESS_UPGRADE            1023
+#define IDC_BUTTON_BROWSE               1024
+#define IDC_RADIO_GET_FEATURE           1025
+#define IDC_EDIT_FILE_PATH              1025
+#define IDC_RADIO_MATCH_N               1026
+#define IDC_BUTTON_UPGRADE              1026
+#define IDC_RADIO_DOWN_FEATURE          1027
+#define IDC_BUTTON_RESTORE              1027
+#define IDC_RADIO_UP_FEATURE            1028
+#define IDC_EDIT_X_START                1028
+#define IDC_EDIT_FILE_PATH2             1028
+#define IDC_RADIO_DOWN_MATCH_1          1029
+#define IDC_EDIT_Y_START                1029
+#define IDC_BUTTON_BROWSE2              1029
+#define IDC_RADIO_MATCH_1               1030
+#define IDC_BUTTON_GET_START            1030
+#define IDC_RADIO_DOWN_MATCH            1031
+#define IDC_CHECK_CHANGE                1031
+#define IDC_RADIO_GET_IMAGE             1032
+#define IDC_BUTTON_SET_START            1033
+#define IDC_RADIO_SET_REG               1034
+#define IDC_RADIO_GET_VERSION           1035
+#define IDC_RADIO_SET_MATCH_LEVEL       1036
+#define IDC_RADIOPROCESSIMAGE           1037
+#define IDC_RADIO_COMM_TEST             1038
+#define IDC_BTNTEST                     1039
+#define IDC_BUTTON_FEATURE_BROWSE       1041
+#define IDC_EDIT_FEATURE_PATH           1042
+#define IDC_RADIO_GET_USER_INFO         1043
+#define IDC_RADIO3                      1044
+#define IDC_RADIO_SET_LP_MODE           1044
+#define IDC_BTNCREATEHEXFILE            1045
+#define IDC_RADIO_SET_ENROLL_MODE       1046
+#define IDC_BUTTON_STORE_FEATURE        1048
+#define IDC_BUTTON_ENABLE               1049
+#define IDC_GET_HISTOGRAM               1050
+#define IDC_COMBO_BAUD                  1051
+#define IDC_COMBO_PORT                  1053
+#define IDC_CHECK_RESET_ID              1053
+#define IDC_EDIT_ACK_CODE               1054
+#define IDC_BTN_UPLOAD_ID               1055
+#define IDC_BTN_UPLOAD_RAND             1056
+#define IDC_BTN_DNLOAD_RAND             1057
+#define IDC_RADIO_GET_ONE_RECORD        1059
+#define IDC_RADIO_GET_NEW_RECORD        1060
+#define IDC_RADIO_SET_TIME              1061
+#define IDC_RADIO_GET_TIME              1062
+#define IDC_RADIO_CLEAR_RECORD          1063
+#define IDC_BTN_TG_PROG                 1065
+#define IDC_BTN_MOVE_RIGHT              1067
+#define IDC_BTN_MOVE_UP                 1068
+#define IDC_EDIT_MOVE_RIGHT             1069
+#define IDC_EDIT_MOVE_UP                1070
+#define IDC_BTN_LUM                     1071
+#define IDC_EDIT_LUM_ENC                1072
+#define IDC_CHECK_TWICE                 1080
+#define IDC_CHECK_UPLOAD                1081
+#define IDC_CHECK_IDENC_1               1082
+#define IDC_EDIT_CAPTIME                1083
+#define IDC_BTN_GET_BIG_IMG             1084
+#define IDC_BTN_GET_SMALL_IMG           1085
+#define IDC_CHECK_IDENC_2               1086
+#define IDC_CHECK_2FP                   1087
+#define IDC_CHECK_IMG_RAW               1088
+#define IDC_RADIO_LUM_ADJUST            1091
+#define IDC_BTN_BATCH                   1092
+#define IDC_EDIT_BATCH_CNT              1093
+#define IDC_EDIT_BATCH_INDX             1094
+#define IDC_CHECK_ENABLE_BATCH          1095
+#define IDC_STATIC_BATCH_CNT            1096
+#define IDC_STATIC_BATCH_INDX           1097
+#define IDC_CHECK1                      1098
+#define IDC_CHECK_GET_STORAGE           1098
+#define ID_DSP_TEST                     32771
+#define ID_DSP_UPGRADE                  32772
+#define ID_DSP_SETTINGS                 32773
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        141
+#define _APS_NEXT_COMMAND_VALUE         32779
+#define _APS_NEXT_CONTROL_VALUE         1099
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

@@ -126,7 +126,7 @@ int getPufResponse(uint8_t* challenge, uint8_t* Response) {
 	return 0;
 }
 
-static void extract40BytesChallenge(uint8_t* au8FingerprintFromServer, uint8_t* au8Challenge40Bytes) {
+void extract40BytesChallenge(uint8_t* au8FingerprintFromServer, uint8_t* au8Challenge40Bytes) {
 	memcpy(au8Challenge40Bytes, au8FingerprintFromServer + CHALLENGE_OFFSET_IN_FINGERPRINT,
 	       LEN_PUF_CHALLENGE);
 }
