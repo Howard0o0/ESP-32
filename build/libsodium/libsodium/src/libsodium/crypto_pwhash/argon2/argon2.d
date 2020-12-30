@@ -1,18 +1,18 @@
 libsodium/src/libsodium/crypto_pwhash/argon2/argon2.o: \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.c \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.h
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.h:
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.c:

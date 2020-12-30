@@ -1,18 +1,15 @@
 transport_utils.o: \
- /Users/zhuhouwang/esp/esp-idf/components/tcp_transport/transport_utils.c \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h \
- /Users/zhuhouwang/esp/esp-idf/components/tcp_transport/private_include/esp_transport_utils.h \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/sys/time.h
+ C:/msys32/home/waz/esp/esp-idf/components/tcp_transport/transport_utils.c \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/tcp_transport/private_include/esp_transport_utils.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/time.h
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/assert.h:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/esp_common/include/esp_compiler.h:
+C:/msys32/home/waz/esp/esp-idf/components/tcp_transport/private_include/esp_transport_utils.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/tcp_transport/private_include/esp_transport_utils.h:
-
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/sys/time.h:
-/Users/zhuhouwang/esp/esp-idf/components/tcp_transport/./transport_utils.c:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/time.h:
+/home/waz/esp/esp-idf/components/tcp_transport/./transport_utils.c:

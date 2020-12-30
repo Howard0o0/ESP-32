@@ -1,1 +1,1 @@
-1 gatt_server_service_table_demo v4.1-520-gc3324a82a
+52d2ee2-dirty gatt_server_service_table_demo 

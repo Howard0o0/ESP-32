@@ -1,6 +1,6 @@
 cJSON/cJSON.o: \
- /Users/zhuhouwang/esp/esp-idf/components/json/cJSON/cJSON.c \
- /Users/zhuhouwang/esp/esp-idf/components/json/cJSON/cJSON.h
+ C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.c \
+ C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h
 
-/Users/zhuhouwang/esp/esp-idf/components/json/cJSON/cJSON.h:
-/Users/zhuhouwang/esp/esp-idf/components/json/cJSON/cJSON.c:
+C:/msys32/home/waz/esp/esp-idf/components/json/cJSON/cJSON.h:
+/home/waz/esp/esp-idf/components/json/cJSON/cJSON.c:

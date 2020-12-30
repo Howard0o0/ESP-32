@@ -1,5 +1,5 @@
-unityString.o: /Users/zhuhouwang/esp/wristband/main/unityString.c \
- /Users/zhuhouwang/esp/wristband/main/unityString.h
+unityString.o: C:/msys32/home/waz/esp/ESP-32/main/unityString.c \
+ C:/msys32/home/waz/esp/ESP-32/main/unityString.h
 
-/Users/zhuhouwang/esp/wristband/main/unityString.h:
-/Users/zhuhouwang/esp/wristband/main/./unityString.c:
+C:/msys32/home/waz/esp/ESP-32/main/unityString.h:
+/home/waz/esp/ESP-32/main/./unityString.c:

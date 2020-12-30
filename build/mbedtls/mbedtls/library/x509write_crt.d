@@ -1,75 +1,75 @@
 mbedtls/library/x509write_crt.o: \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/sha1_alt.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
- /Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/sha1_alt.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h \
+ C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/port/include/sha1_alt.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/port/include/sha1_alt.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h:
-/Users/zhuhouwang/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c:
+C:/msys32/home/waz/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h:
+/home/waz/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c:

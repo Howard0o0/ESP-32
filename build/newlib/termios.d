@@ -1,8 +1,8 @@
-termios.o: /Users/zhuhouwang/esp/esp-idf/components/newlib/termios.c \
- /Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h \
- /Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/sys/termios.h
+termios.o: C:/msys32/home/waz/esp/esp-idf/components/newlib/termios.c \
+ C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h \
+ C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/termios.h
 
-/Users/zhuhouwang/esp/wristband/build/include/sdkconfig.h:
+C:/msys32/home/waz/esp/ESP-32/build/include/sdkconfig.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/newlib/platform_include/sys/termios.h:
-/Users/zhuhouwang/esp/esp-idf/components/newlib/./termios.c:
+C:/msys32/home/waz/esp/esp-idf/components/newlib/platform_include/sys/termios.h:
+/home/waz/esp/esp-idf/components/newlib/./termios.c:

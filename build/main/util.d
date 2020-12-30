@@ -1,5 +1,5 @@
-util.o: /Users/zhuhouwang/esp/wristband/main/util.c \
- /Users/zhuhouwang/esp/wristband/main/util.h
+util.o: C:/msys32/home/waz/esp/ESP-32/main/util.c \
+ C:/msys32/home/waz/esp/ESP-32/main/util.h
 
-/Users/zhuhouwang/esp/wristband/main/util.h:
-/Users/zhuhouwang/esp/wristband/main/./util.c:
+C:/msys32/home/waz/esp/ESP-32/main/util.h:
+/home/waz/esp/ESP-32/main/./util.c:

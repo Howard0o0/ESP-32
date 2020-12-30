@@ -223,12 +223,12 @@ void app_main()
 void allDriverInstall(void)
 {
         I2c_Master_Init();
+        max30102_init();
         blue_init();
         fpgaDriverInstall();
 
         szm301DriverInstall();
         BMI160_init();
-        max30102_init();
 
         TryToGetLblockKey();
 

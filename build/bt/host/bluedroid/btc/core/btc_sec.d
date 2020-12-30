@@ -1,3 +1,3 @@
 host/bluedroid/btc/core/btc_sec.o: \
- /Users/zhuhouwang/esp/esp-idf/components/bt/host/bluedroid/btc/core/btc_sec.c
-/Users/zhuhouwang/esp/esp-idf/components/bt/host/bluedroid/btc/core/btc_sec.c:
+ C:/msys32/home/waz/esp/esp-idf/components/bt/host/bluedroid/btc/core/btc_sec.c
+/home/waz/esp/esp-idf/components/bt/host/bluedroid/btc/core/btc_sec.c:

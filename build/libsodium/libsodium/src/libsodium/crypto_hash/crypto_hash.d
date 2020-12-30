@@ -1,12 +1,12 @@
 libsodium/src/libsodium/crypto_hash/crypto_hash.o: \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/crypto_hash.c \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
- /Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/crypto_hash.c \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
+ C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
 
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
-/Users/zhuhouwang/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/crypto_hash.c:
+C:/msys32/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/waz/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/crypto_hash.c:
