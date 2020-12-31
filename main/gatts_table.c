@@ -52,7 +52,7 @@
 #define SPP_PROFILE_APP_IDX         4
 #define PROFILE_APP_IDXID           5
 // #define ESP_APP_ID                  0x55
-#define SAMPLE_DEVICE_NAME          "ESP_GATTS_DEMO"
+#define SAMPLE_DEVICE_NAME          "device_0f"
 #define SVC_INST_ID                 0
 #define GATTS_TABLE_TAG "GATTS_TABLE_DEMO"
 
@@ -107,7 +107,7 @@ static uint8_t raw_adv_data[] = {
         /* service uuid */
         0x03, 0x03, 0xFF, 0x00,
         /* device name */
-        0x0f, 0x09, 'E', 'S', 'P', '_', 'G', 'A', 'T', 'T', 'S', '_', 'D','E', 'M', 'O'
+        0x0f, 0x09, 'E', 'S', 'P', '_', 'G', 'A', 'T', 'T', 'S', '_', '0', 'F'//, 'D','E', 'M', 'O'
 };
 static uint8_t raw_scan_rsp_data[] = {
         /* flags */
