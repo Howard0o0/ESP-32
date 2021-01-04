@@ -1,4 +1,6 @@
 #include "task_sensor.h"
+#include "authenticate.h"
+#include "fpga.h"
 
 uint16_t step=0;
 spo2Andhr   bo2andhrinit={0,0};
@@ -20,7 +22,7 @@ void sensor_data_update()
             bo2andhr=&bo2andhrinit;
         
         // temp=MAX30205_ReadTemperature();
-        vTaskDelay(3000 / portTICK_RATE_MS);
+        vTaskDelay(5000 / portTICK_RATE_MS);
     }
     
 }
@@ -38,11 +40,54 @@ void ble_data_update()
             hrdata[i]=bo2andhr->hr>>((3-i)*8);
         tempdata[0]=(uint8_t)temp;
         tempdata[1]=(uint8_t)((temp-(float)tempdata[0])*100);
-        change_char_value(stepdata,sizeof(stepdata),1);
-        change_char_value(bo2data,sizeof(bo2data),2);
-        change_char_value(hrdata,sizeof(hrdata),3);
-        change_char_value(tempdata,sizeof(tempdata),4);
-        vTaskDelay(3000 / portTICK_RATE_MS);
+
+        //encry
+        uint8_t pu8DeviceId[10] = {0};
+        uint16_t u16LenDeviceId;
+        getDeviceId(pu8DeviceId, &u16LenDeviceId);
+        uint8_t *au8LblockKey = NULL;
+        au8LblockKey = GetLblockKeyForId((char *)pu8DeviceId);
+        if(!au8LblockKey){
+            continue;
+        }
+
+        uint8_t pu8EncResp[20] = {0};
+        uint8_t u8LenEncResp = 0;
+        if(lblock_encrype(stepdata, au8LblockKey, pu8EncResp, sizeof(stepdata), &u8LenEncResp) == 0){
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[0];
+                u8LenEncResp++;
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[1];
+                u8LenEncResp++;
+                change_char_value(pu8EncResp, u8LenEncResp, 1);
+        }
+        if(lblock_encrype(bo2data, au8LblockKey, pu8EncResp, sizeof(bo2data), &u8LenEncResp) == 0){
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[0];
+                u8LenEncResp++;
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[1];
+                u8LenEncResp++;
+            change_char_value(pu8EncResp, u8LenEncResp, 2);
+        }
+        if(lblock_encrype(hrdata, au8LblockKey, pu8EncResp, sizeof(hrdata), &u8LenEncResp) == 0){
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[0];
+                u8LenEncResp++;
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[1];
+                u8LenEncResp++;
+            change_char_value(pu8EncResp, u8LenEncResp, 3);
+        }
+        if(lblock_encrype(tempdata, au8LblockKey, pu8EncResp, sizeof(tempdata), &u8LenEncResp) == 0){
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[0];
+                u8LenEncResp++;
+                pu8EncResp[u8LenEncResp] = pu8DeviceId[1];
+                u8LenEncResp++;
+            change_char_value(pu8EncResp, u8LenEncResp, 4);
+        }
+        //
+
+        // change_char_value(stepdata,sizeof(stepdata),1);
+        // change_char_value(bo2data,sizeof(bo2data),2);
+        // change_char_value(hrdata,sizeof(hrdata),3);
+        // change_char_value(tempdata,sizeof(tempdata),4);
+        vTaskDelay(5000 / portTICK_RATE_MS);
         
         printf("ble data updated\r\n");
         /*test*/

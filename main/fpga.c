@@ -240,7 +240,7 @@ uint8_t *FindMajorElementIndex(uint8_t **data, int first_dim_len,
 
 int get80bitPuf(uint8_t *pu8Puf80Bit)
 {
-#define PUF_SAMPLE_TIMES 10
+#define PUF_SAMPLE_TIMES 5
 
         int iRet;
         int iStableFlag = 0;
@@ -301,7 +301,6 @@ int get80bitPuf(uint8_t *pu8Puf80Bit)
         }
         memcpy(pu8Puf80Bit + 4, stable_puf_b, 4);
 
-
         /* fill the last 2 bytes of au8Puf80bit */
         pu8Puf80Bit[8] = 0xF0;
         pu8Puf80Bit[9] = 0x51;
@@ -320,9 +319,9 @@ bool GetLblockKey(uint8_t *lblock_key)
 static uint8_t *getLblockResponseAccordingToId(char *id)
 {
         static uint8_t lblockResponse[5][10] = {
-            {0x7A ,0x13 ,0x3C ,0xAA ,0x43 ,0x3F ,0xE4 ,0xAB}, // ID : "0D"
-            {0xE8,0xED ,0x93 ,0x53 ,0x2C,0xAE ,0x5A ,0x59},   // ID : "0B"
-            {0xB7 ,0x67 ,0x36 ,0x15,0x7E  ,0x36 ,0x9A ,0x77 }, // ID : "0F"
+            {0x7A, 0x13, 0x3C, 0xAA, 0x43, 0x3F, 0xE4, 0xAB}, // ID : "0D"
+            {0xE8, 0xED, 0x93, 0x53, 0x2C, 0xAE, 0x5A, 0x59}, // ID : "0B"
+            {0xB7, 0x67, 0x36, 0x15, 0x7E, 0x36, 0x9A, 0x77}, // ID : "0F"
             {},
             {}};
 
@@ -332,8 +331,6 @@ static uint8_t *getLblockResponseAccordingToId(char *id)
                 return lblockResponse[1];
         if (strstr(id, "0F") != NULL)
                 return lblockResponse[2];
-        
-        
 
         printf("unrecord id : %s \r\n", id);
         return NULL;
@@ -413,8 +410,8 @@ int lblock_encrype_8bytes(uint8_t *pu8PlainText, uint8_t *pu8Key, uint8_t *pu8En
 
         /* 3. send cmd, receive result */
         sendCmdToFPGA(au8Cmd, 1 + 1 + 8 + 10 + 1);
-        printf("cmd :");
-        print_hex((char *)au8Cmd, 1 + 1 + 8 + 10 + 1);
+        // printf("cmd :");
+        // print_hex((char *)au8Cmd, 1 + 1 + 8 + 10 + 1);
         iRet = rcvRspFromFPGA(au8RcvBuf);
         if (iRet <= 0)
         {

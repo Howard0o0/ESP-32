@@ -2255,98 +2255,6 @@
                                 "type": "int"
                             }, 
                             {
-                                "children": [
-                                    {
-                                        "children": [
-                                            {
-                                                "children": [], 
-                                                "depends_on": "<choice BTDM_CTRL_PCM_ROLE>", 
-                                                "help": null, 
-                                                "id": "BTDM_CTRL_PCM_ROLE_MASTER", 
-                                                "name": "BTDM_CTRL_PCM_ROLE_MASTER", 
-                                                "range": null, 
-                                                "title": "PCM Master", 
-                                                "type": "bool"
-                                            }, 
-                                            {
-                                                "children": [], 
-                                                "depends_on": "<choice BTDM_CTRL_PCM_ROLE>", 
-                                                "help": null, 
-                                                "id": "BTDM_CTRL_PCM_ROLE_SLAVE", 
-                                                "name": "BTDM_CTRL_PCM_ROLE_SLAVE", 
-                                                "range": null, 
-                                                "title": "PCM Slave", 
-                                                "type": "bool"
-                                            }
-                                        ], 
-                                        "depends_on": "BTDM_CTRL_PCM_ROLE_EDGE_CONFIG", 
-                                        "help": "PCM role can be configured as PCM master or PCM slave", 
-                                        "id": "component-config-bluetooth-bluetooth-controller-pcm-signal-config-role-and-polar--pcm-role", 
-                                        "name": "BTDM_CTRL_PCM_ROLE", 
-                                        "title": "PCM Role", 
-                                        "type": "choice"
-                                    }, 
-                                    {
-                                        "children": [
-                                            {
-                                                "children": [], 
-                                                "depends_on": "<choice BTDM_CTRL_PCM_POLAR>", 
-                                                "help": null, 
-                                                "id": "BTDM_CTRL_PCM_POLAR_FALLING_EDGE", 
-                                                "name": "BTDM_CTRL_PCM_POLAR_FALLING_EDGE", 
-                                                "range": null, 
-                                                "title": "Falling Edge", 
-                                                "type": "bool"
-                                            }, 
-                                            {
-                                                "children": [], 
-                                                "depends_on": "<choice BTDM_CTRL_PCM_POLAR>", 
-                                                "help": null, 
-                                                "id": "BTDM_CTRL_PCM_POLAR_RISING_EDGE", 
-                                                "name": "BTDM_CTRL_PCM_POLAR_RISING_EDGE", 
-                                                "range": null, 
-                                                "title": "Rising Edge", 
-                                                "type": "bool"
-                                            }
-                                        ], 
-                                        "depends_on": "BTDM_CTRL_PCM_ROLE_EDGE_CONFIG", 
-                                        "help": "PCM polarity can be configured as Falling Edge or Rising Edge", 
-                                        "id": "component-config-bluetooth-bluetooth-controller-pcm-signal-config-role-and-polar--pcm-polar", 
-                                        "name": "BTDM_CTRL_PCM_POLAR", 
-                                        "title": "PCM Polar", 
-                                        "type": "choice"
-                                    }
-                                ], 
-                                "depends_on": "BTDM_CTRL_BR_EDR_SCO_DATA_PATH_PCM", 
-                                "help": null, 
-                                "id": "BTDM_CTRL_PCM_ROLE_EDGE_CONFIG", 
-                                "is_menuconfig": true, 
-                                "name": "BTDM_CTRL_PCM_ROLE_EDGE_CONFIG", 
-                                "range": null, 
-                                "title": "PCM Signal Config (Role and Polar)", 
-                                "type": "menu"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": null, 
-                                "help": null, 
-                                "id": "BTDM_CTRL_PCM_ROLE_EFF", 
-                                "name": "BTDM_CTRL_PCM_ROLE_EFF", 
-                                "range": null, 
-                                "title": null, 
-                                "type": "int"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": null, 
-                                "help": null, 
-                                "id": "BTDM_CTRL_PCM_POLAR_EFF", 
-                                "name": "BTDM_CTRL_PCM_POLAR_EFF", 
-                                "range": null, 
-                                "title": null, 
-                                "type": "int"
-                            }, 
-                            {
                                 "children": [], 
                                 "depends_on": "BTDM_CTRL_MODE_BTDM", 
                                 "help": "BLE auto latency, used to enhance classic BT performance\nwhile classic BT and BLE are enabled at the same time.", 
@@ -2362,26 +2270,6 @@
                                 "help": null, 
                                 "id": "BTDM_CTRL_AUTO_LATENCY_EFF", 
                                 "name": "BTDM_CTRL_AUTO_LATENCY_EFF", 
-                                "range": null, 
-                                "title": null, 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "BTDM_CTRL_MODE_BR_EDR_ONLY || BTDM_CTRL_MODE_BTDM", 
-                                "help": "To protect from BIAS attack during Legacy authentication,\nLegacy authentication Vendor specific event should be enabled", 
-                                "id": "BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT", 
-                                "name": "BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT", 
-                                "range": null, 
-                                "title": "Legacy Authentication Vendor Specific Event Enable", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": null, 
-                                "help": null, 
-                                "id": "BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF", 
-                                "name": "BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF", 
                                 "range": null, 
                                 "title": null, 
                                 "type": "bool"
@@ -5672,84 +5560,13 @@
                         "type": "bool"
                     }, 
                     {
-                        "children": [
-                            {
-                                "children": [], 
-                                "depends_on": "<choice BLE_MESH_MEM_ALLOC_MODE>", 
-                                "help": null, 
-                                "id": "BLE_MESH_MEM_ALLOC_MODE_INTERNAL", 
-                                "name": "BLE_MESH_MEM_ALLOC_MODE_INTERNAL", 
-                                "range": null, 
-                                "title": "Internal DRAM", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "ESP32_SPIRAM_SUPPORT && <choice BLE_MESH_MEM_ALLOC_MODE>", 
-                                "help": null, 
-                                "id": "BLE_MESH_MEM_ALLOC_MODE_EXTERNAL", 
-                                "name": "BLE_MESH_MEM_ALLOC_MODE_EXTERNAL", 
-                                "range": null, 
-                                "title": "External SPIRAM", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "ESP32_SPIRAM_SUPPORT && <choice BLE_MESH_MEM_ALLOC_MODE>", 
-                                "help": "Enable this option to use the default memory allocation strategy when\nexternal SPIRAM is enabled. See the SPIRAM options for more details.", 
-                                "id": "BLE_MESH_MEM_ALLOC_MODE_DEFAULT", 
-                                "name": "BLE_MESH_MEM_ALLOC_MODE_DEFAULT", 
-                                "range": null, 
-                                "title": "Default alloc mode", 
-                                "type": "bool"
-                            }
-                        ], 
-                        "depends_on": "BLE_MESH", 
-                        "help": "Allocation strategy for BLE Mesh stack, essentially provides ability to\nallocate all required dynamic allocations from,\n\n- Internal DRAM memory only\n- External SPIRAM memory only\n- Either internal or external memory based on default malloc()\n  behavior in ESP-IDF\n\nRecommended mode here is always internal, since that is most preferred\nfrom security perspective. But if application requirement does not allow\nsufficient free internal memory then alternate mode can be selected.", 
-                        "id": "component-config-esp-ble-mesh-support-memory-allocation-strategy", 
-                        "name": "BLE_MESH_MEM_ALLOC_MODE", 
-                        "title": "Memory allocation strategy", 
-                        "type": "choice"
-                    }, 
-                    {
-                        "children": [
-                            {
-                                "children": [
-                                    {
-                                        "children": [], 
-                                        "depends_on": "ESP32_SPIRAM_SUPPORT && <choice BLE_MESH_FREERTOS_STATIC_ALLOC_MODE>", 
-                                        "help": "If enabled, BLE Mesh allocates dynamic memory from external SPIRAM for\nFreeRTOS objects, i.e. mutex, queue, and task stack. External SPIRAM\ncan only be used for task stack when SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY\nis enabled. See the SPIRAM options for more details.", 
-                                        "id": "BLE_MESH_FREERTOS_STATIC_ALLOC_EXTERNAL", 
-                                        "name": "BLE_MESH_FREERTOS_STATIC_ALLOC_EXTERNAL", 
-                                        "range": null, 
-                                        "title": "External SPIRAM", 
-                                        "type": "bool"
-                                    }
-                                ], 
-                                "depends_on": "BLE_MESH_FREERTOS_STATIC_ALLOC && BLE_MESH", 
-                                "help": "Choose the memory to be used for FreeRTOS objects.", 
-                                "id": "component-config-esp-ble-mesh-support-enable-freertos-static-allocation-memory-allocation-for-freertos-objects", 
-                                "name": "BLE_MESH_FREERTOS_STATIC_ALLOC_MODE", 
-                                "title": "Memory allocation for FreeRTOS objects", 
-                                "type": "choice"
-                            }
-                        ], 
-                        "depends_on": "FREERTOS_SUPPORT_STATIC_ALLOCATION && ESP32_SPIRAM_SUPPORT && BLE_MESH", 
-                        "help": "Enable this option to use FreeRTOS static allocation APIs for BLE Mesh,\nwhich provides the ability to use different dynamic memory (i.e. SPIRAM)\nfor FreeRTOS objects.\nIf this option is disabled, the FreeRTOS static allocation APIs will not\nbe used, and internal DRAM will be allocated for FreeRTOS objects.", 
-                        "id": "BLE_MESH_FREERTOS_STATIC_ALLOC", 
-                        "name": "BLE_MESH_FREERTOS_STATIC_ALLOC", 
-                        "range": null, 
-                        "title": "Enable FreeRTOS static allocation", 
-                        "type": "bool"
-                    }, 
-                    {
                         "children": [], 
                         "depends_on": "BLE_MESH", 
-                        "help": "If enabled, users can use the function esp_ble_mesh_deinit() to de-initialize\nthe whole BLE Mesh stack.", 
-                        "id": "BLE_MESH_DEINIT", 
-                        "name": "BLE_MESH_DEINIT", 
+                        "help": "When this option is enabled, BLE Mesh stack will try to allocate memory\nfrom PSRAM firstly. This will save the internal RAM if PSRAM exists.", 
+                        "id": "BLE_MESH_ALLOC_FROM_PSRAM_FIRST", 
+                        "name": "BLE_MESH_ALLOC_FROM_PSRAM_FIRST", 
                         "range": null, 
-                        "title": "Support de-initialize BLE Mesh stack", 
+                        "title": "BLE Mesh will first allocate memory from PSRAM", 
                         "type": "bool"
                     }, 
                     {
@@ -5931,7 +5748,7 @@
                         "id": "BLE_MESH_NET_BUF_POOL_USAGE", 
                         "name": "BLE_MESH_NET_BUF_POOL_USAGE", 
                         "range": null, 
-                        "title": null, 
+                        "title": "BLE Mesh net buffer pool usage tracking", 
                         "type": "bool"
                     }, 
                     {
@@ -6583,255 +6400,197 @@
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Configuration Client model.", 
+                                "help": "Enable support for Configuration client model.", 
                                 "id": "BLE_MESH_CFG_CLI", 
                                 "name": "BLE_MESH_CFG_CLI", 
                                 "range": null, 
-                                "title": "Configuration Client model", 
+                                "title": "Configuration Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Health Client model.", 
+                                "help": "Enable support for Health client model.", 
                                 "id": "BLE_MESH_HEALTH_CLI", 
                                 "name": "BLE_MESH_HEALTH_CLI", 
                                 "range": null, 
-                                "title": "Health Client model", 
+                                "title": "Health Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Health Server model.", 
-                                "id": "BLE_MESH_HEALTH_SRV", 
-                                "name": "BLE_MESH_HEALTH_SRV", 
-                                "range": null, 
-                                "title": "Health Server model", 
-                                "type": "bool"
-                            }
-                        ], 
-                        "depends_on": "BLE_MESH", 
-                        "id": "component-config-esp-ble-mesh-support-support-for-ble-mesh-foundation-models", 
-                        "title": "Support for BLE Mesh Foundation models", 
-                        "type": "menu"
-                    }, 
-                    {
-                        "children": [
-                            {
-                                "children": [], 
-                                "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic OnOff Client model.", 
+                                "help": "Enable support for Generic OnOff client model.", 
                                 "id": "BLE_MESH_GENERIC_ONOFF_CLI", 
                                 "name": "BLE_MESH_GENERIC_ONOFF_CLI", 
                                 "range": null, 
-                                "title": "Generic OnOff Client model", 
+                                "title": "Generic OnOff Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Level Client model.", 
+                                "help": "Enable support for Generic Level client model.", 
                                 "id": "BLE_MESH_GENERIC_LEVEL_CLI", 
                                 "name": "BLE_MESH_GENERIC_LEVEL_CLI", 
                                 "range": null, 
-                                "title": "Generic Level Client model", 
+                                "title": "Generic Level Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Default Transition Time Client model.", 
+                                "help": "Enable support for Generic Default Transition Time client model.", 
                                 "id": "BLE_MESH_GENERIC_DEF_TRANS_TIME_CLI", 
                                 "name": "BLE_MESH_GENERIC_DEF_TRANS_TIME_CLI", 
                                 "range": null, 
-                                "title": "Generic Default Transition Time Client model", 
+                                "title": "Generic Default Transition Time Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Power OnOff Client model.", 
+                                "help": "Enable support for Generic Power OnOff client model.", 
                                 "id": "BLE_MESH_GENERIC_POWER_ONOFF_CLI", 
                                 "name": "BLE_MESH_GENERIC_POWER_ONOFF_CLI", 
                                 "range": null, 
-                                "title": "Generic Power OnOff Client model", 
+                                "title": "Generic Power OnOff Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Power Level Client model.", 
+                                "help": "Enable support for Generic Power Level client model.", 
                                 "id": "BLE_MESH_GENERIC_POWER_LEVEL_CLI", 
                                 "name": "BLE_MESH_GENERIC_POWER_LEVEL_CLI", 
                                 "range": null, 
-                                "title": "Generic Power Level Client model", 
+                                "title": "Generic Power Level Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Battery Client model.", 
+                                "help": "Enable support for Generic Battery client model.", 
                                 "id": "BLE_MESH_GENERIC_BATTERY_CLI", 
                                 "name": "BLE_MESH_GENERIC_BATTERY_CLI", 
                                 "range": null, 
-                                "title": "Generic Battery Client model", 
+                                "title": "Generic Battery Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Location Client model.", 
+                                "help": "Enable support for Generic Location client model.", 
                                 "id": "BLE_MESH_GENERIC_LOCATION_CLI", 
                                 "name": "BLE_MESH_GENERIC_LOCATION_CLI", 
                                 "range": null, 
-                                "title": "Generic Location Client model", 
+                                "title": "Generic Location Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic Property Client model.", 
+                                "help": "Enable support for Generic Property client model.", 
                                 "id": "BLE_MESH_GENERIC_PROPERTY_CLI", 
                                 "name": "BLE_MESH_GENERIC_PROPERTY_CLI", 
                                 "range": null, 
-                                "title": "Generic Property Client model", 
+                                "title": "Generic Property Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Sensor Client model.", 
+                                "help": "Enable support for Sensor client model.", 
                                 "id": "BLE_MESH_SENSOR_CLI", 
                                 "name": "BLE_MESH_SENSOR_CLI", 
                                 "range": null, 
-                                "title": "Sensor Client model", 
+                                "title": "Sensor Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Time Client model.", 
+                                "help": "Enable support for Time client model.", 
                                 "id": "BLE_MESH_TIME_CLI", 
                                 "name": "BLE_MESH_TIME_CLI", 
                                 "range": null, 
-                                "title": "Time Client model", 
+                                "title": "Time Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Scene Client model.", 
+                                "help": "Enable support for Scene client model.", 
                                 "id": "BLE_MESH_SCENE_CLI", 
                                 "name": "BLE_MESH_SCENE_CLI", 
                                 "range": null, 
-                                "title": "Scene Client model", 
+                                "title": "Scene Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Scheduler Client model.", 
+                                "help": "Enable support for Scheduler client model.", 
                                 "id": "BLE_MESH_SCHEDULER_CLI", 
                                 "name": "BLE_MESH_SCHEDULER_CLI", 
                                 "range": null, 
-                                "title": "Scheduler Client model", 
+                                "title": "Scheduler Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Light Lightness Client model.", 
+                                "help": "Enable support for Light Lightness client model.", 
                                 "id": "BLE_MESH_LIGHT_LIGHTNESS_CLI", 
                                 "name": "BLE_MESH_LIGHT_LIGHTNESS_CLI", 
                                 "range": null, 
-                                "title": "Light Lightness Client model", 
+                                "title": "Light Lightness Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Light CTL Client model.", 
+                                "help": "Enable support for Light CTL client model.", 
                                 "id": "BLE_MESH_LIGHT_CTL_CLI", 
                                 "name": "BLE_MESH_LIGHT_CTL_CLI", 
                                 "range": null, 
-                                "title": "Light CTL Client model", 
+                                "title": "Light CTL Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Light HSL Client model.", 
+                                "help": "Enable support for Light HSL client model.", 
                                 "id": "BLE_MESH_LIGHT_HSL_CLI", 
                                 "name": "BLE_MESH_LIGHT_HSL_CLI", 
                                 "range": null, 
-                                "title": "Light HSL Client model", 
+                                "title": "Light HSL Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Light XYL Client model.", 
+                                "help": "Enable support for Light XYL client model.", 
                                 "id": "BLE_MESH_LIGHT_XYL_CLI", 
                                 "name": "BLE_MESH_LIGHT_XYL_CLI", 
                                 "range": null, 
-                                "title": "Light XYL Client model", 
+                                "title": "Light XYL Client Model", 
                                 "type": "bool"
                             }, 
                             {
                                 "children": [], 
                                 "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Light LC Client model.", 
+                                "help": "Enable support for Light LC client model.", 
                                 "id": "BLE_MESH_LIGHT_LC_CLI", 
                                 "name": "BLE_MESH_LIGHT_LC_CLI", 
                                 "range": null, 
-                                "title": "Light LC Client model", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Generic server models.", 
-                                "id": "BLE_MESH_GENERIC_SERVER", 
-                                "name": "BLE_MESH_GENERIC_SERVER", 
-                                "range": null, 
-                                "title": "Generic server models", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Sensor server models.", 
-                                "id": "BLE_MESH_SENSOR_SERVER", 
-                                "name": "BLE_MESH_SENSOR_SERVER", 
-                                "range": null, 
-                                "title": "Sensor server models", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Time and Scenes server models.", 
-                                "id": "BLE_MESH_TIME_SCENE_SERVER", 
-                                "name": "BLE_MESH_TIME_SCENE_SERVER", 
-                                "range": null, 
-                                "title": "Time and Scenes server models", 
-                                "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": "BLE_MESH", 
-                                "help": "Enable support for Lighting server models.", 
-                                "id": "BLE_MESH_LIGHTING_SERVER", 
-                                "name": "BLE_MESH_LIGHTING_SERVER", 
-                                "range": null, 
-                                "title": "Lighting server models", 
+                                "title": "Light LC Client Model", 
                                 "type": "bool"
                             }
                         ], 
                         "depends_on": "BLE_MESH", 
-                        "id": "component-config-esp-ble-mesh-support-support-for-ble-mesh-client-server-models", 
-                        "title": "Support for BLE Mesh Client/Server models", 
+                        "id": "component-config-esp-ble-mesh-support-support-for-ble-mesh-client-models", 
+                        "title": "Support for BLE Mesh Client Models", 
                         "type": "menu"
                     }, 
                     {
@@ -7462,16 +7221,6 @@
             }, 
             {
                 "children": [
-                    {
-                        "children": [], 
-                        "depends_on": "!FREERTOS_UNICORE && ESP32_SPIRAM_SUPPORT", 
-                        "help": null, 
-                        "id": "ESP32_ECO3_CACHE_LOCK_FIX", 
-                        "name": "ESP32_ECO3_CACHE_LOCK_FIX", 
-                        "range": null, 
-                        "title": null, 
-                        "type": "bool"
-                    }, 
                     {
                         "children": [
                             {
@@ -11680,41 +11429,21 @@
                     {
                         "children": [], 
                         "depends_on": null, 
-                        "help": "Enabling this option allows fragmenting outgoing IP4 packets if their size\nexceeds MTU.", 
-                        "id": "LWIP_IP4_FRAG", 
-                        "name": "LWIP_IP4_FRAG", 
+                        "help": "Enabling this option allows fragmenting outgoing IP packets if their size\nexceeds MTU.", 
+                        "id": "LWIP_IP_FRAG", 
+                        "name": "LWIP_IP_FRAG", 
                         "range": null, 
-                        "title": "Enable fragment outgoing IP4 packets", 
+                        "title": "Enable fragment outgoing IP packets", 
                         "type": "bool"
                     }, 
                     {
                         "children": [], 
                         "depends_on": null, 
-                        "help": "Enabling this option allows fragmenting outgoing IP6 packets if their size\nexceeds MTU.", 
-                        "id": "LWIP_IP6_FRAG", 
-                        "name": "LWIP_IP6_FRAG", 
+                        "help": "Enabling this option allows reassemblying incoming fragmented IP packets.", 
+                        "id": "LWIP_IP_REASSEMBLY", 
+                        "name": "LWIP_IP_REASSEMBLY", 
                         "range": null, 
-                        "title": "Enable fragment outgoing IP6 packets", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": null, 
-                        "help": "Enabling this option allows reassemblying incoming fragmented IP4 packets.", 
-                        "id": "LWIP_IP4_REASSEMBLY", 
-                        "name": "LWIP_IP4_REASSEMBLY", 
-                        "range": null, 
-                        "title": "Enable reassembly incoming fragmented IP4 packets", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": null, 
-                        "help": "Enabling this option allows reassemblying incoming fragmented IP6 packets.", 
-                        "id": "LWIP_IP6_REASSEMBLY", 
-                        "name": "LWIP_IP6_REASSEMBLY", 
-                        "range": null, 
-                        "title": "Enable reassembly incoming fragmented IP6 packets", 
+                        "title": "Enable reassembly incoming fragmented IP packets", 
                         "type": "bool"
                     }, 
                     {
@@ -11904,16 +11633,6 @@
                     }, 
                     {
                         "children": [
-                            {
-                                "children": [], 
-                                "depends_on": null, 
-                                "help": "Enables custom TCP ISN hook to randomize initial sequence\nnumber in TCP connection. This is recommended as default\nlwIP implementation (`tcp_next_iss`) is not very strong,\nas it does not take into consideration any platform\nspecific entropy source.", 
-                                "id": "LWIP_TCP_ISN_HOOK", 
-                                "name": "LWIP_TCP_ISN_HOOK", 
-                                "range": null, 
-                                "title": "Enable TCP ISN Hook", 
-                                "type": "bool"
-                            }, 
                             {
                                 "children": [], 
                                 "depends_on": null, 
@@ -12128,16 +11847,6 @@
                                 "range": null, 
                                 "title": "Support TCP window scale", 
                                 "type": "bool"
-                            }, 
-                            {
-                                "children": [], 
-                                "depends_on": null, 
-                                "help": "Set default TCP rto time for a reasonable initial rto.\nIn bad network environment, recommend set value of rto time to 1500.", 
-                                "id": "LWIP_TCP_RTO_TIME", 
-                                "name": "LWIP_TCP_RTO_TIME", 
-                                "range": null, 
-                                "title": "Default TCP rto time", 
-                                "type": "int"
                             }
                         ], 
                         "depends_on": null, 
@@ -12253,6 +11962,66 @@
                                 "range": null, 
                                 "title": "Enable IPV6 support for PPP connections (IPV6CP)", 
                                 "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable to set a callback which is called on change of the internal PPP state machine.", 
+                                "id": "LWIP_PPP_NOTIFY_PHASE_SUPPORT", 
+                                "name": "LWIP_PPP_NOTIFY_PHASE_SUPPORT", 
+                                "range": null, 
+                                "title": "Enable Notify Phase Callback", 
+                                "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable Password Authentication Protocol (PAP) support", 
+                                "id": "LWIP_PPP_PAP_SUPPORT", 
+                                "name": "LWIP_PPP_PAP_SUPPORT", 
+                                "range": null, 
+                                "title": "Enable PAP support", 
+                                "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable Challenge Handshake Authentication Protocol (CHAP) support", 
+                                "id": "LWIP_PPP_CHAP_SUPPORT", 
+                                "name": "LWIP_PPP_CHAP_SUPPORT", 
+                                "range": null, 
+                                "title": "Enable CHAP support", 
+                                "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable Microsoft version of the Challenge-Handshake Authentication Protocol (MSCHAP) support", 
+                                "id": "LWIP_PPP_MSCHAP_SUPPORT", 
+                                "name": "LWIP_PPP_MSCHAP_SUPPORT", 
+                                "range": null, 
+                                "title": "Enable MSCHAP support", 
+                                "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable Microsoft Point-to-Point Encryption (MPPE) support", 
+                                "id": "LWIP_PPP_MPPE_SUPPORT", 
+                                "name": "LWIP_PPP_MPPE_SUPPORT", 
+                                "range": null, 
+                                "title": "Enable MPPE support", 
+                                "type": "bool"
+                            }, 
+                            {
+                                "children": [], 
+                                "depends_on": "LWIP_PPP_SUPPORT", 
+                                "help": "Enable PPP debug log output", 
+                                "id": "LWIP_PPP_DEBUG_ON", 
+                                "name": "LWIP_PPP_DEBUG_ON", 
+                                "range": null, 
+                                "title": "Enable PPP debug log output", 
+                                "type": "bool"
                             }
                         ], 
                         "depends_on": null, 
@@ -12263,92 +12032,6 @@
                         "range": null, 
                         "title": "Enable PPP support (new/experimental)", 
                         "type": "menu"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": null, 
-                        "help": "Config max number of IPv6 packets to queue during MAC resolution.", 
-                        "id": "LWIP_IPV6_MEMP_NUM_ND6_QUEUE", 
-                        "name": "LWIP_IPV6_MEMP_NUM_ND6_QUEUE", 
-                        "range": [
-                            3, 
-                            20
-                        ], 
-                        "title": "Max number of IPv6 packets to queue during MAC resolution", 
-                        "type": "int"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": null, 
-                        "help": "Config max number of entries in IPv6 neighbor cache", 
-                        "id": "LWIP_IPV6_ND6_NUM_NEIGHBORS", 
-                        "name": "LWIP_IPV6_ND6_NUM_NEIGHBORS", 
-                        "range": [
-                            3, 
-                            10
-                        ], 
-                        "title": "Max number of entries in IPv6 neighbor cache", 
-                        "type": "int"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable to set a callback which is called on change of the internal PPP state machine.", 
-                        "id": "LWIP_PPP_NOTIFY_PHASE_SUPPORT", 
-                        "name": "LWIP_PPP_NOTIFY_PHASE_SUPPORT", 
-                        "range": null, 
-                        "title": "Enable Notify Phase Callback", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable Password Authentication Protocol (PAP) support", 
-                        "id": "LWIP_PPP_PAP_SUPPORT", 
-                        "name": "LWIP_PPP_PAP_SUPPORT", 
-                        "range": null, 
-                        "title": "Enable PAP support", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable Challenge Handshake Authentication Protocol (CHAP) support", 
-                        "id": "LWIP_PPP_CHAP_SUPPORT", 
-                        "name": "LWIP_PPP_CHAP_SUPPORT", 
-                        "range": null, 
-                        "title": "Enable CHAP support", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable Microsoft version of the Challenge-Handshake Authentication Protocol (MSCHAP) support", 
-                        "id": "LWIP_PPP_MSCHAP_SUPPORT", 
-                        "name": "LWIP_PPP_MSCHAP_SUPPORT", 
-                        "range": null, 
-                        "title": "Enable MSCHAP support", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable Microsoft Point-to-Point Encryption (MPPE) support", 
-                        "id": "LWIP_PPP_MPPE_SUPPORT", 
-                        "name": "LWIP_PPP_MPPE_SUPPORT", 
-                        "range": null, 
-                        "title": "Enable MPPE support", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": "LWIP_PPP_SUPPORT", 
-                        "help": "Enable PPP debug log output", 
-                        "id": "LWIP_PPP_DEBUG_ON", 
-                        "name": "LWIP_PPP_DEBUG_ON", 
-                        "range": null, 
-                        "title": "Enable PPP debug log output", 
-                        "type": "bool"
                     }, 
                     {
                         "children": [
@@ -14656,16 +14339,6 @@
                         "name": "WPA_TLS_V12", 
                         "range": null, 
                         "title": "Enable TLS v1.2", 
-                        "type": "bool"
-                    }, 
-                    {
-                        "children": [], 
-                        "depends_on": null, 
-                        "help": "Select this option to enable WPS related IOT fixes with\ndifferent APs. This option fixes IOT related issues with\nAPs which do not follow some of the standards of WPS-2.0\nspecification. These do not include any of the security\nrelated bypassing, just simple configuration corrections.\n\nCurrent fixes under this flag.\n1. Allow NULL-padded WPS attributes: Some APs keep NULL-padding\nat the end of some variable length WPS Attributes.\nThis is not as par the WPS2.0 specs, but to avoid interop issues,\nignore the padding by reducing the attribute length by 1.\n2. Bypass WPS-Config method validation: Some APs set display/pbc\nbutton bit without setting virtual/physical display/button bit which\nwill cause M2 validation fail, bypassing WPS-Config method validation.", 
-                        "id": "WPA_WPS_WARS", 
-                        "name": "WPA_WPS_WARS", 
-                        "range": null, 
-                        "title": "Add WPS Inter operatability Fixes", 
                         "type": "bool"
                     }
                 ], 
