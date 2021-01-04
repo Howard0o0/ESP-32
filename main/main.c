@@ -134,7 +134,6 @@ void app_main()
         xTaskCreate(sensor_data_update, "sensor_test", 2048, NULL, 5, NULL);
 
         xTaskCreate(ble_data_update, "ble_test", 2048, NULL, 3, NULL);
-        // xTaskCreate(lcd_data_update,"lcd_test",2048,NULL,3,NULL);
 
 
         xTaskCreate((TaskFunction_t)mainTaskAuthenticate, /* Pointer to the function that implements the task. */
@@ -144,6 +143,7 @@ void app_main()
                     configMAX_PRIORITIES - 4,             /* This task will run at priority 1. */
                     NULL);
 
+        // xTaskCreate(lcd_data_update,"lcd_test",2048,NULL,3,NULL);
         // // // xTaskCreate(lcd_show_main,"lcd_main_test",2048,NULL,1,NULL);
         // // // xTaskCreate(lcd_show_sensor,"lcd_sensor_test",2048,NULL,2,NULL);
         /*=====================End of Unit Test =====================*/
