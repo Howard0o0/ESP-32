@@ -612,7 +612,7 @@ void PrintStableLblockKey()
         uint8_t *lblockKey = NULL;
         while (1)
         {
-                lblockKey = GetLblockKeyForId("0F");
+                lblockKey = GetLblockKeyForId("0B");
                 if (!lblockKey)
                 {
                         printf("555 got lblock key failed \r\n");

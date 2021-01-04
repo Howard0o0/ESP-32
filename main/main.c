@@ -178,7 +178,7 @@ void app_main()
 
         /*+++++++++++++++test lblock key stability++++++++++++++*/
         // TestLblockKeyStability();
-        // PrintStableLblockKey();
+        PrintStableLblockKey();
         /*---------------test lblock key stability--------------*/
 
         /* test fpga led blink */
