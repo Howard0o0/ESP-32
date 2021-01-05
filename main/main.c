@@ -26,6 +26,7 @@
 #include "rgb_led.h"
 #include "task_sensor.h"
 #include "max30102.h"
+#include "bmi160_defs.h"
 
 void allDriverInstall(void);
 
@@ -35,6 +36,30 @@ void app_main()
         // MAX30102_test();
 
         /* ==========End of MAX30102 TEST ==================*/
+
+        // /* BMI160 TEST */
+        // I2c_Master_Init();
+        // while(BMI160_init() != BMI160_OK){
+        //         printf("main BMI160 init error\r\n");
+        // }
+        // while(1){
+        //         uint16_t step = 0;
+        //         step = BMI160_read_step_count();
+        //         printf("cur step : %u\r\n", step);
+        //         vTaskDelay(1000 / portTICK_RATE_MS);
+        // }
+        // /* BMI160 TEST */
+
+
+        /* MAX30205 TEST */
+        // I2c_Master_Init();
+        // while(1){
+        //         float temp = 0;
+        //         temp = MAX30205_ReadTemperature();
+        //         printf("cur temp : %f\r\n", temp);
+        //         vTaskDelay(1000 / portTICK_RATE_MS);
+        // }
+        /* MAX30205 TEST */
 
         /* test fingerprint */
         // szm301DriverInstall();
@@ -178,7 +203,7 @@ void app_main()
 
         /*+++++++++++++++test lblock key stability++++++++++++++*/
         // TestLblockKeyStability();
-        PrintStableLblockKey();
+        // PrintStableLblockKey();
         /*---------------test lblock key stability--------------*/
 
         /* test fpga led blink */

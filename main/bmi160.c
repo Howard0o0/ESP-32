@@ -1380,7 +1380,7 @@ int8_t BMI160_init(void){
 	int8_t bmi160_init_rslt = BMI160_OK;
 	bmi160_init_rslt = bmi160_init(&sensor);
   
-    //### Configuring accel and gyro sensor
+        //### Configuring accel and gyro sensor
 	//#### Example for configuring accel and gyro sensors in normal mode
 
 	int8_t rslt = BMI160_OK;
@@ -1439,8 +1439,8 @@ int8_t BMI160_init(void){
 	uint8_t step_enable = 1;//enable the step counter
 
 	rslt = bmi160_set_step_counter(step_enable,  &sensor);
-    
-    return bmi160_init_rslt;
+
+        return bmi160_init_rslt;
 }
 
 uint16_t BMI160_read_step_count(void){
@@ -1558,6 +1558,8 @@ int8_t bmi160_init(struct bmi160_dev *dev)
     {
         rslt = bmi160_get_regs(BMI160_SPI_COMM_TEST_ADDR, &data, 1, dev);
     }
+    
+    
     if (rslt == BMI160_OK)
     {
         /* Assign chip id as zero */
@@ -1565,19 +1567,23 @@ int8_t bmi160_init(struct bmi160_dev *dev)
         while ((try--) && (dev->chip_id != BMI160_CHIP_ID))
         {
             /* Read chip_id */
-            rslt = bmi160_get_regs(BMI160_CHIP_ID_ADDR, &dev->chip_id, 1, dev);
+            rslt = bmi160_get_regs(BMI160_CHIP_ID_ADDR, &dev->chip_id, 1, dev); 
         }
+
+
         if ((rslt == BMI160_OK) && (dev->chip_id == BMI160_CHIP_ID))
         {
             dev->any_sig_sel = BMI160_BOTH_ANY_SIG_MOTION_DISABLED;
 
             /* Soft reset */
             rslt = bmi160_soft_reset(dev);
+
         }
         else
         {
             rslt = BMI160_E_DEV_NOT_FOUND;
         }
+
     }
 
     return rslt;

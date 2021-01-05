@@ -76,7 +76,6 @@ spo2Andhr *read_spo2_and_ir()
         }
         else
         {
-                
                 maxim_heart_rate_and_oxygen_saturation(aun_ir_buffer, n_ir_buffer_length, aun_red_buffer, &n_sp02, &ch_spo2_valid, &n_heart_rate, &ch_hr_valid);
                 spo2Andhr *spo2_ir = (spo2Andhr *)malloc(sizeof(spo2Andhr));
                 spo2_ir->spo2 = ch_spo2_valid ? n_sp02 : 0;
