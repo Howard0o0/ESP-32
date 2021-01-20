@@ -319,9 +319,9 @@ bool GetLblockKey(uint8_t *lblock_key)
 static uint8_t *getLblockResponseAccordingToId(char *id)
 {
         static uint8_t lblockResponse[5][10] = {
-            {0x7A, 0x13, 0x3C, 0xAA, 0x43, 0x3F, 0xE4, 0xAB}, // ID : "0D"
+            {0xE6,0x3B ,0x09 ,0xD6 ,0x24 ,0x80 ,0x35 ,0xFA}, // ID : "0D"
             {0xE8, 0xED, 0x93, 0x53, 0x2C, 0xAE, 0x5A, 0x59}, // ID : "0B"
-            {0xB7, 0x67, 0x36, 0x15, 0x7E, 0x36, 0x9A, 0x77}, // ID : "0F"
+            {0x1B,0x00 ,0x0A ,0xBB ,0x35 ,0x8A ,0x9A ,0xAB }, // ID : "0F"
             {},
             {}};
 
@@ -581,7 +581,8 @@ void TestLblockKeyStability()
         uint8_t standard_key_enc[8];
 
         while (GetLblockKey(standard_key) != true)
-                ;
+                vTaskDelay(1000 / portTICK_RATE_MS);
+
         printf("standard key : ");
         print_hex((char *)standard_key, 10);
 
@@ -612,7 +613,7 @@ void PrintStableLblockKey()
         uint8_t *lblockKey = NULL;
         while (1)
         {
-                lblockKey = GetLblockKeyForId("0B");
+                lblockKey = GetLblockKeyForId("0F");
                 if (!lblockKey)
                 {
                         printf("555 got lblock key failed \r\n");
