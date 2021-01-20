@@ -47,10 +47,10 @@ int8_t BMI160_I2c_Master_Write_Slave(uint8_t dev_addr, uint8_t reg_addr, uint8_t
 #define I2C_SLAVE_TX_BUF_LEN (2 * DATA_LENGTH)  /*!< I2C slave tx buffer size */
 #define I2C_SLAVE_RX_BUF_LEN (2 * DATA_LENGTH)  /*!< I2C slave rx buffer size */
 
-// #define I2C_MASTER_SCL_IO GPIO_NUM_27			/*!< gpio number for I2C master clock */                //id: 0d 0f
-// #define I2C_MASTER_SDA_IO GPIO_NUM_13           /*!< gpio number for I2C master data  */
-#define I2C_MASTER_SCL_IO GPIO_NUM_18                                                                        //id : 0B
-#define I2C_MASTER_SDA_IO GPIO_NUM_19
+#define I2C_MASTER_SCL_IO GPIO_NUM_27			/*!< gpio number for I2C master clock */                //id: 0d 0f
+#define I2C_MASTER_SDA_IO GPIO_NUM_13           /*!< gpio number for I2C master data  */
+// #define I2C_MASTER_SCL_IO GPIO_NUM_18                                                                        //id : 0B
+// #define I2C_MASTER_SDA_IO GPIO_NUM_19
 #define I2C_MASTER_NUM I2C_NUMBER(0) 			/*!< I2C port number for master dev */
 #define I2C_MASTER_FREQ_HZ 100000        		/*!< I2C master clock frequency */
 #define I2C_MASTER_TX_BUF_DISABLE 0             /*!< I2C master doesn't need buffer */

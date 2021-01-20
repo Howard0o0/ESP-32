@@ -251,7 +251,6 @@ void allDriverInstall(void)
         max30102_init();
         blue_init();
         fpgaDriverInstall();
-
         szm301DriverInstall();
         BMI160_init();
 
