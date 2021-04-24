@@ -26,6 +26,11 @@
 #define CHALLENGE_OFFSET_IN_FINGERPRINT 4
 #define LEN_PUF_CHALLENGE 40
 
+
+char* gId1 = "0B";
+char* gId2 = "0D";
+char* gId3 = "0F";
+
 enum FPGA_ACK_ERR
 {
         ERR_LEN = 1,
@@ -336,11 +341,15 @@ static uint8_t *getLblockResponseAccordingToId(char *id)
         return NULL;
 }
 
+
 bool GetStableLblockKey(uint8_t *stable_lblock_key, char *id)
 {
         uint8_t dirty_key[11];
         int errCnt = 0;
-        uint8_t *standard_enc_data = getLblockResponseAccordingToId(id);
+        // uint8_t *standard_enc_data = getLblockResponseAccordingToId(id);
+        uint8_t *standard_enc_data1 = getLblockResponseAccordingToId(gId1);
+        uint8_t *standard_enc_data2 = getLblockResponseAccordingToId(gId2);
+        uint8_t *standard_enc_data3 = getLblockResponseAccordingToId(gId3);
         uint8_t dirty_enc_data[8];
 
         while (errCnt < 10)
@@ -362,7 +371,10 @@ bool GetStableLblockKey(uint8_t *stable_lblock_key, char *id)
                 }
                 printf("enc : ");
                 PrintHex(dirty_enc_data, 8);
-                if (IsSame(dirty_enc_data, standard_enc_data, 8) == true)
+                if ( (IsSame(dirty_enc_data, standard_enc_data1, 8) == true)
+                 || (IsSame(dirty_enc_data, standard_enc_data2, 8) == true)
+                 || (IsSame(dirty_enc_data, standard_enc_data3, 8) == true)
+                )
                 {
                         memcpy(stable_lblock_key, dirty_key, 10);
                         printf("[INFO] got stable lblock key: ");
